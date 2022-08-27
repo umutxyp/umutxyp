@@ -3,4 +3,5 @@ I am a professional editor and software developer. I have been professionally in
 
 ![](https://komarev.com/ghpvc/?username=umutxyp&color=blue)
 
-# [Youtube](https://youtube.com/UmutBayraktarYT)
+# [Youtube](https://youtube.com/UmutBayraktarYT) | 
+<a href="discord.gg/codes">https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white</a>
