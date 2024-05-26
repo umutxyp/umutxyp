@@ -5,7 +5,13 @@ I am a professional editor and software developer. I have been professionally in
 [![Twitter](https://img.shields.io/badge/-Twitter-1da1f2?style=flat-square&labelColor=1da1f2&logo=twitter&logoColor=white&link=https://twitter.com/devbayraktar)](https://twitter.com/devbayraktar)
 [![Email](https://img.shields.io/badge/-Email-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:umutbayraktar55@hotmail.com)](mailto:umutbayraktar55@hotmail.com)
 ![visitors](https://komarev.com/ghpvc/?username=umutxyp&color=blue)
- 
+
+<hr>
+https://codeshare.me
+<br>
+https://codexy.co
+<br>
+
 ### Languages
 <img src="https://skillicons.dev/icons?i=javascript,python&theme=dark" />
 
@@ -27,13 +33,6 @@ I am a professional editor and software developer. I have been professionally in
 <img src="https://github-profile-trophy.vercel.app/?username=umutxyp&theme=darkhub&no-frame=true&margin-w=15&margin-h=15" />
 
 <br />
-
-## ✨ Stats
-
-<div width="100%">
-<img src="https://github.com/umutxyp/github-stats/blob/master/generated/overview.svg#gh-dark-mode-only" />
-<img src="https://github.com/umutxyp/github-stats/blob/master/generated/languages.svg#gh-dark-mode-only" />
-</div>
 
 <br />
 <br />
