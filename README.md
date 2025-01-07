@@ -9,9 +9,9 @@ Hi! I'm Umut, a 19-year-old software developer and content creator based in Lond
 # Social Media and Community Links
 - Facebook: https://facebook.com/umutxyp
 - Instagram: https://instagram.com/umutxyp
-- Telegram: https://t.me/umutland
 - YouTube: https://youtube.com/umutxyp
-- Linkedin: https://www.linkedin.com/in/umutxyp/
+- Linkedin: https://www.linkedin.com/in/umutxyp
+- Telegram: https://t.me/umutland
 
 # Key Project
 - Code Share: My first project was a public platform for developers to share their software. This initiative helped me gain significant experience in planning, development, and project management. (https://codeshare.me)
