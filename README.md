@@ -51,4 +51,4 @@ https://codeshare.me
 <img src="https://github-profile-trophy.vercel.app/?username=umutxyp&theme=darkhub&no-frame=true&margin-w=15&margin-h=15" />
 
 <br />
-<img src="https://count.getloli.com/@:lewislosa?name=%3Alewislosa&theme=gelbooru&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=auto"/>
+<img src="https://count.getloli.com/@:umutxyp?name=%3Alewislosa&theme=gelbooru&padding=7&offset=0&align=center&scale=1&pixelated=1&darkmode=false"/>
