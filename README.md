@@ -1,5 +1,5 @@
 # Hi there 👋
-Hi! I'm Umut, a 19-year-old software developer and content creator based in London, UK. Originally from Antalya, Turkey, I specialize in technology, software, and cryptocurrency.
+Hi! I'm Umut, a 20-year-old software developer and content creator from Antalya, Turkey, I specialize in technology, software, and cryptocurrency.
 
 # Experience and Expertise
 - Community Management: With 5 years of experience, I’ve worked on various projects, building and managing communities and developing social media strategies. During this time, I’ve successfully coordinated communities with thousands of members, adding value to multiple projects.
