@@ -23,7 +23,7 @@ If you're interested in learning more about software, crypto, or community manag
 <br><br>
 [![Instagram](https://img.shields.io/badge/-Instagram-5851DB?style=flat-square&labelColor=5851DB&logo=instagram&logoColor=white&link=https://instagram.com/umutxyp)](https://instagram.com/umutxyp)
 [![Twitter](https://img.shields.io/badge/-Twitter-1da1f2?style=flat-square&labelColor=1da1f2&logo=twitter&logoColor=white&link=https://twitter.com/devbayraktar)](https://twitter.com/devbayraktar)
-[![Email](https://img.shields.io/badge/-Email-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:umutbayraktar55@hotmail.com)](mailto:umutbayraktar55@hotmail.com)
+[![Email](https://img.shields.io/badge/-Email-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:umutbayraktar55@gmail.com)](mailto:umutbayraktar55@gmail.com)
 ![visitors](https://komarev.com/ghpvc/?username=umutxyp&color=blue)
 
 <hr>
