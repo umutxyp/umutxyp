@@ -48,7 +48,5 @@ https://codeshare.me
 <br />
 
 ## ⚡ GitHub Trophies</h2>
-<img src="https://github-profile-trophy.vercel.app/?username=umutxyp&theme=darkhub&no-frame=true&margin-w=15&margin-h=15" />
-
 <br />
 <img src="https://count.getloli.com/@umutxyp"/>
