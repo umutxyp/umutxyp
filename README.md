@@ -33,7 +33,7 @@
 ```yaml
 name       : Umut Bayraktar
 alias      : umutxyp
-age        : 20
+age        : 21 (2005, September 15)
 location   : Antalya, Turkey 🇹🇷
 role       : Full-Stack Developer & Content Creator
 focus      :
