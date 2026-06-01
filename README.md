@@ -169,12 +169,6 @@ Expert-level content on **crypto, AI, and software** across YouTube, Instagram, 
 
 ---
 
-### ♻️ [DNZ Geri Dönüşüm](https://dnzgeridonusum.com) — Recycling & Waste Management
-> Digital presence for an industrial recycling company. Covers scrap pricing, service pages, and logistics tooling for metal/plastic/paper recycling and building demolition operations.
-
-`Web Development` `Full-Stack` `UI/UX`
-
----
 
 ### 🤖 [Dotrai](https://dotrai.com) — AI Assistant Platform
 > Self-learning text-based AI assistant with tiered access (free, advanced, expert) and daily query limits. Multi-experience architecture built for scale.
