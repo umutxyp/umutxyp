@@ -29,6 +29,7 @@
 ```yaml
 name       : Umut Bayraktar  (@umutxyp)
 age        : 20 → 21 on Sep 15, 2005  🇹🇷  Antalya, Turkey
+live in: 🇻🇳 Vietnam
 role       : Full-Stack Developer · AI Systems Researcher · Content Creator
 focus      :
   - Full-Stack Web Development (React · Next.js · Node.js · PostgreSQL)
