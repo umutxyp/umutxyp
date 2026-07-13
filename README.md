@@ -95,13 +95,6 @@ website    : https://umutbayraktar.vercel.app
 
 ---
 
-### 🏎️ [Vip Transfer Turkey](https://viptransfertr.com) — Premium Transfer Service
-> Full-stack booking platform for premium VIP airport and hotel transfers across Antalya, Belek, Side, Kemer, and Alanya. Multilingual, SEO-optimized with real-time service integrations.
-
-`Next.js` `Node.js` `MongoDB` `Full-Stack` `UI/UX`
-
----
-
 ### 🤖 [Sylon](https://sylon.app) — AI-Powered Discord Moderation Bot
 > AI-driven moderation with anti-spam, ad detection, server guard, ticket system, and welcome automation. 99.9% uptime across all shards.
 
@@ -113,13 +106,6 @@ website    : https://umutbayraktar.vercel.app
 > Real-time Minecraft server discovery platform. Tracks 7,000+ servers with live player counts, vote rankings, uptime history, and leaderboards.
 
 `Node.js` `Next.js` `PostgreSQL` `Real-Time` · **574K+ Concurrent Players**
-
----
-
-### 👁️ [Stalkly](https://stalkly.me) — Discord Analytics Platform
-> Comprehensive Discord analytics — voice activity, message patterns, profile tracking, and server intelligence. Real-time activity streams with full participant data.
-
-`Discord API` `Node.js` `MongoDB` `Real-Time` `Full-Stack`
 
 ---
 
