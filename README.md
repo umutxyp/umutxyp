@@ -49,7 +49,7 @@ website    : https://umutbayraktar.vercel.app
 
 | 🏢 Codeshare | 🎵 Beatra | 📣 Social | ⏱️ Experience |
 |:---:|:---:|:---:|:---:|
-| **15K+** active users | **1.2M+** Discord users | **44K+** followers | **6+ years** dev & community |
+| **12K+** users | **2M+** Discord users | **44K+** followers | **6+ years** dev & community |
 
 </div>
 
@@ -84,28 +84,28 @@ website    : https://umutbayraktar.vercel.app
 ### 🛒 [Codeshare](https://codeshare.me) — Digital Marketplace for Developers
 > Full-stack digital marketplace for buying, selling, and sharing code snippets, game keys, premium software, and YouTube-gated content. Features verified seller system, escrow payments, real-time chat, and a [developer CLI](https://github.com/codeshareme/codeshare-cli).
 
-`Next.js` `TypeScript` `PostgreSQL` `Node.js` `Full-Stack` · **15K+ Users**
+`Next.js` `TypeScript` `PostgreSQL` `Node.js` `Full-Stack` · **12K+ Users**
 
 ---
 
 ### 🎵 [Beatra](https://beatra.app) — Advanced Discord Music Bot
 > Multi-platform music streaming ecosystem across Discord, web, and desktop. Supports YouTube, Spotify, SoundCloud, Bandcamp, and Twitch. Features 24/7 mode, smart autoplay with 20+ genres, audio filters, analytics, and Beatra Wrapped.
 
-`Discord.js v14` `Node.js` `React` `Electron` `MongoDB` · **16K+ Servers · 1.2M+ Users**
+`Discord.js v14` `Node.js` `React` `Electron` `MongoDB` · **30K+ Servers · 2M+ Users**
 
 ---
 
 ### 🤖 [Sylon](https://sylon.app) — AI-Powered Discord Moderation Bot
 > AI-driven moderation with anti-spam, ad detection, server guard, ticket system, and welcome automation. 99.9% uptime across all shards.
 
-`Discord API` `Node.js` `AI` · **21+ Servers · 20K+ Users**
+`Discord API` `Node.js` `AI` · **31+ Servers · 20K+ Users**
 
 ---
 
 ### 🟩 [McStat.org](https://mcstat.org) — Minecraft Server Statistics
 > Real-time Minecraft server discovery platform. Tracks 7,000+ servers with live player counts, vote rankings, uptime history, and leaderboards.
 
-`Node.js` `Next.js` `PostgreSQL` `Real-Time` · **574K+ Concurrent Players**
+`Node.js` `Next.js` `PostgreSQL` `Real-Time` · **600K+ Concurrent Players** and **7K+ Servers**
 
 ---
 
