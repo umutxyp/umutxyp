@@ -113,7 +113,6 @@ website    : https://umutbayraktar.vercel.app
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=umutxyp&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=0284c7&text_color=7dd3fc&ring_color=0284c7" />
 <img width="49%" src="https://streak-stats.demolab.com?user=umutxyp&theme=dark&border=0284c7&background=0D1117&stroke=0284c7&ring=38bdf8&fire=7dd3fc&currStreakLabel=7dd3fc&sideLabels=7dd3fc&currStreakNum=e0f2fe&sideNums=e0f2fe&dates=0284c7" />
 
 <br/><br/>
