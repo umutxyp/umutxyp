@@ -105,7 +105,7 @@ website    : https://umutbayraktar.vercel.app
 ### 🟩 [McStat.org](https://mcstat.org) — Minecraft Server Statistics
 > Real-time Minecraft server discovery platform. Tracks 7,000+ servers with live player counts, vote rankings, uptime history, and leaderboards.
 
-`Node.js` `Next.js` `PostgreSQL` `Real-Time` · **600K+ Concurrent Players** and **7K+ Servers**
+`Node.js` `Next.js` `PostgreSQL` `Real-Time` · **600K+ Concurrent Players · 7K+ Servers**
 
 ---
 
