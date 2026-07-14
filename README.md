@@ -10,15 +10,31 @@
 
 <p>
   <img src="https://komarev.com/ghpvc/?username=umutxyp&style=for-the-badge&color=0284c7&label=PROFILE+VIEWS" />
-  &nbsp;
   <a href="https://github.com/umutxyp?tab=followers">
     <img src="https://img.shields.io/github/followers/umutxyp?style=for-the-badge&color=0369a1&labelColor=0c1a2e&label=FOLLOWERS" />
   </a>
-  &nbsp;
-  <a href="https://umutbayraktar.vercel.app">
-    <img src="https://img.shields.io/badge/Portfolio-0284c7?style=for-the-badge&logo=vercel&logoColor=white" />
-  </a>
 </p>
+
+
+<div align="center">
+
+<a href="https://umutbayraktar.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0284c7?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+&nbsp;
+<a href="https://linkedin.com/in/umutxyp"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+&nbsp;
+<a href="https://instagram.com/umutxyp"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+&nbsp;
+<a href="https://youtube.com/@umutxyp"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
+&nbsp;
+<a href="https://tiktok.com/@umutxyp"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" /></a>
+&nbsp;
+<a href="https://twitter.com/devbayraktar"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a>
+&nbsp;
+<a href="https://facebook.com/umutxyp"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" /></a>
+&nbsp;
+<a href="mailto:umutbayraktar55@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+
+</div>
 
 </div>
 
@@ -118,32 +134,6 @@ website    : https://umutbayraktar.vercel.app
 <br/><br/>
 
 <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=umutxyp&theme=react-dark&bg_color=0d1117&color=38bdf8&line=0284c7&point=7dd3fc&area=true&hide_border=true&area_color=0c1a2e" />
-
-</div>
-
----
-
-## 🌐 Connect
-
-<div align="center">
-
-<a href="https://umutbayraktar.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0284c7?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-&nbsp;
-<a href="https://linkedin.com/in/umutxyp"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-&nbsp;
-<a href="https://instagram.com/umutxyp"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
-&nbsp;
-<a href="https://youtube.com/@umutxyp"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
-&nbsp;
-<a href="https://tiktok.com/@umutxyp"><img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white" /></a>
-&nbsp;
-<a href="https://twitter.com/devbayraktar"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a>
-&nbsp;
-<a href="https://t.me/umutxyp"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" /></a>
-&nbsp;
-<a href="https://facebook.com/umutxyp"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" /></a>
-&nbsp;
-<a href="mailto:umutbayraktar55@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
 </div>
 
