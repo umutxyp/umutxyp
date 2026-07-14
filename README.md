@@ -3,7 +3,7 @@
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:0c1a2e,70:0d2d4a,100:0d1117&height=200&section=header&text=Umut%20Bayraktar&fontSize=62&fontColor=38bdf8&fontAlignY=42&desc=Full-Stack%20Developer%20%E2%80%A2%20AI%20Researcher%20%E2%80%A2%20Content%20Creator&descAlignY=64&descSize=15&descColor=7dd3fc&animation=fadeIn" />
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=680&lines=%F0%9F%9A%80+Full-Stack+Web+Developer;%F0%9F%A4%96+AI+Systems+Researcher;%F0%9F%A7%A0+Community+Manager+%E2%80%94+6%2B+Years;%F0%9F%93%88+44%2C000%2B+Social+Media+Followers;%F0%9F%9B%A0%EF%B8%8F+Founder+%40+Codeshare Technology;%F0%9F%8E%B5+Beatra+%E2%80%94+2M%2B+Discord+Users" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=680&lines=%F0%9F%9A%80+Full-Stack+Web+Developer;%F0%9F%A4%96+AI+Systems+Researcher;%F0%9F%A7%A0+Community+Manager+%E2%80%94+6%2B+Years;%F0%9F%93%88+44%2C000%2B+Social+Media+Followers;%F0%9F%9B%A0%EF%B8%8F+Founder+%40+Codeshare+Technology;%F0%9F%8E%B5+Beatra+%E2%80%94+2M%2B+Discord+Users" alt="Typing SVG" />
 </a>
 
 <br/>
