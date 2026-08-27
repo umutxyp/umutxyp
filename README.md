@@ -45,7 +45,6 @@
 ```yaml
 name       : Umut Bayraktar  (@umutxyp)
 born       : Sep 15, 2005  🇹🇷  Antalya, Turkey
-live in    : 🇻🇳 Vietnam
 role       : Founder @ Codeshare Technology
              Full-Stack Developer · AI Systems Researcher · Content Creator
 focus      :
