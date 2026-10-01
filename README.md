@@ -18,13 +18,35 @@
 
 ### 👋 About
 
-I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the London software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime and Dotrai. The core of every product stays free, and I run all of it on my own infrastructure.
+I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the London software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime and Dotrai. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
 
 <img width="100%" src="./assets/stats.svg" alt="3M+ Beatra users · 40K+ Discord servers · 463K MCStat player records · 44K+ followers" />
 
 ### 🚀 Projects
 
 <a href="https://codeshare.me"><img width="100%" src="./assets/studio.svg" alt="Codeshare Technology — software studio, London" /></a>
+
+<details>
+<summary><b>How Codeshare got here</b></summary>
+
+<br/>
+
+| When | What happened |
+|:---|:---|
+| **Feb 2020** | The Discord bot that later becomes Sylon is born as *Server Support* |
+| **Nov 2020** | The bot that later becomes Beatra is made — launches as *MusicMaker*, shut down in 2022 |
+| **Aug 2022** | codeshare.me is bought and runs a developer marketplace |
+| **Mar 2025** | Work on Dotrai starts |
+| **Aug 2025** | Codeshare Technology Ltd is incorporated in England and Wales |
+| **Oct 2025** | Beatra comes back after three years off |
+| **Dec 2025** | MCStat launches |
+| **Apr 2026** | Server Support becomes Sylon and gets its own site |
+| **Aug 2026** | JustDiscord and JustAnime launch three days apart |
+| **Sep 2026** | The marketplace closes — codeshare.me becomes the studio's own site |
+
+<sub>Codeshare Technology Ltd · Registered in England and Wales · Company no. 16672504 · <a href="mailto:contact@codeshare.me">contact@codeshare.me</a></sub>
+
+</details>
 
 <div align="center">
 

@@ -31,6 +31,8 @@ STUDIO = dict(
     tag="Software studio · London",
     desc="Software for online communities — with the core kept free.",
     products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai"],
+    stats=[("6", "products live"), ("2.9M", "Discord users reached"),
+           ("2020", "oldest account"), ("2025", "incorporated")],
 )
 
 PROJECTS = {
@@ -185,7 +187,7 @@ def stats():
 # ────────────────────────────── STUDIO ──────────────────────────────
 
 def studio():
-    W, H = 1200, 200
+    W, H = 1200, 260
     p = STUDIO
     border, style = running_border(W, H, 22, 220, 10)
     out = [border, f'''<image href="{logo("codeshare")}" x="40" y="44" width="104" height="112"/>
@@ -201,6 +203,11 @@ def studio():
             out.append(f'<rect x="{x}" y="{58 + r * 46}" width="{w}" height="32" rx="16" fill="{BLUE}" fill-opacity=".1" stroke="{LINE}"/>'
                        f'<text x="{x + w / 2}" y="{79 + r * 46}" text-anchor="middle" font-family="{SANS}" font-size="15" fill="{BLUE_L}">{esc(name)}</text>')
             x -= 10
+    out.append(f'<line x1="40" y1="186" x2="{W - 40}" y2="186" stroke="{LINE}"/>')
+    cw = (W - 80) / len(p["stats"])
+    for k, (v, l) in enumerate(p["stats"]):
+        out.append(f'<text x="{40 + k * cw}" y="226" font-family="{SANS}" font-size="20"><tspan font-weight="800" fill="{BLUE}">{esc(v)}</tspan>'
+                   f'<tspan fill="{MUTED}" font-size="16">  {esc(l)}</tspan></text>')
     write("studio.svg", svg(W, H, "\n".join(out), style))
 
 
