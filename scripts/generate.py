@@ -4,6 +4,7 @@
 Edit the DATA section below, then run:  python3 scripts/generate.py
 All files are written to ./assets.
 """
+import base64
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -27,25 +28,25 @@ STATS = [
 
 PROJECTS = {
     "mcstat": dict(
-        title="MCStat", url="mcstat.org", icon="cube",
+        title="MCStat", url="mcstat.org",
         desc=["Real-time Minecraft server list with live player",
               "counts, vote rankings and 50K+ player profiles."],
         stats=[("6.7K", "servers"), ("250K", "daily peak")],
     ),
     "beatra": dict(
-        title="Beatra", url="beatra.app", icon="eq",
+        title="Beatra", url="beatra.app",
         desc=["Music bot for Discord, web and desktop —",
               "Spotify, YouTube, Apple Music and more."],
         stats=[("32.8K", "servers"), ("2.1M+", "users")],
     ),
     "justdiscord": dict(
-        title="JustDiscord", url="justdiscord.org", icon="chat",
+        title="JustDiscord", url="justdiscord.org",
         desc=["Discord server & bot list built on trust —",
               "real reviews, verified owners, free emojis."],
         stats=[("16K+", "listings"), ("91K", "emojis")],
     ),
     "sylon": dict(
-        title="Sylon", url="sylon.app", icon="shield",
+        title="Sylon", url="sylon.app",
         desc=["AI moderation for Discord that catches ads",
               "and scams in any language, even in images."],
         stats=[("33K+", "users"), ("99.9%", "uptime")],
@@ -148,20 +149,10 @@ def stats():
 
 # ───────────────────────────── PROJECTS ─────────────────────────────
 
-def icon(kind):
-    if kind == "eq":
-        return "".join(
-            f'<rect x="{-17 + k * 9}" y="-14" width="6" height="28" rx="3" fill="{BLUE}" class="eq" '
-            f'style="animation-delay:-{0.2 * k:.1f}s"/>' for k in range(4))
-    if kind == "cube":
-        return (f'<path d="M0 -18 L16 -9 L0 0 L-16 -9 Z" fill="{BLUE_L}"/>'
-                f'<path d="M-16 -9 L0 0 L0 18 L-16 9 Z" fill="{BLUE_D}"/>'
-                f'<path d="M16 -9 L0 0 L0 18 L16 9 Z" fill="{BLUE}"/>')
-    if kind == "chat":
-        return (f'<path d="M-18 -14 Q-18 -18 -14 -18 H14 Q18 -18 18 -14 V4 Q18 8 14 8 H-3 L-11 16 V8 H-14 Q-18 8 -18 4 Z" fill="{BLUE}"/>'
-                f'<path d="M0 -12 L2 -7 L7 -7 L3 -4 L4.5 1 L0 -2 L-4.5 1 L-3 -4 L-7 -7 L-2 -7 Z" fill="{BG}"/>')
-    return (f'<path d="M0 -19 L16 -12 V0 Q16 13 0 20 Q-16 13 -16 0 V-12 Z" fill="{BLUE}"/>'
-            f'<path d="M-6 1 L-1.5 5.5 L7 -4" stroke="{BG}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>')
+def logo(key):
+    """Original project logo from assets/logos, embedded so it renders inside an <img>."""
+    data = base64.b64encode((OUT / "logos" / f"{key}.png").read_bytes()).decode()
+    return f"data:image/png;base64,{data}"
 
 
 def project(key, p):
@@ -169,20 +160,19 @@ def project(key, p):
     per = 2 * (W - 4 + H - 4)
     out = [f'''<rect x="2" y="2" width="{W - 4}" height="{H - 4}" rx="20" fill="{CARD}" stroke="{LINE}" stroke-width="2"/>
 <rect x="2" y="2" width="{W - 4}" height="{H - 4}" rx="20" stroke="{BLUE}" stroke-width="2" stroke-linecap="round" class="run"/>
-<g transform="translate(58 60)"><rect x="-28" y="-28" width="56" height="56" rx="14" fill="{BLUE}" fill-opacity=".1"/>{icon(p["icon"])}</g>
-<text x="104" y="56" font-family="{SANS}" font-size="28" font-weight="700" fill="#f0f9ff">{esc(p["title"])}</text>
-<text x="104" y="82" font-family="{MONO}" font-size="15" fill="{BLUE}">{esc(p["url"])}</text>''']
+<clipPath id="lc"><rect x="26" y="26" width="64" height="64" rx="16"/></clipPath>
+<image href="{logo(key)}" x="26" y="26" width="64" height="64" clip-path="url(#lc)"/>
+<text x="108" y="56" font-family="{SANS}" font-size="28" font-weight="700" fill="#f0f9ff">{esc(p["title"])}</text>
+<text x="108" y="82" font-family="{MONO}" font-size="15" fill="{BLUE}">{esc(p["url"])}</text>''']
     for k, line in enumerate(p["desc"]):
-        out.append(f'<text x="30" y="{128 + k * 25}" font-family="{SANS}" font-size="17" fill="{MUTED}">{esc(line)}</text>')
+        out.append(f'<text x="30" y="{134 + k * 25}" font-family="{SANS}" font-size="17" fill="{MUTED}">{esc(line)}</text>')
     x = 30
     for v, l in p["stats"]:
         out.append(f'<text x="{x}" y="{H - 30}" font-family="{SANS}" font-size="17"><tspan font-weight="700" fill="{BLUE_L}">{esc(v)}</tspan>'
                    f'<tspan fill="{MUTED}"> {esc(l)}</tspan></text>')
         x += 180
     style = f'''.run{{stroke-dasharray:140 {per - 140};animation:run 8s linear infinite}}
-@keyframes run{{to{{stroke-dashoffset:-{per}}}}}
-.eq{{transform-box:fill-box;transform-origin:center bottom;animation:eq .8s ease-in-out infinite alternate}}
-@keyframes eq{{from{{transform:scaleY(.3)}}to{{transform:scaleY(1)}}}}'''
+@keyframes run{{to{{stroke-dashoffset:-{per}}}}}'''
     write(f"projects/{key}.svg", svg(W, H, "\n".join(out), style))
 
 

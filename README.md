@@ -4,13 +4,13 @@
 
 <br/><br/>
 
-<a href="https://umutbayraktar.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0a1628?style=for-the-badge&logo=vercel&logoColor=38bdf8" /></a>
-<a href="https://linkedin.com/in/umutxyp"><img src="https://img.shields.io/badge/LinkedIn-0a1628?style=for-the-badge&logo=linkedin&logoColor=38bdf8" /></a>
-<a href="https://youtube.com/@umutxyp"><img src="https://img.shields.io/badge/YouTube-0a1628?style=for-the-badge&logo=youtube&logoColor=38bdf8" /></a>
-<a href="https://instagram.com/umutxyp"><img src="https://img.shields.io/badge/Instagram-0a1628?style=for-the-badge&logo=instagram&logoColor=38bdf8" /></a>
-<a href="https://tiktok.com/@umutxyp"><img src="https://img.shields.io/badge/TikTok-0a1628?style=for-the-badge&logo=tiktok&logoColor=38bdf8" /></a>
-<a href="https://twitter.com/devbayraktar"><img src="https://img.shields.io/badge/X-0a1628?style=for-the-badge&logo=x&logoColor=38bdf8" /></a>
-<a href="mailto:umutbayraktar55@gmail.com"><img src="https://img.shields.io/badge/Email-0a1628?style=for-the-badge&logo=gmail&logoColor=38bdf8" /></a>
+<a href="https://umutbayraktar.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0a1628?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+<a href="https://linkedin.com/in/umutxyp"><img src="https://img.shields.io/badge/LinkedIn-0a1628?style=for-the-badge&logo=linkedin&logoColor=0A66C2" /></a>
+<a href="https://youtube.com/@umutxyp"><img src="https://img.shields.io/badge/YouTube-0a1628?style=for-the-badge&logo=youtube&logoColor=FF0000" /></a>
+<a href="https://instagram.com/umutxyp"><img src="https://img.shields.io/badge/Instagram-0a1628?style=for-the-badge&logo=instagram&logoColor=E4405F" /></a>
+<a href="https://tiktok.com/@umutxyp"><img src="https://img.shields.io/badge/TikTok-0a1628?style=for-the-badge&logo=tiktok&logoColor=white" /></a>
+<a href="https://twitter.com/devbayraktar"><img src="https://img.shields.io/badge/X-0a1628?style=for-the-badge&logo=x&logoColor=white" /></a>
+<a href="mailto:umutbayraktar55@gmail.com"><img src="https://img.shields.io/badge/Email-0a1628?style=for-the-badge&logo=gmail&logoColor=EA4335" /></a>
 
 </div>
 
