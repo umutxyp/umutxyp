@@ -1,86 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="210" viewBox="0 0 1200 210" fill="none">
-<style>.pop{opacity:0;animation:pop .8s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes pop{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.bar{transform-box:fill-box;transform-origin:center;transform:scaleX(0);animation:bar 1s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes bar{to{transform:scaleX(1)}}</style>
-<defs>
-<linearGradient id="g0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c084fc" stop-opacity=".22"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></linearGradient>
-<linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4ade80" stop-opacity=".22"/><stop offset="1" stop-color="#4ade80" stop-opacity="0"/></linearGradient>
-<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#818cf8" stop-opacity=".22"/><stop offset="1" stop-color="#818cf8" stop-opacity="0"/></linearGradient>
-<linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#facc15" stop-opacity=".22"/><stop offset="1" stop-color="#facc15" stop-opacity="0"/></linearGradient>
-<linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f472b6" stop-opacity=".22"/><stop offset="1" stop-color="#f472b6" stop-opacity="0"/></linearGradient>
-</defs>
-<g class="pop" style="animation-delay:0.00s">
-<rect x="1.0" y="1" width="225.2" height="208" rx="18" fill="#0a0f1a" stroke="#1e293b" stroke-width="1.5"/>
-<rect x="1.0" y="1" width="225.2" height="105.0" rx="18" fill="url(#g0)"/>
-<rect x="30.0" y="0" width="167.2" height="3" rx="1.5" fill="#c084fc" class="bar" style="animation-delay:0.40s"/>
-<clipPath id="nc0"><rect x="0.0" y="66" width="227.2" height="52"/></clipPath>
-<g clip-path="url(#nc0)" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-weight="800" font-size="50" fill="#f8fafc">
-<g transform="translate(0 -864)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -864" dur="1.60s" begin="0.50s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.50s"/><text x="54.1" y="108" text-anchor="middle">0</text><text x="54.1" y="180" text-anchor="middle">1</text><text x="54.1" y="252" text-anchor="middle">2</text><text x="54.1" y="324" text-anchor="middle">3</text><text x="54.1" y="396" text-anchor="middle">4</text><text x="54.1" y="468" text-anchor="middle">5</text><text x="54.1" y="540" text-anchor="middle">6</text><text x="54.1" y="612" text-anchor="middle">7</text><text x="54.1" y="684" text-anchor="middle">8</text><text x="54.1" y="756" text-anchor="middle">9</text><text x="54.1" y="828" text-anchor="middle">0</text><text x="54.1" y="900" text-anchor="middle">1</text><text x="54.1" y="972" text-anchor="middle">2</text></g>
-<text x="76.6" y="108" text-anchor="middle" fill="#f8fafc">.</text>
-<g transform="translate(0 -792)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -792" dur="1.90s" begin="0.74s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.74s"/><text x="99.1" y="108" text-anchor="middle">0</text><text x="99.1" y="180" text-anchor="middle">1</text><text x="99.1" y="252" text-anchor="middle">2</text><text x="99.1" y="324" text-anchor="middle">3</text><text x="99.1" y="396" text-anchor="middle">4</text><text x="99.1" y="468" text-anchor="middle">5</text><text x="99.1" y="540" text-anchor="middle">6</text><text x="99.1" y="612" text-anchor="middle">7</text><text x="99.1" y="684" text-anchor="middle">8</text><text x="99.1" y="756" text-anchor="middle">9</text><text x="99.1" y="828" text-anchor="middle">0</text><text x="99.1" y="900" text-anchor="middle">1</text></g>
-<text x="136.1" y="108" text-anchor="middle" fill="#c084fc">M</text>
-<text x="173.1" y="108" text-anchor="middle" fill="#c084fc">+</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="130" viewBox="0 0 1200 130" fill="none">
+<style>.up{opacity:0;animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}</style>
+<g class="up" style="animation-delay:0.00s">
+  <rect x="1.0" y="1" width="286.0" height="128" rx="18" fill="#0a1628" stroke="#14304f" stroke-width="1.5"/>
+  <text x="144.0" y="70" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="40" font-weight="800" fill="#38bdf8">2.1M+</text>
+  <text x="144.0" y="100" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16" fill="#7b93ad">Discord users</text>
 </g>
-<text x="113.6" y="148" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14" letter-spacing="2" fill="#cbd5e1">DISCORD USERS</text>
-<text x="113.6" y="176" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="15" fill="#c084fc">Beatra</text>
+<g class="up" style="animation-delay:0.12s">
+  <rect x="305.0" y="1" width="286.0" height="128" rx="18" fill="#0a1628" stroke="#14304f" stroke-width="1.5"/>
+  <text x="448.0" y="70" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="40" font-weight="800" fill="#38bdf8">250K+</text>
+  <text x="448.0" y="100" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16" fill="#7b93ad">daily players</text>
 </g>
-<g class="pop" style="animation-delay:0.15s">
-<rect x="244.2" y="1" width="225.2" height="208" rx="18" fill="#0a0f1a" stroke="#1e293b" stroke-width="1.5"/>
-<rect x="244.2" y="1" width="225.2" height="105.0" rx="18" fill="url(#g1)"/>
-<rect x="273.2" y="0" width="167.2" height="3" rx="1.5" fill="#4ade80" class="bar" style="animation-delay:0.55s"/>
-<clipPath id="nc1"><rect x="243.2" y="66" width="227.2" height="52"/></clipPath>
-<g clip-path="url(#nc1)" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-weight="800" font-size="50" fill="#f8fafc">
-<g transform="translate(0 -864)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -864" dur="1.60s" begin="0.65s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.65s"/><text x="294.8" y="108" text-anchor="middle">0</text><text x="294.8" y="180" text-anchor="middle">1</text><text x="294.8" y="252" text-anchor="middle">2</text><text x="294.8" y="324" text-anchor="middle">3</text><text x="294.8" y="396" text-anchor="middle">4</text><text x="294.8" y="468" text-anchor="middle">5</text><text x="294.8" y="540" text-anchor="middle">6</text><text x="294.8" y="612" text-anchor="middle">7</text><text x="294.8" y="684" text-anchor="middle">8</text><text x="294.8" y="756" text-anchor="middle">9</text><text x="294.8" y="828" text-anchor="middle">0</text><text x="294.8" y="900" text-anchor="middle">1</text><text x="294.8" y="972" text-anchor="middle">2</text></g>
-<g transform="translate(0 -1080)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -1080" dur="1.75s" begin="0.77s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.77s"/><text x="324.8" y="108" text-anchor="middle">0</text><text x="324.8" y="180" text-anchor="middle">1</text><text x="324.8" y="252" text-anchor="middle">2</text><text x="324.8" y="324" text-anchor="middle">3</text><text x="324.8" y="396" text-anchor="middle">4</text><text x="324.8" y="468" text-anchor="middle">5</text><text x="324.8" y="540" text-anchor="middle">6</text><text x="324.8" y="612" text-anchor="middle">7</text><text x="324.8" y="684" text-anchor="middle">8</text><text x="324.8" y="756" text-anchor="middle">9</text><text x="324.8" y="828" text-anchor="middle">0</text><text x="324.8" y="900" text-anchor="middle">1</text><text x="324.8" y="972" text-anchor="middle">2</text><text x="324.8" y="1044" text-anchor="middle">3</text><text x="324.8" y="1116" text-anchor="middle">4</text><text x="324.8" y="1188" text-anchor="middle">5</text></g>
-<g transform="translate(0 -720)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -720" dur="1.90s" begin="0.89s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.89s"/><text x="354.8" y="108" text-anchor="middle">0</text><text x="354.8" y="180" text-anchor="middle">1</text><text x="354.8" y="252" text-anchor="middle">2</text><text x="354.8" y="324" text-anchor="middle">3</text><text x="354.8" y="396" text-anchor="middle">4</text><text x="354.8" y="468" text-anchor="middle">5</text><text x="354.8" y="540" text-anchor="middle">6</text><text x="354.8" y="612" text-anchor="middle">7</text><text x="354.8" y="684" text-anchor="middle">8</text><text x="354.8" y="756" text-anchor="middle">9</text><text x="354.8" y="828" text-anchor="middle">0</text></g>
-<text x="386.8" y="108" text-anchor="middle" fill="#4ade80">K</text>
-<text x="418.8" y="108" text-anchor="middle" fill="#4ade80">+</text>
+<g class="up" style="animation-delay:0.24s">
+  <rect x="609.0" y="1" width="286.0" height="128" rx="18" fill="#0a1628" stroke="#14304f" stroke-width="1.5"/>
+  <text x="752.0" y="70" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="40" font-weight="800" fill="#38bdf8">16K+</text>
+  <text x="752.0" y="100" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16" fill="#7b93ad">listings</text>
 </g>
-<text x="356.8" y="148" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14" letter-spacing="2" fill="#cbd5e1">DAILY PLAYERS</text>
-<text x="356.8" y="176" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="15" fill="#4ade80">MCStat</text>
-</g>
-<g class="pop" style="animation-delay:0.30s">
-<rect x="487.4" y="1" width="225.2" height="208" rx="18" fill="#0a0f1a" stroke="#1e293b" stroke-width="1.5"/>
-<rect x="487.4" y="1" width="225.2" height="105.0" rx="18" fill="url(#g2)"/>
-<rect x="516.4" y="0" width="167.2" height="3" rx="1.5" fill="#818cf8" class="bar" style="animation-delay:0.70s"/>
-<clipPath id="nc2"><rect x="486.4" y="66" width="227.2" height="52"/></clipPath>
-<g clip-path="url(#nc2)" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-weight="800" font-size="50" fill="#f8fafc">
-<g transform="translate(0 -792)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -792" dur="1.60s" begin="0.80s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.80s"/><text x="553.0" y="108" text-anchor="middle">0</text><text x="553.0" y="180" text-anchor="middle">1</text><text x="553.0" y="252" text-anchor="middle">2</text><text x="553.0" y="324" text-anchor="middle">3</text><text x="553.0" y="396" text-anchor="middle">4</text><text x="553.0" y="468" text-anchor="middle">5</text><text x="553.0" y="540" text-anchor="middle">6</text><text x="553.0" y="612" text-anchor="middle">7</text><text x="553.0" y="684" text-anchor="middle">8</text><text x="553.0" y="756" text-anchor="middle">9</text><text x="553.0" y="828" text-anchor="middle">0</text><text x="553.0" y="900" text-anchor="middle">1</text></g>
-<g transform="translate(0 -1152)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -1152" dur="1.75s" begin="0.92s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.92s"/><text x="583.0" y="108" text-anchor="middle">0</text><text x="583.0" y="180" text-anchor="middle">1</text><text x="583.0" y="252" text-anchor="middle">2</text><text x="583.0" y="324" text-anchor="middle">3</text><text x="583.0" y="396" text-anchor="middle">4</text><text x="583.0" y="468" text-anchor="middle">5</text><text x="583.0" y="540" text-anchor="middle">6</text><text x="583.0" y="612" text-anchor="middle">7</text><text x="583.0" y="684" text-anchor="middle">8</text><text x="583.0" y="756" text-anchor="middle">9</text><text x="583.0" y="828" text-anchor="middle">0</text><text x="583.0" y="900" text-anchor="middle">1</text><text x="583.0" y="972" text-anchor="middle">2</text><text x="583.0" y="1044" text-anchor="middle">3</text><text x="583.0" y="1116" text-anchor="middle">4</text><text x="583.0" y="1188" text-anchor="middle">5</text><text x="583.0" y="1260" text-anchor="middle">6</text></g>
-<text x="615.0" y="108" text-anchor="middle" fill="#818cf8">K</text>
-<text x="647.0" y="108" text-anchor="middle" fill="#818cf8">+</text>
-</g>
-<text x="600.0" y="148" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14" letter-spacing="2" fill="#cbd5e1">LISTINGS</text>
-<text x="600.0" y="176" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="15" fill="#818cf8">JustDiscord</text>
-</g>
-<g class="pop" style="animation-delay:0.45s">
-<rect x="730.6" y="1" width="225.2" height="208" rx="18" fill="#0a0f1a" stroke="#1e293b" stroke-width="1.5"/>
-<rect x="730.6" y="1" width="225.2" height="105.0" rx="18" fill="url(#g3)"/>
-<rect x="759.6" y="0" width="167.2" height="3" rx="1.5" fill="#facc15" class="bar" style="animation-delay:0.85s"/>
-<clipPath id="nc3"><rect x="729.5999999999999" y="66" width="227.2" height="52"/></clipPath>
-<g clip-path="url(#nc3)" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-weight="800" font-size="50" fill="#f8fafc">
-<g transform="translate(0 -864)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -864" dur="1.60s" begin="0.95s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="0.95s"/><text x="788.7" y="108" text-anchor="middle">0</text><text x="788.7" y="180" text-anchor="middle">1</text><text x="788.7" y="252" text-anchor="middle">2</text><text x="788.7" y="324" text-anchor="middle">3</text><text x="788.7" y="396" text-anchor="middle">4</text><text x="788.7" y="468" text-anchor="middle">5</text><text x="788.7" y="540" text-anchor="middle">6</text><text x="788.7" y="612" text-anchor="middle">7</text><text x="788.7" y="684" text-anchor="middle">8</text><text x="788.7" y="756" text-anchor="middle">9</text><text x="788.7" y="828" text-anchor="middle">0</text><text x="788.7" y="900" text-anchor="middle">1</text><text x="788.7" y="972" text-anchor="middle">2</text></g>
-<text x="811.2" y="108" text-anchor="middle" fill="#f8fafc">.</text>
-<g transform="translate(0 -1224)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -1224" dur="1.90s" begin="1.19s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="1.19s"/><text x="833.7" y="108" text-anchor="middle">0</text><text x="833.7" y="180" text-anchor="middle">1</text><text x="833.7" y="252" text-anchor="middle">2</text><text x="833.7" y="324" text-anchor="middle">3</text><text x="833.7" y="396" text-anchor="middle">4</text><text x="833.7" y="468" text-anchor="middle">5</text><text x="833.7" y="540" text-anchor="middle">6</text><text x="833.7" y="612" text-anchor="middle">7</text><text x="833.7" y="684" text-anchor="middle">8</text><text x="833.7" y="756" text-anchor="middle">9</text><text x="833.7" y="828" text-anchor="middle">0</text><text x="833.7" y="900" text-anchor="middle">1</text><text x="833.7" y="972" text-anchor="middle">2</text><text x="833.7" y="1044" text-anchor="middle">3</text><text x="833.7" y="1116" text-anchor="middle">4</text><text x="833.7" y="1188" text-anchor="middle">5</text><text x="833.7" y="1260" text-anchor="middle">6</text><text x="833.7" y="1332" text-anchor="middle">7</text></g>
-<text x="865.7" y="108" text-anchor="middle" fill="#facc15">K</text>
-<text x="897.7" y="108" text-anchor="middle" fill="#facc15">+</text>
-</g>
-<text x="843.2" y="148" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14" letter-spacing="2" fill="#cbd5e1">GITHUB STARS</text>
-<text x="843.2" y="176" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="15" fill="#facc15">Open source</text>
-</g>
-<g class="pop" style="animation-delay:0.60s">
-<rect x="973.8" y="1" width="225.2" height="208" rx="18" fill="#0a0f1a" stroke="#1e293b" stroke-width="1.5"/>
-<rect x="973.8" y="1" width="225.2" height="105.0" rx="18" fill="url(#g4)"/>
-<rect x="1002.8" y="0" width="167.2" height="3" rx="1.5" fill="#f472b6" class="bar" style="animation-delay:1.00s"/>
-<clipPath id="nc4"><rect x="972.8" y="66" width="227.2" height="52"/></clipPath>
-<g clip-path="url(#nc4)" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-weight="800" font-size="50" fill="#f8fafc">
-<g transform="translate(0 -1008)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -1008" dur="1.60s" begin="1.10s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="1.10s"/><text x="1039.4" y="108" text-anchor="middle">0</text><text x="1039.4" y="180" text-anchor="middle">1</text><text x="1039.4" y="252" text-anchor="middle">2</text><text x="1039.4" y="324" text-anchor="middle">3</text><text x="1039.4" y="396" text-anchor="middle">4</text><text x="1039.4" y="468" text-anchor="middle">5</text><text x="1039.4" y="540" text-anchor="middle">6</text><text x="1039.4" y="612" text-anchor="middle">7</text><text x="1039.4" y="684" text-anchor="middle">8</text><text x="1039.4" y="756" text-anchor="middle">9</text><text x="1039.4" y="828" text-anchor="middle">0</text><text x="1039.4" y="900" text-anchor="middle">1</text><text x="1039.4" y="972" text-anchor="middle">2</text><text x="1039.4" y="1044" text-anchor="middle">3</text><text x="1039.4" y="1116" text-anchor="middle">4</text></g>
-<g transform="translate(0 -1008)"><animateTransform attributeName="transform" type="translate" values="0 0;0 -1008" dur="1.75s" begin="1.22s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".15 .7 .1 1"/><set attributeName="transform" to="translate(0 0)" begin="0s" dur="1.22s"/><text x="1069.4" y="108" text-anchor="middle">0</text><text x="1069.4" y="180" text-anchor="middle">1</text><text x="1069.4" y="252" text-anchor="middle">2</text><text x="1069.4" y="324" text-anchor="middle">3</text><text x="1069.4" y="396" text-anchor="middle">4</text><text x="1069.4" y="468" text-anchor="middle">5</text><text x="1069.4" y="540" text-anchor="middle">6</text><text x="1069.4" y="612" text-anchor="middle">7</text><text x="1069.4" y="684" text-anchor="middle">8</text><text x="1069.4" y="756" text-anchor="middle">9</text><text x="1069.4" y="828" text-anchor="middle">0</text><text x="1069.4" y="900" text-anchor="middle">1</text><text x="1069.4" y="972" text-anchor="middle">2</text><text x="1069.4" y="1044" text-anchor="middle">3</text><text x="1069.4" y="1116" text-anchor="middle">4</text></g>
-<text x="1101.4" y="108" text-anchor="middle" fill="#f472b6">K</text>
-<text x="1133.4" y="108" text-anchor="middle" fill="#f472b6">+</text>
-</g>
-<text x="1086.4" y="148" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="14" letter-spacing="2" fill="#cbd5e1">FOLLOWERS</text>
-<text x="1086.4" y="176" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="15" fill="#f472b6">Social</text>
+<g class="up" style="animation-delay:0.36s">
+  <rect x="913.0" y="1" width="286.0" height="128" rx="18" fill="#0a1628" stroke="#14304f" stroke-width="1.5"/>
+  <text x="1056.0" y="70" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="40" font-weight="800" fill="#38bdf8">44K+</text>
+  <text x="1056.0" y="100" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16" fill="#7b93ad">followers</text>
 </g>
 </svg>

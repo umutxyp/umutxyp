@@ -1,43 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="366" viewBox="0 0 600 366" fill="none">
-<style>.snake{stroke-dasharray:180 1736;animation:snake 7s linear infinite}
-@keyframes snake{to{stroke-dashoffset:-1916}}
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="230" viewBox="0 0 600 230" fill="none">
+<style>.run{stroke-dasharray:140 1504;animation:run 8s linear infinite}
+@keyframes run{to{stroke-dashoffset:-1644}}
 .eq{transform-box:fill-box;transform-origin:center bottom;animation:eq .8s ease-in-out infinite alternate}
-@keyframes eq{0%{transform:scaleY(.25)}100%{transform:scaleY(1)}}
-.float{animation:fl 3s ease-in-out infinite}
-@keyframes fl{50%{transform:translateY(-4px)}}
-.spin{transform-box:fill-box;transform-origin:center;animation:spin 4s cubic-bezier(.6,0,.4,1) infinite}
-@keyframes spin{0%,40%{transform:translate(0,-6px) rotate(0)}60%,100%{transform:translate(0,-6px) rotate(144deg)}}
-.scanY{animation:sy 2.4s ease-in-out infinite}
-@keyframes sy{0%{transform:translateY(0)}50%{transform:translateY(55px)}100%{transform:translateY(0)}}
-.live{animation:live 1.4s ease-in-out infinite}
-@keyframes live{50%{opacity:.25}}
-.rise{opacity:0;animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}</style>
-<defs>
-  <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
-  <radialGradient id="glow" cx="0.12" cy="0.1" r="0.8"><stop offset="0" stop-color="#22d3ee" stop-opacity=".22"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
-  <linearGradient id="run" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee"/><stop offset="1" stop-color="#0284c7"/></linearGradient>
-  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#94a3b8" fill-opacity=".12"/></pattern>
-</defs>
-<rect x="2" y="2" width="596" height="362" rx="22" fill="#0a0f1a"/>
-<rect x="2" y="2" width="596" height="362" rx="22" fill="url(#dots)"/>
-<rect x="2" y="2" width="596" height="362" rx="22" fill="url(#glow)"/>
-<rect x="2" y="2" width="596" height="362" rx="22" stroke="#1e293b" stroke-width="2"/>
-<rect x="2" y="2" width="596" height="362" rx="22" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" class="snake"/>
-<g transform="translate(64 70)"><rect x="-34" y="-34" width="68" height="68" rx="18" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".35"/><clipPath id="sh"><path d="M0 -26 L22 -17 V0 Q22 18 0 27 Q-22 18 -22 0 V-17 Z"/></clipPath><path d="M0 -26 L22 -17 V0 Q22 18 0 27 Q-22 18 -22 0 V-17 Z" fill="url(#ac)"/><g clip-path="url(#sh)"><rect x="-24" y="-30" width="48" height="5" fill="#fff" opacity=".7" class="scanY"/></g><path d="M-8 1 L-2 7 L10 -6" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
-<text x="118" y="66" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="32" font-weight="800" fill="#f8fafc">Sylon</text>
-<text x="118" y="94" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" fill="#22d3ee">↗ sylon.app</text>
-<g transform="translate(504 44)"><rect width="66" height="26" rx="13" fill="#052e16" stroke="#4ade80" stroke-opacity=".5"/><circle cx="16" cy="13" r="4" fill="#4ade80" class="live"/><text x="27" y="17.5" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#86efac" letter-spacing="1">LIVE</text></g>
-<text x="34" y="140" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#e2e8f0">AI-powered Discord moderation</text>
-<text x="34" y="168" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">Catches ads, invites &amp; scams in any language —</text>
-<text x="34" y="192" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">even text hidden inside images. Tickets, anti-</text>
-<text x="34" y="216" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">raid, leveling, giveaways &amp; a web dashboard.</text>
-<line x1="34" y1="240" x2="566" y2="240" stroke="#1e293b"/>
-<g class="rise" style="animation-delay:0.30s"><text x="34.0" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">33K+</text><text x="34.0" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">USERS</text></g>
-<g class="rise" style="animation-delay:0.45s"><text x="211.33333333333334" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">AI</text><text x="211.33333333333334" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">VISION</text></g>
-<g class="rise" style="animation-delay:0.60s"><text x="388.6666666666667" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">99.9%</text><text x="388.6666666666667" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">UPTIME</text></g>
-<rect x="34" y="314" width="75" height="24" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee" stroke-opacity=".3"/><text x="71.6" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">Node.js</text>
-<rect x="117.19999999999999" y="314" width="106" height="24" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee" stroke-opacity=".3"/><text x="170.0" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">Discord API</text>
-<rect x="230.79999999999998" y="314" width="75" height="24" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee" stroke-opacity=".3"/><text x="268.4" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">MongoDB</text>
-<rect x="314.0" y="314" width="60" height="24" rx="12" fill="#22d3ee" fill-opacity=".08" stroke="#22d3ee" stroke-opacity=".3"/><text x="344.0" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">AI/ML</text>
+@keyframes eq{from{transform:scaleY(.3)}to{transform:scaleY(1)}}</style>
+<rect x="2" y="2" width="596" height="226" rx="20" fill="#0a1628" stroke="#14304f" stroke-width="2"/>
+<rect x="2" y="2" width="596" height="226" rx="20" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" class="run"/>
+<g transform="translate(58 60)"><rect x="-28" y="-28" width="56" height="56" rx="14" fill="#38bdf8" fill-opacity=".1"/><path d="M0 -19 L16 -12 V0 Q16 13 0 20 Q-16 13 -16 0 V-12 Z" fill="#38bdf8"/><path d="M-6 1 L-1.5 5.5 L7 -4" stroke="#07111f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="104" y="56" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="28" font-weight="700" fill="#f0f9ff">Sylon</text>
+<text x="104" y="82" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" fill="#38bdf8">sylon.app</text>
+<text x="30" y="128" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17" fill="#7b93ad">AI moderation for Discord that catches ads</text>
+<text x="30" y="153" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17" fill="#7b93ad">and scams in any language, even in images.</text>
+<text x="30" y="200" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17"><tspan font-weight="700" fill="#bae6fd">33K+</tspan><tspan fill="#7b93ad"> users</tspan></text>
+<text x="210" y="200" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17"><tspan font-weight="700" fill="#bae6fd">99.9%</tspan><tspan fill="#7b93ad"> uptime</tspan></text>
 </svg>
