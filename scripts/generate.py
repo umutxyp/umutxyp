@@ -14,17 +14,24 @@ OUT = ROOT / "assets"
 
 NAME = "Umut Bayraktar"
 ROLES = [
+    "Founder & CEO @ Codeshare Technology",
     "Full-Stack Developer",
     "AI Systems Researcher",
-    "Building Beatra · MCStat · JustDiscord",
 ]
 
 STATS = [
-    ("2.1M+", "Discord users"),
-    ("250K+", "daily players"),
-    ("16K+", "listings"),
+    ("2.1M+", "Beatra users"),
+    ("250K", "daily players on MCStat"),
+    ("6", "products shipped"),
     ("44K+", "followers"),
 ]
+
+STUDIO = dict(
+    title="Codeshare Technology", url="codeshare.me",
+    tag="Software studio · London",
+    desc="Software for online communities — with the core kept free.",
+    products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai"],
+)
 
 PROJECTS = {
     "mcstat": dict(
@@ -43,13 +50,25 @@ PROJECTS = {
         title="JustDiscord", url="justdiscord.org",
         desc=["Discord server & bot list built on trust —",
               "real reviews, verified owners, free emojis."],
-        stats=[("16K+", "listings"), ("91K", "emojis")],
+        stats=[("16K+", "listings"), ("91K+", "emojis")],
     ),
     "sylon": dict(
         title="Sylon", url="sylon.app",
         desc=["AI moderation for Discord that catches ads",
               "and scams in any language, even in images."],
         stats=[("33K+", "users"), ("99.9%", "uptime")],
+    ),
+    "justanime": dict(
+        title="JustAnime", url="justanime.me",
+        desc=["Anime & manga tracker where every single",
+              "episode gets its own rating and review."],
+        stats=[("200+", "sites synced"), ("AniList", "& MAL sync")],
+    ),
+    "dotrai": dict(
+        title="Dotrai", url="dotrai.com",
+        desc=["Free AI chat that searches the live web,",
+              "runs real code and shows its reasoning."],
+        stats=[("Free", "no card needed"), ("Live", "web search")],
     ),
 }
 
@@ -82,6 +101,22 @@ def write(name, content):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
     print(f"  ✓ {path.relative_to(ROOT)}")
+
+
+def logo(key):
+    """Original logo from assets/logos, embedded so it renders inside an <img>."""
+    data = base64.b64encode((OUT / "logos" / f"{key}.png").read_bytes()).decode()
+    return f"data:image/png;base64,{data}"
+
+
+def running_border(w, h, rx, dash, dur):
+    """A thin card border with a short blue light travelling around it."""
+    per = 2 * (w - 4 + h - 4)
+    body = (f'<rect x="2" y="2" width="{w - 4}" height="{h - 4}" rx="{rx}" fill="{CARD}" stroke="{LINE}" stroke-width="2"/>\n'
+            f'<rect x="2" y="2" width="{w - 4}" height="{h - 4}" rx="{rx}" stroke="{BLUE}" stroke-width="2" stroke-linecap="round" class="run"/>')
+    style = (f'.run{{stroke-dasharray:{dash} {per - dash};animation:run {dur}s linear infinite}}\n'
+             f'@keyframes run{{to{{stroke-dashoffset:-{per}}}}}')
+    return body, style
 
 
 FADE_UP = '''.up{opacity:0;animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
@@ -147,20 +182,34 @@ def stats():
     write("stats.svg", svg(W, H, "\n".join(out), FADE_UP))
 
 
+# ────────────────────────────── STUDIO ──────────────────────────────
+
+def studio():
+    W, H = 1200, 200
+    p = STUDIO
+    border, style = running_border(W, H, 22, 220, 10)
+    out = [border, f'''<image href="{logo("codeshare")}" x="40" y="44" width="104" height="112"/>
+<text x="176" y="80" font-family="{SANS}" font-size="34" font-weight="800" fill="#f0f9ff">{esc(p["title"])}</text>
+<text x="176" y="112" font-family="{MONO}" font-size="16" fill="{BLUE}">{esc(p["url"])}<tspan fill="{MUTED}">  ·  {esc(p["tag"])}</tspan></text>
+<text x="176" y="148" font-family="{SANS}" font-size="18" fill="{MUTED}">{esc(p["desc"])}</text>''']
+    half = (len(p["products"]) + 1) // 2
+    for r, row in enumerate([p["products"][:half], p["products"][half:]]):
+        x = W - 40
+        for name in reversed(row):
+            w = len(name) * 9 + 28
+            x -= w
+            out.append(f'<rect x="{x}" y="{58 + r * 46}" width="{w}" height="32" rx="16" fill="{BLUE}" fill-opacity=".1" stroke="{LINE}"/>'
+                       f'<text x="{x + w / 2}" y="{79 + r * 46}" text-anchor="middle" font-family="{SANS}" font-size="15" fill="{BLUE_L}">{esc(name)}</text>')
+            x -= 10
+    write("studio.svg", svg(W, H, "\n".join(out), style))
+
+
 # ───────────────────────────── PROJECTS ─────────────────────────────
-
-def logo(key):
-    """Original project logo from assets/logos, embedded so it renders inside an <img>."""
-    data = base64.b64encode((OUT / "logos" / f"{key}.png").read_bytes()).decode()
-    return f"data:image/png;base64,{data}"
-
 
 def project(key, p):
     W, H = 600, 230
-    per = 2 * (W - 4 + H - 4)
-    out = [f'''<rect x="2" y="2" width="{W - 4}" height="{H - 4}" rx="20" fill="{CARD}" stroke="{LINE}" stroke-width="2"/>
-<rect x="2" y="2" width="{W - 4}" height="{H - 4}" rx="20" stroke="{BLUE}" stroke-width="2" stroke-linecap="round" class="run"/>
-<clipPath id="lc"><rect x="26" y="26" width="64" height="64" rx="16"/></clipPath>
+    border, style = running_border(W, H, 20, 140, 8)
+    out = [border, f'''<clipPath id="lc"><rect x="26" y="26" width="64" height="64" rx="16"/></clipPath>
 <image href="{logo(key)}" x="26" y="26" width="64" height="64" clip-path="url(#lc)"/>
 <text x="108" y="56" font-family="{SANS}" font-size="28" font-weight="700" fill="#f0f9ff">{esc(p["title"])}</text>
 <text x="108" y="82" font-family="{MONO}" font-size="15" fill="{BLUE}">{esc(p["url"])}</text>''']
@@ -170,9 +219,7 @@ def project(key, p):
     for v, l in p["stats"]:
         out.append(f'<text x="{x}" y="{H - 30}" font-family="{SANS}" font-size="17"><tspan font-weight="700" fill="{BLUE_L}">{esc(v)}</tspan>'
                    f'<tspan fill="{MUTED}"> {esc(l)}</tspan></text>')
-        x += 180
-    style = f'''.run{{stroke-dasharray:140 {per - 140};animation:run 8s linear infinite}}
-@keyframes run{{to{{stroke-dashoffset:-{per}}}}}'''
+        x += 200
     write(f"projects/{key}.svg", svg(W, H, "\n".join(out), style))
 
 
@@ -180,6 +227,7 @@ if __name__ == "__main__":
     print("Generating assets…")
     hero()
     stats()
+    studio()
     for k, v in PROJECTS.items():
         project(k, v)
     print("Done.")

@@ -26,7 +26,7 @@
   </g>
   <rect width="1200" height="320" fill="url(#dots)" mask="url(#m)"/>
   <text class="up" x="600.0" y="152" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="76" font-weight="800" letter-spacing="1" fill="url(#name)">Umut Bayraktar</text>
-  <g class="up" style="animation-delay:.3s" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" fill="#bae6fd"><text class="role" x="600.0" y="214" text-anchor="middle" style="animation-delay:0s;animation-duration:9s">Full-Stack Developer</text><text class="role" x="600.0" y="214" text-anchor="middle" style="animation-delay:3s;animation-duration:9s">AI Systems Researcher</text><text class="role" x="600.0" y="214" text-anchor="middle" style="animation-delay:6s;animation-duration:9s">Building Beatra · MCStat · JustDiscord</text></g>
+  <g class="up" style="animation-delay:.3s" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="22" fill="#bae6fd"><text class="role" x="600.0" y="214" text-anchor="middle" style="animation-delay:0s;animation-duration:9s">Founder &amp; CEO @ Codeshare Technology</text><text class="role" x="600.0" y="214" text-anchor="middle" style="animation-delay:3s;animation-duration:9s">Full-Stack Developer</text><text class="role" x="600.0" y="214" text-anchor="middle" style="animation-delay:6s;animation-duration:9s">AI Systems Researcher</text></g>
   <rect width="1200" height="320" rx="24" stroke="#14304f" stroke-width="2"/>
 </g>
 </svg>
