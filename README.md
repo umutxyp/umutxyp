@@ -20,7 +20,7 @@
 
 I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the London software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime and Dotrai. The core of every product stays free, and I run all of it on my own infrastructure.
 
-<img width="100%" src="./assets/stats.svg" alt="2.1M+ Beatra users · 250K daily players on MCStat · 6 products · 44K+ followers" />
+<img width="100%" src="./assets/stats.svg" alt="3M+ Beatra users · 40K+ Discord servers · 463K MCStat player records · 44K+ followers" />
 
 ### 🚀 Projects
 

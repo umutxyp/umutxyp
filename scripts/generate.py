@@ -20,9 +20,9 @@ ROLES = [
 ]
 
 STATS = [
-    ("2.1M+", "Beatra users"),
-    ("250K", "daily players on MCStat"),
-    ("6", "products shipped"),
+    ("3M+", "Beatra users"),
+    ("40K+", "Discord servers"),
+    ("463K", "MCStat player records"),
     ("44K+", "followers"),
 ]
 
@@ -38,37 +38,37 @@ PROJECTS = {
         title="MCStat", url="mcstat.org",
         desc=["Real-time Minecraft server list with live player",
               "counts, vote rankings and 50K+ player profiles."],
-        stats=[("6.7K", "servers"), ("250K", "daily peak")],
+        stats=[("6,752", "servers"), ("463K", "player records"), ("428K", "skins")],
     ),
     "beatra": dict(
         title="Beatra", url="beatra.app",
         desc=["Music bot for Discord, web and desktop —",
               "Spotify, YouTube, Apple Music and more."],
-        stats=[("32.8K", "servers"), ("2.1M+", "users")],
+        stats=[("40K+", "servers"), ("3M+", "users")],
     ),
     "justdiscord": dict(
         title="JustDiscord", url="justdiscord.org",
         desc=["Discord server & bot list built on trust —",
               "real reviews, verified owners, free emojis."],
-        stats=[("16K+", "listings"), ("91K+", "emojis")],
+        stats=[("2,835", "servers"), ("8,198", "bots"), ("96.8K", "emojis")],
     ),
     "sylon": dict(
         title="Sylon", url="sylon.app",
         desc=["AI moderation for Discord that catches ads",
               "and scams in any language, even in images."],
-        stats=[("33K+", "users"), ("99.9%", "uptime")],
+        stats=[("500+", "servers"), ("300K+", "users")],
     ),
     "justanime": dict(
         title="JustAnime", url="justanime.me",
         desc=["Anime & manga tracker where every single",
               "episode gets its own rating and review."],
-        stats=[("200+", "sites synced"), ("AniList", "& MAL sync")],
+        stats=[("123K", "titles"), ("176K", "characters"), ("1,190", "airing")],
     ),
     "dotrai": dict(
         title="Dotrai", url="dotrai.com",
         desc=["Free AI chat that searches the live web,",
               "runs real code and shows its reasoning."],
-        stats=[("Free", "no card needed"), ("Live", "web search")],
+        stats=[],
     ),
 }
 
@@ -215,11 +215,9 @@ def project(key, p):
 <text x="108" y="82" font-family="{MONO}" font-size="15" fill="{BLUE}">{esc(p["url"])}</text>''']
     for k, line in enumerate(p["desc"]):
         out.append(f'<text x="30" y="{134 + k * 25}" font-family="{SANS}" font-size="17" fill="{MUTED}">{esc(line)}</text>')
-    x = 30
-    for v, l in p["stats"]:
-        out.append(f'<text x="{x}" y="{H - 30}" font-family="{SANS}" font-size="17"><tspan font-weight="700" fill="{BLUE_L}">{esc(v)}</tspan>'
+    for k, (v, l) in enumerate(p["stats"]):
+        out.append(f'<text x="{30 + k * 186}" y="{H - 30}" font-family="{SANS}" font-size="17"><tspan font-weight="700" fill="{BLUE_L}">{esc(v)}</tspan>'
                    f'<tspan fill="{MUTED}"> {esc(l)}</tspan></text>')
-        x += 200
     write(f"projects/{key}.svg", svg(W, H, "\n".join(out), style))
 
 
