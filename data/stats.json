@@ -1,0 +1,44 @@
+{
+  "updated": "2026-10-01",
+  "pages": {
+    "home": {
+      "Products live": "6",
+      "Discord servers": "41.1K",
+      "Discord users reached": "2.9M",
+      "Minecraft players": "463K"
+    },
+    "about": {
+      "Products live": "6",
+      "Discord users reached": "2.9M",
+      "Oldest account we own": "2020",
+      "Company incorporated": "2025"
+    },
+    "beatra": {
+      "Discord servers": "40.6K",
+      "Discord users": "2.7M",
+      "Playing right now": "80"
+    },
+    "sylon": {
+      "Discord servers": "490",
+      "Discord users": "257K",
+      "Uptime": "99.9%"
+    },
+    "mcstat": {
+      "Servers tracked": "6,752",
+      "Player records": "463K",
+      "Skins archived": "428K",
+      "Capes archived": "73.0K"
+    },
+    "justdiscord": {
+      "Server listings": "2,835",
+      "Bot listings": "8,198",
+      "Emojis and stickers": "96.8K",
+      "Unique visitors": "18.4K"
+    },
+    "justanime": {
+      "Anime and manga titles": "123K",
+      "Character records": "176K",
+      "Airing schedule entries": "1,190"
+    }
+  }
+}
