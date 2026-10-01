@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="366" viewBox="0 0 600 366" fill="none">
+<style>.snake{stroke-dasharray:180 1736;animation:snake 7s linear infinite}
+@keyframes snake{to{stroke-dashoffset:-1916}}
+.eq{transform-box:fill-box;transform-origin:center bottom;animation:eq .8s ease-in-out infinite alternate}
+@keyframes eq{0%{transform:scaleY(.25)}100%{transform:scaleY(1)}}
+.float{animation:fl 3s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-4px)}}
+.spin{transform-box:fill-box;transform-origin:center;animation:spin 4s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes spin{0%,40%{transform:translate(0,-6px) rotate(0)}60%,100%{transform:translate(0,-6px) rotate(144deg)}}
+.scanY{animation:sy 2.4s ease-in-out infinite}
+@keyframes sy{0%{transform:translateY(0)}50%{transform:translateY(55px)}100%{transform:translateY(0)}}
+.live{animation:live 1.4s ease-in-out infinite}
+@keyframes live{50%{opacity:.25}}
+.rise{opacity:0;animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}</style>
+<defs>
+  <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c084fc"/><stop offset="1" stop-color="#db2777"/></linearGradient>
+  <radialGradient id="glow" cx="0.12" cy="0.1" r="0.8"><stop offset="0" stop-color="#c084fc" stop-opacity=".22"/><stop offset="1" stop-color="#c084fc" stop-opacity="0"/></radialGradient>
+  <linearGradient id="run" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c084fc" stop-opacity="0"/><stop offset=".5" stop-color="#c084fc"/><stop offset="1" stop-color="#db2777"/></linearGradient>
+  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#94a3b8" fill-opacity=".12"/></pattern>
+</defs>
+<rect x="2" y="2" width="596" height="362" rx="22" fill="#0a0f1a"/>
+<rect x="2" y="2" width="596" height="362" rx="22" fill="url(#dots)"/>
+<rect x="2" y="2" width="596" height="362" rx="22" fill="url(#glow)"/>
+<rect x="2" y="2" width="596" height="362" rx="22" stroke="#1e293b" stroke-width="2"/>
+<rect x="2" y="2" width="596" height="362" rx="22" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round" class="snake"/>
+<g transform="translate(64 70)"><rect x="-34" y="-34" width="68" height="68" rx="18" fill="#c084fc" fill-opacity=".1" stroke="#c084fc" stroke-opacity=".35"/><rect x="-22" y="-18" width="6" height="36" rx="3" fill="url(#ac)" class="eq" style="animation-duration:0.70s;animation-delay:-0.00s"/><rect x="-12" y="-18" width="6" height="36" rx="3" fill="url(#ac)" class="eq" style="animation-duration:0.83s;animation-delay:-0.17s"/><rect x="-2" y="-18" width="6" height="36" rx="3" fill="url(#ac)" class="eq" style="animation-duration:0.96s;animation-delay:-0.34s"/><rect x="8" y="-18" width="6" height="36" rx="3" fill="url(#ac)" class="eq" style="animation-duration:1.09s;animation-delay:-0.51s"/><rect x="18" y="-18" width="6" height="36" rx="3" fill="url(#ac)" class="eq" style="animation-duration:1.22s;animation-delay:-0.68s"/></g>
+<text x="118" y="66" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="32" font-weight="800" fill="#f8fafc">Beatra</text>
+<text x="118" y="94" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" fill="#c084fc">↗ beatra.app</text>
+<g transform="translate(504 44)"><rect width="66" height="26" rx="13" fill="#052e16" stroke="#4ade80" stroke-opacity=".5"/><circle cx="16" cy="13" r="4" fill="#4ade80" class="live"/><text x="27" y="17.5" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#86efac" letter-spacing="1">LIVE</text></g>
+<text x="34" y="140" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#e2e8f0">Multi-platform music for Discord</text>
+<text x="34" y="168" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">Discord, web, desktop &amp; Activities. YouTube,</text>
+<text x="34" y="192" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">Spotify, Apple Music, Deezer, Tidal and more —</text>
+<text x="34" y="216" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">smart autoplay, filters &amp; Beatra Wrapped.</text>
+<line x1="34" y1="240" x2="566" y2="240" stroke="#1e293b"/>
+<g class="rise" style="animation-delay:0.30s"><text x="34.0" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">32.8K</text><text x="34.0" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">SERVERS</text></g>
+<g class="rise" style="animation-delay:0.45s"><text x="211.33333333333334" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">2.1M+</text><text x="211.33333333333334" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">USERS</text></g>
+<g class="rise" style="animation-delay:0.60s"><text x="388.6666666666667" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">99%</text><text x="388.6666666666667" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">UPTIME</text></g>
+<rect x="34" y="314" width="98" height="24" rx="12" fill="#c084fc" fill-opacity=".08" stroke="#c084fc" stroke-opacity=".3"/><text x="83.0" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">Discord.js</text>
+<rect x="140.0" y="314" width="60" height="24" rx="12" fill="#c084fc" fill-opacity=".08" stroke="#c084fc" stroke-opacity=".3"/><text x="170.0" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">React</text>
+<rect x="208.0" y="314" width="83" height="24" rx="12" fill="#c084fc" fill-opacity=".08" stroke="#c084fc" stroke-opacity=".3"/><text x="249.4" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">Electron</text>
+<rect x="298.8" y="314" width="83" height="24" rx="12" fill="#c084fc" fill-opacity=".08" stroke="#c084fc" stroke-opacity=".3"/><text x="340.2" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">Lavalink</text>
+</svg>
