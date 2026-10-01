@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="84" viewBox="0 0 1200 84" fill="none">
+<style>.f{opacity:0;animation:f .7s ease forwards}
+@keyframes f{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:none}}
+.draw{stroke-dasharray:617;stroke-dashoffset:617;animation:dr 1.4s .4s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes dr{to{stroke-dashoffset:0}}</style>
+<rect x="1" y="1" width="1198" height="82" rx="18" fill="#0a0f1a" stroke="#1e293b" stroke-width="1.5"/>
+<g transform="translate(28 0)">
+<defs>
+  <linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6" stop-opacity="0"/></linearGradient>
+  <linearGradient id="tx" x1="0" x2="1"><stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#a5b4fc"/></linearGradient>
+</defs>
+<text x="2" y="52" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="20" fill="#f472b6" class="f" style="animation-delay:0s">05</text>
+<text x="40" y="52" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="20" fill="#475569" class="f" style="animation-delay:.1s">/</text>
+<text x="64" y="54" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="4" fill="url(#tx)" class="f" style="animation-delay:.2s">OPEN SOURCE</text>
+<line x1="293" y1="44" x2="910" y2="44" stroke="url(#ln)" stroke-width="2" class="draw"/>
+<circle r="3.5" cy="44" fill="#fff" class="dot" style="filter:drop-shadow(0 0 6px #22d3ee)"><animate attributeName="cx" values="293;910" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+<text x="1140" y="50" text-anchor="end" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="16" fill="#64748b" class="f" style="animation-delay:.5s">// free for everyone</text>
+</g>
+</svg>

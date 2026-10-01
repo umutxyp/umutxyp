@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="366" viewBox="0 0 600 366" fill="none">
+<style>.snake{stroke-dasharray:180 1736;animation:snake 7s linear infinite}
+@keyframes snake{to{stroke-dashoffset:-1916}}
+.eq{transform-box:fill-box;transform-origin:center bottom;animation:eq .8s ease-in-out infinite alternate}
+@keyframes eq{0%{transform:scaleY(.25)}100%{transform:scaleY(1)}}
+.float{animation:fl 3s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-4px)}}
+.spin{transform-box:fill-box;transform-origin:center;animation:spin 4s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes spin{0%,40%{transform:translate(0,-6px) rotate(0)}60%,100%{transform:translate(0,-6px) rotate(144deg)}}
+.scanY{animation:sy 2.4s ease-in-out infinite}
+@keyframes sy{0%{transform:translateY(0)}50%{transform:translateY(55px)}100%{transform:translateY(0)}}
+.live{animation:live 1.4s ease-in-out infinite}
+@keyframes live{50%{opacity:.25}}
+.rise{opacity:0;animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}</style>
+<defs>
+  <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ade80"/><stop offset="1" stop-color="#16a34a"/></linearGradient>
+  <radialGradient id="glow" cx="0.12" cy="0.1" r="0.8"><stop offset="0" stop-color="#4ade80" stop-opacity=".22"/><stop offset="1" stop-color="#4ade80" stop-opacity="0"/></radialGradient>
+  <linearGradient id="run" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4ade80" stop-opacity="0"/><stop offset=".5" stop-color="#4ade80"/><stop offset="1" stop-color="#16a34a"/></linearGradient>
+  <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#94a3b8" fill-opacity=".12"/></pattern>
+</defs>
+<rect x="2" y="2" width="596" height="362" rx="22" fill="#0a0f1a"/>
+<rect x="2" y="2" width="596" height="362" rx="22" fill="url(#dots)"/>
+<rect x="2" y="2" width="596" height="362" rx="22" fill="url(#glow)"/>
+<rect x="2" y="2" width="596" height="362" rx="22" stroke="#1e293b" stroke-width="2"/>
+<rect x="2" y="2" width="596" height="362" rx="22" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" class="snake"/>
+<g transform="translate(64 70)"><rect x="-34" y="-34" width="68" height="68" rx="18" fill="#4ade80" fill-opacity=".1" stroke="#4ade80" stroke-opacity=".35"/><g class="float"><path d="M0 -24 L22 -12 L0 0 L-22 -12 Z" fill="url(#ac)"/><path d="M-22 -12 L0 0 L0 24 L-22 12 Z" fill="#16a34a"/><path d="M22 -12 L0 0 L0 24 L22 12 Z" fill="#4ade80" fill-opacity=".55"/><path d="M-11 -18 L0 -12 L11 -18" stroke="#052e16" stroke-opacity=".35" stroke-width="2"/></g></g>
+<text x="118" y="66" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="32" font-weight="800" fill="#f8fafc">MCStat</text>
+<text x="118" y="94" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="15" fill="#4ade80">↗ mcstat.org</text>
+<g transform="translate(504 44)"><rect width="66" height="26" rx="13" fill="#052e16" stroke="#4ade80" stroke-opacity=".5"/><circle cx="16" cy="13" r="4" fill="#4ade80" class="live"/><text x="27" y="17.5" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#86efac" letter-spacing="1">LIVE</text></g>
+<text x="34" y="140" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17" font-weight="700" fill="#e2e8f0">Minecraft server &amp; player platform</text>
+<text x="34" y="168" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">Real-time server list with live player counts,</text>
+<text x="34" y="192" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">uptime history, vote rankings &amp; 50K+ player</text>
+<text x="34" y="216" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="16.5" fill="#94a3b8">profiles. A signed-telemetry plugin feeds it.</text>
+<line x1="34" y1="240" x2="566" y2="240" stroke="#1e293b"/>
+<g class="rise" style="animation-delay:0.30s"><text x="34.0" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">6.7K</text><text x="34.0" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">SERVERS</text></g>
+<g class="rise" style="animation-delay:0.45s"><text x="211.33333333333334" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">227K</text><text x="211.33333333333334" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">ONLINE NOW</text></g>
+<g class="rise" style="animation-delay:0.60s"><text x="388.6666666666667" y="268" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="24" font-weight="800" fill="url(#ac)">250K</text><text x="388.6666666666667" y="290" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1" fill="#64748b">DAILY PEAK</text></g>
+<rect x="34" y="314" width="75" height="24" rx="12" fill="#4ade80" fill-opacity=".08" stroke="#4ade80" stroke-opacity=".3"/><text x="71.6" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">Next.js</text>
+<rect x="117.19999999999999" y="314" width="98" height="24" rx="12" fill="#4ade80" fill-opacity=".08" stroke="#4ade80" stroke-opacity=".3"/><text x="166.2" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">TypeScript</text>
+<rect x="223.2" y="314" width="98" height="24" rx="12" fill="#4ade80" fill-opacity=".08" stroke="#4ade80" stroke-opacity=".3"/><text x="272.2" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">PostgreSQL</text>
+<rect x="329.2" y="314" width="60" height="24" rx="12" fill="#4ade80" fill-opacity=".08" stroke="#4ade80" stroke-opacity=".3"/><text x="359.2" y="330.5" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', 'Cascadia Code', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#cbd5e1">Redis</text>
+</svg>
