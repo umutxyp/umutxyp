@@ -43,7 +43,3 @@ I'm **Umut**, a full-stack developer from Turkey. I build and run high-traffic w
 | [Personal-Website](https://github.com/umutxyp/Personal-Website) | Clean Next.js developer portfolio |
 | [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows |
 | [slash-command-bot](https://github.com/umutxyp/slash-command-bot) | discord.js v14 slash-command boilerplate |
-
-### 📈 Activity
-
-<img width="100%" src="https://raw.githubusercontent.com/umutxyp/umutxyp/output/snake.svg" alt="contribution snake" />
