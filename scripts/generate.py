@@ -5,10 +5,20 @@ Edit the DATA section below, then run:  python3 scripts/generate.py
 All files are written to ./assets.
 """
 import base64
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets"
+
+# Live numbers scraped from codeshare.me by scripts/fetch_stats.py.
+# A stat written as ("page", "Label on codeshare.me") is looked up there;
+# a plain string is used as is.
+LIVE = json.loads((ROOT / "data" / "stats.json").read_text())["pages"]
+
+
+def live(v):
+    return LIVE[v[0]][v[1]] if isinstance(v, tuple) else v
 
 # ─────────────────────────────── DATA ───────────────────────────────
 
@@ -20,9 +30,9 @@ ROLES = [
 ]
 
 STATS = [
-    ("3M+", "Beatra users"),
-    ("40K+", "Discord servers"),
-    ("463K", "MCStat player records"),
+    (("home", "Discord users reached"), "Discord users reached"),
+    (("home", "Discord servers"), "Discord servers"),
+    (("home", "Minecraft players"), "Minecraft players"),
     ("44K+", "followers"),
 ]
 
@@ -31,8 +41,10 @@ STUDIO = dict(
     tag="Software studio · London",
     desc="Software for online communities — with the core kept free.",
     products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai"],
-    stats=[("6", "products live"), ("2.9M", "Discord users reached"),
-           ("2020", "oldest account"), ("2025", "incorporated")],
+    stats=[(("about", "Products live"), "products live"),
+           (("about", "Discord users reached"), "Discord users reached"),
+           (("about", "Oldest account we own"), "oldest account"),
+           (("about", "Company incorporated"), "incorporated")],
 )
 
 PROJECTS = {
@@ -40,31 +52,35 @@ PROJECTS = {
         title="MCStat", url="mcstat.org",
         desc=["Real-time Minecraft server list with live player",
               "counts, vote rankings and 50K+ player profiles."],
-        stats=[("6,752", "servers"), ("463K", "player records"), ("428K", "skins")],
+        stats=[(("mcstat", "Servers tracked"), "servers"), (("mcstat", "Player records"), "player records"),
+               (("mcstat", "Skins archived"), "skins")],
     ),
     "beatra": dict(
         title="Beatra", url="beatra.app",
         desc=["Music bot for Discord, web and desktop —",
               "Spotify, YouTube, Apple Music and more."],
-        stats=[("40K+", "servers"), ("3M+", "users")],
+        stats=[(("beatra", "Discord servers"), "servers"), (("beatra", "Discord users"), "users")],
     ),
     "justdiscord": dict(
         title="JustDiscord", url="justdiscord.org",
         desc=["Discord server & bot list built on trust —",
               "real reviews, verified owners, free emojis."],
-        stats=[("2,835", "servers"), ("8,198", "bots"), ("96.8K", "emojis")],
+        stats=[(("justdiscord", "Server listings"), "servers"), (("justdiscord", "Bot listings"), "bots"),
+               (("justdiscord", "Emojis and stickers"), "emojis")],
     ),
     "sylon": dict(
         title="Sylon", url="sylon.app",
         desc=["AI moderation for Discord that catches ads",
               "and scams in any language, even in images."],
-        stats=[("500+", "servers"), ("300K+", "users")],
+        stats=[(("sylon", "Discord servers"), "servers"), (("sylon", "Discord users"), "users"),
+               (("sylon", "Uptime"), "uptime")],
     ),
     "justanime": dict(
         title="JustAnime", url="justanime.me",
         desc=["Anime & manga tracker where every single",
               "episode gets its own rating and review."],
-        stats=[("123K", "titles"), ("176K", "characters"), ("1,190", "airing")],
+        stats=[(("justanime", "Anime and manga titles"), "titles"), (("justanime", "Character records"), "characters"),
+               (("justanime", "Airing schedule entries"), "airing")],
     ),
     "dotrai": dict(
         title="Dotrai", url="dotrai.com",
@@ -175,6 +191,7 @@ def stats():
     cw = (W - gap * (n - 1)) / n
     out = []
     for i, (val, label) in enumerate(STATS):
+        val = live(val)
         x = i * (cw + gap)
         out.append(f'''<g class="up" style="animation-delay:{i * .12:.2f}s">
   <rect x="{x + 1:.1f}" y="1" width="{cw - 2:.1f}" height="{H - 2}" rx="18" fill="{CARD}" stroke="{LINE}" stroke-width="1.5"/>
@@ -206,6 +223,7 @@ def studio():
     out.append(f'<line x1="40" y1="186" x2="{W - 40}" y2="186" stroke="{LINE}"/>')
     cw = (W - 80) / len(p["stats"])
     for k, (v, l) in enumerate(p["stats"]):
+        v = live(v)
         out.append(f'<text x="{40 + k * cw}" y="226" font-family="{SANS}" font-size="20"><tspan font-weight="800" fill="{BLUE}">{esc(v)}</tspan>'
                    f'<tspan fill="{MUTED}" font-size="16">  {esc(l)}</tspan></text>')
     write("studio.svg", svg(W, H, "\n".join(out), style))
@@ -223,6 +241,7 @@ def project(key, p):
     for k, line in enumerate(p["desc"]):
         out.append(f'<text x="30" y="{134 + k * 25}" font-family="{SANS}" font-size="17" fill="{MUTED}">{esc(line)}</text>')
     for k, (v, l) in enumerate(p["stats"]):
+        v = live(v)
         out.append(f'<text x="{30 + k * 186}" y="{H - 30}" font-family="{SANS}" font-size="17"><tspan font-weight="700" fill="{BLUE_L}">{esc(v)}</tspan>'
                    f'<tspan fill="{MUTED}"> {esc(l)}</tspan></text>')
     write(f"projects/{key}.svg", svg(W, H, "\n".join(out), style))
