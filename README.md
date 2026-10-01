@@ -45,7 +45,7 @@
 ```yaml
 name       : Umut Bayraktar  (@umutxyp)
 born       : Sep 15, 2005  🇹🇷  Antalya, Turkey
-role       : Founder @ Codeshare Technology
+role       : Founder & CEO @ Codeshare Technology Ltd (London)
              Full-Stack Developer · AI Systems Researcher · Content Creator
 focus      :
   - Full-Stack Web Development (Next.js · React · Node.js · PostgreSQL · MongoDB)
@@ -63,10 +63,10 @@ website    : https://umutbayraktar.vercel.app
 
 <div align="center">
 
-| 🎵 Beatra | 🟩 MCStat | 💬 JustDiscord | 🛒 Codeshare | 📣 Social |
-|:---:|:---:|:---:|:---:|:---:|
-| **2.1M+** Discord users | **250K+** players/day | **16K+** listings | **13K+** snippets | **44K+** followers |
-| **32.8K** servers | **6.7K** servers | **91K+** emojis | **10K+** users | **6+ yrs** experience |
+| 🏢 Codeshare | 🎵 Beatra | 🟩 MCStat | 💬 JustDiscord | 🤖 Sylon | 📣 Social |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **6** products | **2.1M+** Discord users | **250K+** players/day | **16K+** listings | **33K+** users | **44K+** followers |
+| London studio | **32.8K** servers | **6.7K** servers | **91K+** emojis | **69+** servers | **6+ yrs** experience |
 
 </div>
 
@@ -96,6 +96,12 @@ website    : https://umutbayraktar.vercel.app
 
 ---
 
+## 🏢 Codeshare Technology
+
+> [**Codeshare Technology Ltd**](https://codeshare.me) is the London software studio I founded and run. We build software for online communities and keep the core of it free — six products, every one self-hosted. Started in 2019 as a Discord community for developers; the codeshare.me developer marketplace that grew out of it was retired on **14 September 2026**, and the domain now serves the company site.
+
+---
+
 ## 🚀 Projects
 
 > Ordered by live traffic — most-visited first. Numbers are current as of **August 2026**.
@@ -121,17 +127,24 @@ website    : https://umutbayraktar.vercel.app
 
 ---
 
-### 🛒 [Codeshare](https://codeshare.me) — Digital Marketplace for Developers
-> Full-stack marketplace for buying, selling and sharing code snippets, game top-ups, gift cards, software licenses, accounts and freelance digital services. Escrow protection on every order, verified sellers, instant auto-delivery, YouTube-subscriber gating, real-time chat, and a [developer CLI](https://github.com/codeshareme/codeshare-cli) that version-controls snippets from the terminal.
-
-`Next.js` `TypeScript` `PostgreSQL` `Node.js` `Payments` · **10K+ users · 13.9K+ snippets · 30+ categories**
-
----
-
 ### 🤖 [Sylon](https://sylon.app) — AI-Powered Discord Moderation Bot
 > AI moderation that catches ads, invite links and scams in any language — including text hidden inside images. Full moderation suite with cases and logs, ticket system with HTML transcripts, server guard, anti-raid/anti-spam, leveling with custom rank cards, giveaways, role menus, welcome automation and a web dashboard.
 
 `Discord API` `Node.js` `MongoDB` `AI/ML` · **69+ servers · 33K+ users · 99.9% uptime**
+
+---
+
+### 🎌 [JustAnime](https://justanime.me) — Anime & Manga Tracker
+> Track what you watch and read, rate and review every single episode, follow studios and people, browse trending titles and a seasonal calendar. The **JustAnime Sync** extension for Chrome and Firefox marks episodes and chapters as you watch or read on 200+ streaming and reading sites — and mirrors them to linked AniList and MyAnimeList accounts.
+
+`Web` `Browser Extension` `AniList / MAL Sync` · **Per-episode ratings · 200+ supported sites**
+
+---
+
+### 🧠 [Dotrai](https://dotrai.com) — Free AI Chat
+> *Dream. Optimize. Think. Reason. AI.* A free, browser-based AI chat that searches the live web, runs real code and shows its reasoning. Streaming answers, syntax-highlighted code help, conversations saved across devices — sign up with an email, no credit card.
+
+`AI` `LLM` `Live Web Search` `Code Execution` · **Free · Any device**
 
 ---
 
@@ -150,7 +163,7 @@ website    : https://umutbayraktar.vercel.app
 | [discordJS-V14](https://github.com/umutxyp/discordJS-V14) | Slash + prefix command handler starter | **59** |
 | [@justdiscord/sdk](https://github.com/justdiscordorg/sdk) | Official JustDiscord API client — votes, stats, webhook verification. Zero deps, ESM + CJS | **npm** |
 | [MCStat-Plugin](https://github.com/mcstatorg/MCStat-Plugin) | Bukkit/proxy plugin — signed telemetry, sessions, TPS, vote links | **3** |
-| [codeshare-cli](https://github.com/codeshareme/codeshare-cli) | Version-control your Codeshare snippets from the terminal | **1** |
+| [codeshare-cli](https://github.com/codeshareme/codeshare-cli) | CLI for the retired Codeshare marketplace — archived | **1** |
 
 </div>
 
