@@ -72,4 +72,4 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | [Discord-Bot-Website](https://github.com/umutxyp/Discord-Bot-Website) | React + Tailwind website theme for Discord bots |
 | [Personal-Website](https://github.com/umutxyp/Personal-Website) | Clean Next.js developer portfolio |
 | [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows |
-| [slash-command-bot](https://github.com/umutxyp/slash-command-bot) | discord.js v14 slash-command boilerplate |
+| [v14-discord-bot](https://github.com/umutxyp/v14-discord-bot) | discord.js v14 slash and prefix command boilerplate |
