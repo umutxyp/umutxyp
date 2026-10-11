@@ -71,5 +71,5 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | [Seo-Promt-Master](https://github.com/umutxyp/Seo-Promt-Master) | Google's SEO docs as an AI prompt — audit and fix every page |
 | [Discord-Bot-Website](https://github.com/umutxyp/Discord-Bot-Website) | React + Tailwind website theme for Discord bots |
 | [Personal-Website](https://github.com/umutxyp/Personal-Website) | Clean Next.js developer portfolio |
-| [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows |
+| [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows, macOS and Linux |
 | [v14-discord-bot](https://github.com/umutxyp/v14-discord-bot) | discord.js v14 slash and prefix command boilerplate |
