@@ -1,0 +1,35 @@
+name: Live numbers
+
+# Every day, the numbers on this profile are read from codeshare.me (the same
+# figures its pages show) and the cards are drawn again. A commit is made only
+# when a number changed, in the owner's name.
+on:
+  schedule:
+    - cron: '23 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Read the numbers and draw the cards
+        run: |
+          python3 scripts/fetch_stats.py
+          python3 scripts/generate.py
+      - name: Save them if anything changed
+        run: |
+          if git diff --quiet; then echo "No number changed."; exit 0; fi
+          git config user.name umutxyp
+          git config user.email 69085038+umutxyp@users.noreply.github.com
+          git add data/stats.json assets
+          git commit -m "Live numbers from codeshare.me ($(date -u +%Y-%m-%d))"
+          git push
