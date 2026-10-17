@@ -10,6 +10,7 @@ Run:  python3 scripts/fetch_stats.py   (then python3 scripts/generate.py)
 """
 import html
 import json
+import os
 import re
 import sys
 import urllib.request
@@ -38,6 +39,27 @@ def fetch(path):
         return res.read().decode("utf-8", "replace")
 
 
+def compact(n):
+    """2840 -> "2.8K", 3200000 -> "3.2M", the way codeshare.me writes numbers."""
+    for size, unit in ((1_000_000, "M"), (1_000, "K")):
+        if n >= size:
+            return f"{n / size:.1f}".rstrip("0").rstrip(".") + unit
+    return str(n)
+
+
+def github():
+    """Stars on the owner's public repos, from the GitHub API."""
+    req = urllib.request.Request(
+        "https://api.github.com/users/umutxyp/repos?per_page=100&type=owner",
+        headers={"User-Agent": "umutxyp-readme-stats/1.0", "Accept": "application/vnd.github+json"},
+    )
+    if os.environ.get("GITHUB_TOKEN"):
+        req.add_header("Authorization", "Bearer " + os.environ["GITHUB_TOKEN"])
+    with urllib.request.urlopen(req, timeout=30) as res:
+        repos = json.load(res)
+    return {"Stars": compact(sum(r["stargazers_count"] for r in repos if not r["fork"]))}
+
+
 def scrape(page):
     text = re.sub(r"<script.*?</script>|<style.*?</style>", "", page, flags=re.S)
     lines = [l.strip() for l in html.unescape(re.sub(r"<[^>]+>", "\n", text)).split("\n") if l.strip()]
@@ -59,6 +81,12 @@ def main():
         except Exception as exc:  # keep the previous numbers for this page
             failed.append(f"{key}: {exc}")
         pages[key] = merged
+    merged = dict(old["pages"].get("github", {}))
+    try:
+        merged.update(github())
+    except Exception as exc:
+        failed.append(f"github: {exc}")
+    pages["github"] = merged
     if pages != old["pages"]:
         DATA.parent.mkdir(exist_ok=True)
         out = {"updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "pages": pages}

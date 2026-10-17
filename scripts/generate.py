@@ -33,7 +33,7 @@ STATS = [
     (("home", "Discord users reached"), "Discord users reached"),
     (("home", "Discord servers"), "Discord servers"),
     (("home", "Minecraft players"), "Minecraft players"),
-    ("44K+", "followers"),
+    (("github", "Stars"), "GitHub stars"),
 ]
 
 STUDIO = dict(
@@ -51,7 +51,7 @@ PROJECTS = {
     "mcstat": dict(
         title="MCStat", url="mcstat.org",
         desc=["Real-time Minecraft server list with live player",
-              "counts, vote rankings and 50K+ player profiles."],
+              "counts, vote rankings and player profiles."],
         stats=[(("mcstat", "Servers tracked"), "servers"), (("mcstat", "Player records"), "player records"),
                (("mcstat", "Skins archived"), "skins")],
     ),

@@ -1,8 +1,8 @@
 name: Live numbers
 
 # Every day, the numbers on this profile are read from codeshare.me (the same
-# figures its pages show) and the cards are drawn again. A commit is made only
-# when a number changed, in the owner's name.
+# figures its pages show) and the GitHub API (stars), and the cards are drawn
+# again. A commit is made only when a number changed, in the owner's name.
 on:
   schedule:
     - cron: '23 5 * * *'
@@ -22,6 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Read the numbers and draw the cards
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           python3 scripts/fetch_stats.py
           python3 scripts/generate.py
