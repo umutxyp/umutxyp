@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "pages": {
     "home": {
       "Products live": "7",
-      "Discord servers": "44.9K",
+      "Discord servers": "45.1K",
       "Discord users reached": "3.3M",
       "Minecraft players": "43.9K"
     },
@@ -30,15 +30,15 @@
       "Capes archived": "8.0K"
     },
     "justdiscord": {
-      "Server listings": "1,520",
+      "Server listings": "1,514",
       "Bot listings": "8,094",
       "Emojis and stickers": "96.8K",
-      "Unique visitors": "52.6K"
+      "Unique visitors": "50.2K"
     },
     "justanime": {
       "Anime and manga titles": "124K",
       "Character records": "176K",
-      "Airing schedule entries": "1,584"
+      "Airing schedule entries": "1,586"
     },
     "github": {
       "Stars": "2.9K"
