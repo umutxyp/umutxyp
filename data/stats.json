@@ -1,15 +1,15 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "pages": {
     "home": {
       "Products live": "7",
       "Discord servers": "45.2K",
       "Discord users reached": "3.3M",
       "Minecraft players": "43.9K",
-      "servers": "45.5K",
-      "titles": "124K",
-      "downloads": "21,632",
-      "Shroudly downloads": "21.6K",
+      "servers": "45.7K",
+      "titles": "163K",
+      "downloads": "26,253",
+      "Shroudly downloads": "26.3K",
       "Our oldest bot goes live": "2020"
     },
     "about": {
@@ -19,31 +19,31 @@
       "Company incorporated": "2025"
     },
     "beatra": {
-      "Discord servers": "44.8K",
+      "Discord servers": "45.0K",
       "Discord users": "2.9M",
-      "Playing right now": "94"
+      "Playing right now": "98"
     },
     "sylon": {
-      "Discord servers": "653",
-      "Discord users": "417K",
+      "Discord servers": "663",
+      "Discord users": "420K",
       "Uptime": "99.9%"
     },
     "mcstat": {
-      "Servers tracked": "6,761",
-      "Player records": "43.9K",
+      "Servers tracked": "6,763",
+      "Player records": "44.0K",
       "Skins archived": "119K",
       "Capes archived": "8.1K"
     },
     "justdiscord": {
-      "Server listings": "1,513",
+      "Server listings": "1,512",
       "Bot listings": "8,094",
       "Emojis and stickers": "96.8K",
-      "Unique visitors": "44.8K"
+      "Unique visitors": "34.6K"
     },
     "justanime": {
-      "Anime and manga titles": "124K",
-      "Character records": "176K",
-      "Airing schedule entries": "1,627"
+      "Anime and manga titles": "163K",
+      "Character records": "179K",
+      "Airing schedule entries": "1,656"
     },
     "github": {
       "Stars": "2.9K"
