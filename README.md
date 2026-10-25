@@ -8,7 +8,6 @@
 <a href="https://youtube.com/@umutxyp"><img src="https://img.shields.io/badge/YouTube-0a1628?style=for-the-badge&logo=youtube&logoColor=FF0000" /></a>
 <a href="https://instagram.com/umutxyp"><img src="https://img.shields.io/badge/Instagram-0a1628?style=for-the-badge&logo=instagram&logoColor=E4405F" /></a>
 <a href="https://tiktok.com/@umutxyp"><img src="https://img.shields.io/badge/TikTok-0a1628?style=for-the-badge&logo=tiktok&logoColor=white" /></a>
-<a href="https://discord.gg/FnU3Whr9ef"><img src="https://img.shields.io/badge/Discord-0a1628?style=for-the-badge&logo=discord&logoColor=5865F2" /></a>
 <a href="https://t.me/umutxyp"><img src="https://img.shields.io/badge/Telegram-0a1628?style=for-the-badge&logo=telegram&logoColor=26A5E4" /></a>
 <a href="https://twitter.com/devbayraktar"><img src="https://img.shields.io/badge/X-0a1628?style=for-the-badge&logo=x&logoColor=white" /></a>
 <a href="https://facebook.com/umutxyp"><img src="https://img.shields.io/badge/Facebook-0a1628?style=for-the-badge&logo=facebook&logoColor=1877F2" /></a>
