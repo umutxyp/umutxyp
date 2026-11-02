@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "pages": {
     "home": {
       "Products live": "7",
@@ -8,8 +8,8 @@
       "Minecraft players": "43.9K",
       "servers": "46.8K",
       "titles": "163K",
-      "downloads": "51,912",
-      "Shroudly downloads": "51.9K",
+      "downloads": "54,598",
+      "Shroudly downloads": "54.6K",
       "Our oldest bot goes live": "2020"
     },
     "about": {
@@ -44,6 +44,11 @@
       "Anime and manga titles": "163K",
       "Character records": "181K",
       "Airing schedule entries": "1,776"
+    },
+    "shroudly": {
+      "Downloads": "54,598",
+      "Running right now": "334",
+      "GitHub stars": "293"
     },
     "github": {
       "Stars": "3K"

@@ -17,7 +17,7 @@
 
 ### 👋 About
 
-I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the London software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime and Dotrai. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
+I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the London software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime, Dotrai and Shroudly. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
 
 <img width="100%" src="./assets/stats.svg" alt="Discord users reached · Discord servers · Minecraft players · GitHub stars" />
 
@@ -38,10 +38,12 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | **Mar 2025** | Work on Dotrai starts |
 | **Aug 2025** | Codeshare Technology Ltd is incorporated in England and Wales |
 | **Oct 2025** | Beatra comes back after three years off |
+| **Oct 2025** | Shroudly's first release, for Windows only |
 | **Dec 2025** | MCStat launches |
 | **Apr 2026** | Server Support becomes Sylon and gets its own site |
 | **Aug 2026** | JustDiscord and JustAnime launch three days apart |
 | **Sep 2026** | The marketplace closes — codeshare.me becomes the studio's own site |
+| **Oct 2026** | Shroudly 2 ships for Windows, macOS and Linux, and reaches Android nine days later |
 
 <sub>Codeshare Technology Ltd · Registered in England and Wales · Company no. 16672504 · <a href="mailto:contact@codeshare.me">contact@codeshare.me</a></sub>
 
@@ -55,6 +57,7 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 <a href="https://sylon.app"><img width="49%" src="./assets/projects/sylon.svg" alt="Sylon" /></a>
 <a href="https://justanime.me"><img width="49%" src="./assets/projects/justanime.svg" alt="JustAnime" /></a>
 <a href="https://dotrai.com"><img width="49%" src="./assets/projects/dotrai.svg" alt="Dotrai" /></a>
+<a href="https://github.com/umutxyp/Shroudly"><img width="49%" src="./assets/projects/shroudly.svg" alt="Shroudly" /></a>
 
 </div>
 
@@ -70,5 +73,5 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | [Seo-Promt-Master](https://github.com/umutxyp/Seo-Promt-Master) | Google's SEO docs as an AI prompt — audit and fix every page |
 | [Discord-Bot-Website](https://github.com/umutxyp/Discord-Bot-Website) | React + Tailwind website theme for Discord bots |
 | [Personal-Website](https://github.com/umutxyp/Personal-Website) | Clean Next.js developer portfolio |
-| [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows, macOS and Linux |
+| [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows, macOS, Linux, Android and iOS |
 | [v14-discord-bot](https://github.com/umutxyp/v14-discord-bot) | discord.js v14 slash and prefix command boilerplate |

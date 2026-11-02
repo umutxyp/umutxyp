@@ -40,7 +40,7 @@ STUDIO = dict(
     title="Codeshare Technology", url="codeshare.me",
     tag="Software studio · London",
     desc="Software for online communities — with the core kept free.",
-    products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai"],
+    products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai", "Shroudly"],
     stats=[(("about", "Products live"), "products live"),
            (("about", "Discord users reached"), "Discord users reached"),
            (("about", "Oldest account we own"), "oldest account"),
@@ -87,6 +87,16 @@ PROJECTS = {
         desc=["Free AI chat that searches the live web,",
               "runs real code and shows its reasoning."],
         stats=[],
+    ),
+    # "Running right now" is on its page too, but these cards are redrawn once
+    # a day, so a number that means "this minute" would be a day old. The logo
+    # is the iOS app icon (apple/App/AppIcon.icon in the Shroudly repo): its
+    # gradient tile under the shield, which on its own vanishes on this navy.
+    "shroudly": dict(
+        title="Shroudly", url="github.com/umutxyp/Shroudly",
+        desc=["Gets blocked sites loading again without a VPN,",
+              "on Windows, macOS, Linux, Android and iOS."],
+        stats=[(("shroudly", "Downloads"), "downloads"), (("shroudly", "GitHub stars"), "stars")],
     ),
 }
 

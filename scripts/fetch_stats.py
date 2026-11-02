@@ -28,6 +28,7 @@ PAGES = {
     "mcstat": "/projects/mcstat",
     "justdiscord": "/projects/justdiscord",
     "justanime": "/projects/justanime",
+    "shroudly": "/projects/shroudly",
 }
 # A stat value: "6", "2.9M", "6,752", "99.9%" — but not step numbers ("01") or company numbers.
 VALUE = re.compile(r"(?!0\d)\d[\d.,]{0,6}[KMB]?\+?%?")
