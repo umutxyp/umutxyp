@@ -44,6 +44,7 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | **Aug 2026** | JustDiscord and JustAnime launch three days apart |
 | **Sep 2026** | The marketplace closes — codeshare.me becomes the studio's own site |
 | **Oct 2026** | Shroudly 2 ships for Windows, macOS and Linux, and reaches Android nine days later |
+| **Nov 2026** | Shroudly reaches iPhone, iPad, Android TV and Google TV |
 
 <sub>Codeshare Technology Ltd · Registered in England and Wales · Company no. 16672504 · <a href="mailto:contact@codeshare.me">contact@codeshare.me</a></sub>
 
@@ -73,5 +74,5 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | [Seo-Promt-Master](https://github.com/umutxyp/Seo-Promt-Master) | Google's SEO docs as an AI prompt — audit and fix every page |
 | [Discord-Bot-Website](https://github.com/umutxyp/Discord-Bot-Website) | React + Tailwind website theme for Discord bots |
 | [Personal-Website](https://github.com/umutxyp/Personal-Website) | Clean Next.js developer portfolio |
-| [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows, macOS, Linux, Android and iOS |
+| [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows, macOS, Linux, Android, Android TV and iOS |
 | [v14-discord-bot](https://github.com/umutxyp/v14-discord-bot) | discord.js v14 slash and prefix command boilerplate |

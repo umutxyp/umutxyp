@@ -95,7 +95,7 @@ PROJECTS = {
     "shroudly": dict(
         title="Shroudly", url="github.com/umutxyp/Shroudly",
         desc=["Gets blocked sites loading again without a VPN,",
-              "on Windows, macOS, Linux, Android and iOS."],
+              "on Windows, macOS, Linux, Android, Android TV and iOS."],
         stats=[(("shroudly", "Downloads"), "downloads"), (("shroudly", "GitHub stars"), "stars")],
     ),
 }
