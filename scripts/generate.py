@@ -94,8 +94,8 @@ PROJECTS = {
     # gradient tile under the shield, which on its own vanishes on this navy.
     "shroudly": dict(
         title="Shroudly", url="github.com/umutxyp/Shroudly",
-        desc=["Gets blocked sites loading again without a VPN,",
-              "on Windows, macOS, Linux, Android, iOS and Apple TV."],
+        desc=["Opens blocked YouTube, Instagram, X, Discord —",
+              "no VPN; Windows 7–11, Mac, Linux, phones, TVs."],
         stats=[(("shroudly", "Downloads"), "downloads"), (("shroudly", "GitHub stars"), "stars")],
     ),
 }

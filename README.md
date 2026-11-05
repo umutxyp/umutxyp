@@ -45,6 +45,7 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | **Sep 2026** | The marketplace closes — codeshare.me becomes the studio's own site |
 | **Oct 2026** | Shroudly 2 ships for Windows, macOS and Linux, and reaches Android nine days later |
 | **Nov 2026** | Shroudly reaches iPhone, iPad, Android TV, Google TV and Apple TV, and goes to the App Store and Google Play |
+| **Nov 2026** | Shroudly reaches Windows 7 and 8, 32-bit Windows and 32-bit ARM Linux |
 
 <sub>Codeshare Technology Ltd · Registered in England and Wales · Company no. 16672504 · <a href="mailto:contact@codeshare.me">contact@codeshare.me</a></sub>
 
@@ -74,5 +75,5 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | [Seo-Promt-Master](https://github.com/umutxyp/Seo-Promt-Master) | Google's SEO docs as an AI prompt — audit and fix every page |
 | [Discord-Bot-Website](https://github.com/umutxyp/Discord-Bot-Website) | React + Tailwind website theme for Discord bots |
 | [Personal-Website](https://github.com/umutxyp/Personal-Website) | Clean Next.js developer portfolio |
-| [Shroudly](https://github.com/umutxyp/Shroudly) | DPI bypass app for Windows, macOS, Linux, Android, Android TV, iOS and Apple TV |
+| [Shroudly](https://github.com/umutxyp/Shroudly) | Free anti-censorship app: opens blocked YouTube, Instagram, X, Facebook, Discord, Telegram, WhatsApp, Wikipedia, Roblox, League of Legends and news, without a VPN — Windows 7 to 11, macOS, Linux, Android, Android TV, iPhone, iPad and Apple TV |
 | [v14-discord-bot](https://github.com/umutxyp/v14-discord-bot) | discord.js v14 slash and prefix command boilerplate |
