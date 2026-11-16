@@ -1,56 +1,56 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "pages": {
     "home": {
       "Products live": "7",
       "Discord servers": "45.2K",
       "Discord users reached": "3.3M",
       "Minecraft players": "43.9K",
-      "servers": "49.7K",
+      "servers": "49.9K",
       "titles": "164K",
-      "downloads": "122,316",
-      "Shroudly downloads": "122K",
+      "downloads": "127,988",
+      "Shroudly downloads": "128K",
       "Our oldest bot goes live": "2020",
       "Building software since": "2020"
     },
     "about": {
       "Products live": "8",
-      "Discord users reached": "3.5M",
+      "Discord users reached": "3.6M",
       "Oldest account we own": "2020",
       "Company incorporated": "2025",
       "Building software since": "2020"
     },
     "beatra": {
-      "Discord servers": "48.8K",
+      "Discord servers": "49K",
       "Discord users": "3.1M",
-      "Playing right now": "100"
+      "Playing right now": "83"
     },
     "sylon": {
-      "Discord servers": "864",
-      "Discord users": "488K",
+      "Discord servers": "879",
+      "Discord users": "491K",
       "Uptime": "99.9%"
     },
     "mcstat": {
       "Servers tracked": "6,775",
       "Player records": "44.2K",
-      "Skins archived": "123K",
+      "Skins archived": "124K",
       "Capes archived": "8.3K"
     },
     "justdiscord": {
-      "Server listings": "1,503",
-      "Bot listings": "8,108",
+      "Server listings": "1,504",
+      "Bot listings": "8,109",
       "Emojis and stickers": "96.8K",
-      "Unique visitors": "27K"
+      "Unique visitors": "20.6K"
     },
     "justanime": {
       "Anime and manga titles": "164K",
       "Character records": "182K",
-      "Airing schedule entries": "2,022"
+      "Airing schedule entries": "2,057"
     },
     "shroudly": {
-      "Downloads": "122,314",
-      "Running right now": "1,449",
-      "GitHub stars": "531"
+      "Downloads": "127,944",
+      "Running right now": "1,477",
+      "GitHub stars": "552"
     },
     "github": {
       "Stars": "3.3K"
