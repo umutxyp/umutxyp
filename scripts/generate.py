@@ -38,7 +38,7 @@ STATS = [
 
 STUDIO = dict(
     title="Codeshare Technology", url="codeshare.me",
-    tag="Software studio · London",
+    tag="Software studio",
     desc="Software for online communities — with the core kept free.",
     products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai", "Shroudly"],
     stats=[(("about", "Products live"), "products live"),

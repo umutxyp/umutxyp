@@ -17,13 +17,13 @@
 
 ### 👋 About
 
-I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the London software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime, Dotrai and Shroudly. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
+I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime, Dotrai and Shroudly. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
 
 <img width="100%" src="./assets/stats.svg" alt="Discord users reached · Discord servers · Minecraft players · GitHub stars" />
 
 ### 🚀 Projects
 
-<a href="https://codeshare.me"><img width="100%" src="./assets/studio.svg" alt="Codeshare Technology — software studio, London" /></a>
+<a href="https://codeshare.me"><img width="100%" src="./assets/studio.svg" alt="Codeshare Technology — software studio" /></a>
 
 <details>
 <summary><b>How Codeshare got here</b></summary>
