@@ -25,33 +25,6 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 
 <a href="https://codeshare.me"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/studio.svg"><img width="100%" src="./assets/light/studio.svg" alt="Codeshare Technology, software studio"></picture></a>
 
-<details>
-<summary><b>How Codeshare got here</b></summary>
-
-<br/>
-
-| When | What happened |
-|:---|:---|
-| **Feb 2020** | The Discord bot that later becomes Sylon is born as *Server Support* |
-| **Nov 2020** | The bot that later becomes Beatra is made — launches as *MusicMaker*, shut down in 2022 |
-| **Aug 2022** | codeshare.me is bought and runs a developer marketplace |
-| **Mar 2025** | Work on Dotrai starts |
-| **Aug 2025** | Codeshare Technology Ltd is incorporated in England and Wales |
-| **Oct 2025** | Beatra comes back after three years off |
-| **Oct 2025** | Shroudly's first release, for Windows only |
-| **Dec 2025** | MCStat launches |
-| **Apr 2026** | Server Support becomes Sylon and gets its own site |
-| **Aug 2026** | JustDiscord and JustAnime launch three days apart |
-| **Sep 2026** | The marketplace closes — codeshare.me becomes the studio's own site |
-| **Oct 2026** | Work on Vanigo, a travel app, starts |
-| **Oct 2026** | Shroudly 2 ships for Windows, macOS and Linux, and reaches Android nine days later |
-| **Nov 2026** | Shroudly reaches iPhone, iPad, Android TV, Google TV and Apple TV, and goes to the App Store and Google Play |
-| **Nov 2026** | Shroudly reaches Windows 7 and 8, 32-bit Windows and 32-bit ARM Linux |
-
-<sub>Codeshare Technology Ltd · Registered in England and Wales · Company no. 16672504 · <a href="mailto:contact@codeshare.me">contact@codeshare.me</a></sub>
-
-</details>
-
 <div align="center">
 
 <a href="https://beatra.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/beatra.svg"><img width="49%" src="./assets/light/projects/beatra.svg" alt="Beatra"></picture></a>

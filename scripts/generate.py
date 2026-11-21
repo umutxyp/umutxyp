@@ -647,7 +647,7 @@ def cat(ink, cx, base, at):
     ears = "M-52 -46L-54 -68L-39 -56ZM-30 -56L-16 -69L-17 -45Z"
     z = "".join(
         f'<g transform="translate({x} {y})"><path class="zz" d="{BOLD.d("z", 0, 0, s)[0]}" fill="{p["soft"]}" style="animation-delay:{at + 1.2 + k * 1.3:.2f}s"/></g>'
-        for k, (x, y, s) in enumerate(((-72, -66, 17), (-85, -86, 21), (-99, -110, 26))))
+        for k, (x, y, s) in enumerate(((-70, -38, 15), (-84, -50, 18), (-99, -62, 21))))
     ink.add(
         f'<g transform="translate({cx} {base})"><g class="i" style="animation-delay:{at:.2f}s">'
         f'<g transform="translate(45 -8)"><g class="tl">'
@@ -665,25 +665,26 @@ def cat(ink, cx, base, at):
 
 
 def studio():
-    W, H = 1200, 416
+    # The frame starts 96 down: room above it for the ivy and for the cat, ears and all.
+    W, H, TOP = 1200, 456, 96
     s = STUDIO
 
     def draw(ink):
         p = ink.p
-        ink.box(14, 56, W - 30, H - 72, 26, at=0, dur=1.6, width=2.8)
-        ink.logo("codeshare", 52, 96, 108, .4, ring=False, ratio=120 / 128)
-        ink.text(BOLD, s["title"], 190, 142, 47, .45)
-        w = ink.text(BOLD, s["url"], 192, 180, 24, .55, p["accent"])
-        ink.text(TEXT, "·  " + s["tag"], 192 + w + 14, 180, 24, .6, p["soft"])
-        ink.text(TEXT, s["desc"], 192, 220, 24, .7, p["soft"], fit=W - 250)
+        ink.box(14, TOP, W - 30, H - TOP - 16, 26, at=0, dur=1.6, width=2.8)
+        ink.logo("codeshare", 52, TOP + 40, 108, .4, ring=False, ratio=120 / 128)
+        ink.text(BOLD, s["title"], 190, TOP + 86, 47, .45)
+        w = ink.text(BOLD, s["url"], 192, TOP + 124, 24, .55, p["accent"])
+        ink.text(TEXT, "·  " + s["tag"], 192 + w + 14, TOP + 124, 24, .6, p["soft"])
+        ink.text(TEXT, s["desc"], 192, TOP + 164, 24, .7, p["soft"], fit=W - 250)
         # the products, as hand-drawn labels in a row
         x = 52
         for k, name in enumerate(s["products"]):
             w = TEXT.width(name, 21.5) + 36
-            ink.box(x, 250, w, 38, 18, at=.7 + k * .07, dur=.5, width=1.9)
-            ink.text(TEXT, name, x + w / 2, 276, 21.5, .8 + k * .07, anchor="middle")
+            ink.box(x, TOP + 194, w, 38, 18, at=.7 + k * .07, dur=.5, width=1.9)
+            ink.text(TEXT, name, x + w / 2, TOP + 220, 21.5, .8 + k * .07, anchor="middle")
             x += w + 14
-        ink.stroke(smooth(hand_line(ink.rng, (46, 314), (W - 48, 312), 1.4, 70)), 1, .8, 1.8, opacity=".5")
+        ink.stroke(smooth(hand_line(ink.rng, (46, TOP + 258), (W - 48, TOP + 256), 1.4, 70)), 1, .8, 1.8, opacity=".5")
         # the numbers, spread across the bottom
         parts = [(live(v), l) for v, l in s["stats"]]
         widths = [BOLD.width(v, 29) + 11 + TEXT.width(l, 22.5) for v, l in parts]
@@ -691,14 +692,14 @@ def studio():
         x = 52
         for k, ((v, l), tw) in enumerate(zip(parts, widths)):
             w = BOLD.width(v, 29)
-            ink.marker(x - 2, 338, x + w + 2, 364, 1.1 + k * .1)
-            ink.text(BOLD, v, x, 362, 29, 1.15 + k * .1)
-            ink.text(TEXT, l, x + w + 11, 362, 22.5, 1.2 + k * .1, p["soft"])
+            ink.marker(x - 2, TOP + 282, x + w + 2, TOP + 308, 1.1 + k * .1)
+            ink.text(BOLD, v, x, TOP + 306, 29, 1.15 + k * .1)
+            ink.text(TEXT, l, x + w + 11, TOP + 306, 22.5, 1.2 + k * .1, p["soft"])
             x += tw + space
         # ivy along the top of the frame, growing in from the left, and a cat asleep on the right
-        ink.vine([(30, 60), (190, 50), (380, 60), (560, 48), (700, 56)], at=1, speed=330, leaf=29, sway=5, side=-1, both=False,
-                 curl=-1, width=2.4, gap=(44, 66), lean=(38, 112), first=18, berries=.3)
-        cat(ink, 1010, 56, 1.5)
+        ink.vine([(30, TOP + 4), (190, TOP - 6), (380, TOP + 4), (560, TOP - 8), (700, TOP)], at=1, speed=330, leaf=29, sway=5,
+                 side=-1, both=False, curl=-1, width=2.4, gap=(44, 66), lean=(38, 112), first=18, berries=.3)
+        cat(ink, 1010, TOP, 1.5)
 
     both("studio.svg", draw, W, H, seed=41)
 
