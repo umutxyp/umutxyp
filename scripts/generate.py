@@ -153,6 +153,11 @@ PROJECTS = {
     ),
 }
 
+# The page draws itself from the top down: every picture waits its turn. Seconds after loading.
+START = dict(hero=0.0, links=2.3, about_heading=3.0, about=3.3, stats=4.0, projects_heading=4.6, studio=4.9,
+             cards=5.6, stack_heading=7.1, stack=7.3, opensource_heading=7.8, opensource=8.0)
+HEADING_START = dict(about="about_heading", projects="projects_heading", stack="stack_heading", opensource="opensource_heading")
+
 # ───────────────────────────── PALETTES ─────────────────────────────
 # Transparent pictures, so the page itself is the paper: dark ink on GitHub's
 # light theme, pale ink on its dark one. The README picks the file with <picture>.
@@ -329,8 +334,8 @@ STYLE = """
 class Ink:
     """One picture being drawn, in one palette."""
 
-    def __init__(self, w, h, pal, seed):
-        self.w, self.h, self.p = w, h, pal
+    def __init__(self, w, h, pal, seed, start=0.0):
+        self.w, self.h, self.p, self.start = w, h, pal, start
         self.rng = random.Random(seed)
         self.body, self.defs = [], []
 
@@ -465,8 +470,13 @@ class Ink:
 
     def render(self):
         defs = f'<defs>{"".join(self.defs)}</defs>' if self.defs else ""
+        body = "".join(self.body)
+        if self.start:
+            # the whole picture waits for its turn (the leaves' sway, which runs from the start, is left alone)
+            body = re.sub(r"animation-delay:(\d*\.?\d+)s", lambda m: f"animation-delay:{float(m.group(1)) + self.start:.2f}s", body)
+            body = re.sub(r'begin="(\d[\d.]*)s"', lambda m: f'begin="{float(m.group(1)) + self.start:.1f}s"', body)
         return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.w}" height="{self.h}" viewBox="0 0 {self.w} {self.h}" fill="none">'
-                f'<style>{STYLE.strip()}</style>{defs}{"".join(self.body)}</svg>\n')
+                f'<style>{STYLE.strip()}</style>{defs}{body}</svg>\n')
 
 
 # For looking at a moment of the animation in a still picture: PREVIEW_T=6 writes the pictures as they
@@ -485,10 +495,10 @@ def write(theme, name, ink):
     path.write_text(svg, encoding="utf-8")
 
 
-def both(name, draw, w, h, seed):
-    """Draws one picture in both palettes, with the same hand (the same seed)."""
+def both(name, draw, w, h, seed, start=0.0):
+    """Draws one picture in both palettes, with the same hand (the same seed), starting `start` seconds in."""
     for theme, pal in PALETTES.items():
-        ink = Ink(w, h, pal, seed)
+        ink = Ink(w, h, pal, seed, start)
         draw(ink)
         write(theme, name, ink)
     print(f"  ✓ {name}")
@@ -532,27 +542,27 @@ def hero():
         letters, w = NAME_FACE.letters(NAME, W / 2 + 6, 246, 138, "middle")
         for k, d in enumerate(letters):
             ink.add(f'<path class="w" pathLength="1" d="{d}" fill="{p["ink"]}" stroke="{p["ink"]}" stroke-width="1.6" '
-                    f'style="animation-delay:{.5 + k * .09:.2f}s"/>')
-        t = .5 + len(letters) * .09 + .5
+                    f'style="animation-delay:{.4 + k * .06:.2f}s"/>')
+        t = .4 + len(letters) * .06 + .45
         # a swoosh under it, drawn twice like a pen going back
         x0, x1 = W / 2 - w / 2 + 34, W / 2 + w / 2 - 6
         ink.stroke(smooth([(x0, 288), (x0 + (x1 - x0) * .3, 281), (x0 + (x1 - x0) * .62, 287), (x1, 276)]), t, .55, 4.4, p["accent"])
-        ink.stroke(smooth([(x1 - 8, 285), (x0 + (x1 - x0) * .66, 295), (x0 + (x1 - x0) * .4, 294)]), t + .5, .4, 3, p["accent"])
+        ink.stroke(smooth([(x1 - 8, 285), (x0 + (x1 - x0) * .66, 295), (x0 + (x1 - x0) * .4, 294)]), t + .4, .35, 3, p["accent"])
         # what he does
         size, gap = 25.5, 52
         sizes = [TEXT.width(r, size) for r in ROLES]
         x = W / 2 - 4 - (sum(sizes) + gap * (len(ROLES) - 1)) / 2
         for k, (r, rw) in enumerate(zip(ROLES, sizes)):
-            ink.text(TEXT, r, x, 356, size, t + .5 + k * .18, p["soft"])
+            ink.text(TEXT, r, x, 356, size, t + .3 + k * .15, p["soft"])
             if k < len(ROLES) - 1:
                 o, v = ink.leaf(15)
-                ink.add(f'<g class="i" style="animation-delay:{t + .6 + k * .18:.2f}s"><g transform="translate({f(x + rw + gap / 2 - 6)} 349) rotate(-38)">'
+                ink.add(f'<g class="i" style="animation-delay:{t + .4 + k * .15:.2f}s"><g transform="translate({f(x + rw + gap / 2 - 6)} 349) rotate(-38)">'
                         f'<path d="{o}" fill="{p["leaf"][k % 3]}" transform="translate(1.4 1.2)"/>'
                         f'<path class="s" d="{o}" stroke="{p["ink"]}" stroke-width="1.5"/></g></g>')
             x += rw + gap
         ladybug(ink, stem, done + .6)
 
-    both("hero.svg", draw, W, H, seed=11)
+    both("hero.svg", draw, W, H, seed=11, start=START["hero"])
 
 # ───────────────────────────── SMALL PARTS ──────────────────────────
 
@@ -562,7 +572,7 @@ def hash_seed(s):
 
 
 def links():
-    for key, label in LINKS:
+    for n, (key, label) in enumerate(LINKS):
         size, pad, h = 30, 26, 76
         W = int(BOLD.width(label, size) + pad * 2 + 22)
 
@@ -579,7 +589,7 @@ def links():
                     f'<path class="s" d="{o}" stroke="{p["ink"]}" stroke-width="1.9"/>'
                     f'<path class="s" d="{v}" stroke="{p["ink"]}" stroke-width="1" stroke-opacity=".7"/></g></g></g></g>')
 
-        both(f"links/{key}.svg", draw, W, h, seed=hash_seed(key))
+        both(f"links/{key}.svg", draw, W, h, seed=hash_seed(key), start=START["links"] + n * .06)
 
 
 def headings():
@@ -593,7 +603,7 @@ def headings():
             ink.vine([(x0, 64), (x0 + 220, 56), (x0 + 470, 68), (x0 + 700, 54), (1126, 62)], at=.4, speed=520, leaf=25,
                      sway=5, side=-1, curl=1, width=2.2, gap=(70, 116), first=40, berries=.25)
 
-        both(f"headings/{key}.svg", draw, W, H, seed=hash_seed(key) + 3)
+        both(f"headings/{key}.svg", draw, W, H, seed=hash_seed(key) + 3, start=START[HEADING_START[key]])
 
 
 def stats():
@@ -617,7 +627,7 @@ def stats():
                          at=.5 + k * .2, speed=130, leaf=19, sway=2.5, side=ink.rng.choice((-1, 1)), curl=0,
                          width=2, gap=(20, 25), first=22, taper=.8)
 
-    both("stats.svg", draw, W, H, seed=23)
+    both("stats.svg", draw, W, H, seed=23, start=START["stats"])
 
 
 def stack():
@@ -648,7 +658,7 @@ def stack():
                 x += w + gap
                 k += 1
 
-    both("stack.svg", draw, W, H, seed=31)
+    both("stack.svg", draw, W, H, seed=31, start=START["stack"])
 
 # ────────────────────────────── STUDIO ──────────────────────────────
 
@@ -718,7 +728,7 @@ def studio():
                  side=-1, both=False, curl=-1, width=2.4, gap=(44, 66), lean=(38, 112), first=18, berries=.3)
         cat(ink, 1010, TOP, 1.5)
 
-    both("studio.svg", draw, W, H, seed=41)
+    both("studio.svg", draw, W, H, seed=41, start=START["studio"])
 
 # ───────────────────────────── PROJECTS ─────────────────────────────
 
@@ -751,7 +761,8 @@ def project(key, proj, n):
             guide = [(22, 56), (22 + span * .35, 46), (22 + span * .7, 54), (22 + span, 46)]
             ink.vine(guide, at=.7, speed=250, leaf=27, sway=4, side=-1, both=False, curl=-1, width=2.2, gap=(42, 62), lean=(38, 112), first=16, berries=.28)
 
-    both(f"projects/{key}.svg", draw, W, H, seed=hash_seed(key) + 7)
+    # two cards to a row: the left one a moment before the right, each row after the one above
+    both(f"projects/{key}.svg", draw, W, H, seed=hash_seed(key) + 7, start=START["cards"] + (n // 2) * .35 + (n % 2) * .12)
 
 
 # ─────────────────────────── WRITTEN PARTS ──────────────────────────
@@ -825,7 +836,7 @@ def about():
                  curl=-1, width=2.2, gap=(40, 56), first=30, berries=.25, taper=.7)
         write_lines(ink, lines, x0, 46, size, step, .2, ink.p["soft"])
 
-    both("about.svg", draw, W, H, seed=53)
+    both("about.svg", draw, W, H, seed=53, start=START["about"])
 
 
 def star(ink, cx, cy, r, at):
@@ -870,7 +881,7 @@ def open_source():
             if n < len(OPEN_SOURCE) - 1:
                 ink.stroke(smooth(hand_line(ink.rng, (x0 - 4, H - 8), (W - 16, H - 9), 1.2, 90)), .5, .7, 1.5, opacity=".32")
 
-        both(f"opensource/{repo.lower()}.svg", draw, W, H, seed=hash_seed(repo) + 5)
+        both(f"opensource/{repo.lower()}.svg", draw, W, H, seed=hash_seed(repo) + 5, start=START["opensource"] + n * .18)
 
 
 if __name__ == "__main__":
