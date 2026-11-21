@@ -40,7 +40,7 @@ STUDIO = dict(
     title="Codeshare Technology", url="codeshare.me",
     tag="Software studio",
     desc="Software for online communities — with the core kept free.",
-    products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai", "Shroudly", "Vanigo"],
+    products=["Beatra", "Shroudly", "Vanigo", "Sylon", "MCStat", "JustAnime", "JustDiscord", "Dotrai"],
     stats=[(("about", "Products live"), "products live"),
            (("about", "Discord users reached"), "Discord users reached"),
            (("about", "Oldest account we own"), "oldest account"),
@@ -48,45 +48,11 @@ STUDIO = dict(
 )
 
 PROJECTS = {
-    "mcstat": dict(
-        title="MCStat", url="mcstat.org",
-        desc=["Real-time Minecraft server list with live player",
-              "counts, vote rankings and player profiles."],
-        stats=[(("mcstat", "Servers tracked"), "servers"), (("mcstat", "Player records"), "player records"),
-               (("mcstat", "Skins archived"), "skins")],
-    ),
     "beatra": dict(
         title="Beatra", url="beatra.app",
         desc=["Music bot for Discord, web and desktop —",
               "Spotify, YouTube, Apple Music and more."],
         stats=[(("beatra", "Discord servers"), "servers"), (("beatra", "Discord users"), "users")],
-    ),
-    "justdiscord": dict(
-        title="JustDiscord", url="justdiscord.org",
-        desc=["Discord server & bot list built on trust —",
-              "real reviews, verified owners, free emojis."],
-        stats=[(("justdiscord", "Server listings"), "servers"), (("justdiscord", "Bot listings"), "bots"),
-               (("justdiscord", "Emojis and stickers"), "emojis")],
-    ),
-    "sylon": dict(
-        title="Sylon", url="sylon.app",
-        desc=["AI moderation for Discord that catches ads",
-              "and scams in any language, even in images."],
-        stats=[(("sylon", "Discord servers"), "servers"), (("sylon", "Discord users"), "users"),
-               (("sylon", "Uptime"), "uptime")],
-    ),
-    "justanime": dict(
-        title="JustAnime", url="justanime.me",
-        desc=["Anime & manga tracker where every single",
-              "episode gets its own rating and review."],
-        stats=[(("justanime", "Anime and manga titles"), "titles"), (("justanime", "Character records"), "characters"),
-               (("justanime", "Airing schedule entries"), "airing")],
-    ),
-    "dotrai": dict(
-        title="Dotrai", url="dotrai.com",
-        desc=["Free AI chat that searches the live web,",
-              "runs real code and shows its reasoning."],
-        stats=[],
     ),
     # "Running right now" is on its page too, but these cards are redrawn once
     # a day, so a number that means "this minute" would be a day old. The logo
@@ -104,6 +70,40 @@ PROJECTS = {
               "plus a wallet that pays shops by local QR."],
         stats=[(("vanigo", "Places on the map"), "places"), (("vanigo", "Countries"), "countries"),
                (("vanigo", "Languages"), "languages")],
+    ),
+    "sylon": dict(
+        title="Sylon", url="sylon.app",
+        desc=["AI moderation for Discord that catches ads",
+              "and scams in any language, even in images."],
+        stats=[(("sylon", "Discord servers"), "servers"), (("sylon", "Discord users"), "users"),
+               (("sylon", "Uptime"), "uptime")],
+    ),
+    "mcstat": dict(
+        title="MCStat", url="mcstat.org",
+        desc=["Real-time Minecraft server list with live player",
+              "counts, vote rankings and player profiles."],
+        stats=[(("mcstat", "Servers tracked"), "servers"), (("mcstat", "Player records"), "player records"),
+               (("mcstat", "Skins archived"), "skins")],
+    ),
+    "justanime": dict(
+        title="JustAnime", url="justanime.me",
+        desc=["Anime & manga tracker where every single",
+              "episode gets its own rating and review."],
+        stats=[(("justanime", "Anime and manga titles"), "titles"), (("justanime", "Character records"), "characters"),
+               (("justanime", "Airing schedule entries"), "airing")],
+    ),
+    "justdiscord": dict(
+        title="JustDiscord", url="justdiscord.org",
+        desc=["Discord server & bot list built on trust —",
+              "real reviews, verified owners, free emojis."],
+        stats=[(("justdiscord", "Server listings"), "servers"), (("justdiscord", "Bot listings"), "bots"),
+               (("justdiscord", "Emojis and stickers"), "emojis")],
+    ),
+    "dotrai": dict(
+        title="Dotrai", url="dotrai.com",
+        desc=["Free AI chat that searches the live web,",
+              "runs real code and shows its reasoning."],
+        stats=[],
     ),
 }
 

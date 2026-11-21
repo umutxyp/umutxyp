@@ -17,7 +17,7 @@
 
 ### 👋 About
 
-I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime, Dotrai, Shroudly and Vanigo. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
+I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the software studio behind Beatra, Shroudly, Vanigo, Sylon, MCStat, JustAnime, JustDiscord and Dotrai. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
 
 <img width="100%" src="./assets/stats.svg" alt="Discord users reached · Discord servers · Minecraft players · GitHub stars" />
 
@@ -54,14 +54,14 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 
 <div align="center">
 
-<a href="https://mcstat.org"><img width="49%" src="./assets/projects/mcstat.svg" alt="MCStat" /></a>
 <a href="https://beatra.app"><img width="49%" src="./assets/projects/beatra.svg" alt="Beatra" /></a>
-<a href="https://justdiscord.org"><img width="49%" src="./assets/projects/justdiscord.svg" alt="JustDiscord" /></a>
-<a href="https://sylon.app"><img width="49%" src="./assets/projects/sylon.svg" alt="Sylon" /></a>
-<a href="https://justanime.me"><img width="49%" src="./assets/projects/justanime.svg" alt="JustAnime" /></a>
-<a href="https://dotrai.com"><img width="49%" src="./assets/projects/dotrai.svg" alt="Dotrai" /></a>
 <a href="https://github.com/umutxyp/Shroudly"><img width="49%" src="./assets/projects/shroudly.svg" alt="Shroudly" /></a>
 <a href="https://vanigo.app"><img width="49%" src="./assets/projects/vanigo.svg" alt="Vanigo" /></a>
+<a href="https://sylon.app"><img width="49%" src="./assets/projects/sylon.svg" alt="Sylon" /></a>
+<a href="https://mcstat.org"><img width="49%" src="./assets/projects/mcstat.svg" alt="MCStat" /></a>
+<a href="https://justanime.me"><img width="49%" src="./assets/projects/justanime.svg" alt="JustAnime" /></a>
+<a href="https://justdiscord.org"><img width="49%" src="./assets/projects/justdiscord.svg" alt="JustDiscord" /></a>
+<a href="https://dotrai.com"><img width="49%" src="./assets/projects/dotrai.svg" alt="Dotrai" /></a>
 
 </div>
 
