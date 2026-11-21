@@ -65,7 +65,7 @@ OPEN_SOURCE = [
     ("MusicBot", "Discord.js v14 music bot — YouTube, Spotify, SoundCloud"),
     ("Seo-Promt-Master", "Google's SEO docs as an AI prompt — audit and fix every page"),
     ("Discord-Bot-Website", "React + Tailwind website theme for Discord bots"),
-    ("Personal-Website", "Clean Next.js developer portfolio"),
+    ("Personal-Website", "Hand-drawn Next.js portfolio with seven animated worlds to pick from"),
     ("Shroudly", "Free anti-censorship app: opens blocked YouTube, Instagram, X, Facebook, Discord, Telegram, WhatsApp, "
                  "Wikipedia, Roblox, League of Legends and news, without a VPN — Windows 7 to 11, macOS, Linux, Android, "
                  "Android TV, iPhone, iPad and Apple TV"),
