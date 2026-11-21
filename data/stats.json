@@ -8,7 +8,7 @@
       "Minecraft players": "43.9K",
       "servers": "50.6K",
       "titles": "164K",
-      "downloads": "145,881",
+      "downloads": "145,900",
       "Shroudly downloads": "146K",
       "Our oldest bot goes live": "2020",
       "Building software since": "2020"
@@ -58,7 +58,18 @@
       "Languages": "30"
     },
     "github": {
-      "Stars": "3.3K"
+      "Stars": "3.3K",
+      "Discord-Bot-Website stars": "328",
+      "discordjs-14-slash-and-prefix-command-bot stars": "18",
+      "discordJS-V14 stars": "58",
+      "Framer-Potfolio-Website stars": "7",
+      "MusicBot stars": "1.3K",
+      "Personal-Website stars": "279",
+      "Seo-Promt-Master stars": "594",
+      "Shopier-Nodejs-Integration-and-Website stars": "2",
+      "Shroudly stars": "584",
+      "umutxyp stars": "1",
+      "v14-discord-bot stars": "142"
     }
   }
 }

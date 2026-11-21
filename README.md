@@ -17,7 +17,7 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/headings/about.svg"><img width="100%" src="./assets/light/headings/about.svg" alt="About"></picture>
 
-I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the software studio behind Beatra, Shroudly, Vanigo, Sylon, MCStat, JustAnime, JustDiscord and Dotrai. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/about.svg"><img width="100%" src="./assets/light/about.svg" alt="I'm Umut — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of Codeshare Technology, the software studio behind Beatra, Shroudly, Vanigo, Sylon, MCStat, JustAnime, JustDiscord and Dotrai. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself."></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/stats.svg"><img width="100%" src="./assets/light/stats.svg" alt="Discord users reached, Discord servers, Minecraft players, GitHub stars"></picture>
 
@@ -44,11 +44,9 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/headings/opensource.svg"><img width="100%" src="./assets/light/headings/opensource.svg" alt="Open source"></picture>
 
-| Repository | Description |
-|:---|:---|
-| [MusicBot](https://github.com/umutxyp/MusicBot) | Discord.js v14 music bot — YouTube, Spotify, SoundCloud |
-| [Seo-Promt-Master](https://github.com/umutxyp/Seo-Promt-Master) | Google's SEO docs as an AI prompt — audit and fix every page |
-| [Discord-Bot-Website](https://github.com/umutxyp/Discord-Bot-Website) | React + Tailwind website theme for Discord bots |
-| [Personal-Website](https://github.com/umutxyp/Personal-Website) | Clean Next.js developer portfolio |
-| [Shroudly](https://github.com/umutxyp/Shroudly) | Free anti-censorship app: opens blocked YouTube, Instagram, X, Facebook, Discord, Telegram, WhatsApp, Wikipedia, Roblox, League of Legends and news, without a VPN — Windows 7 to 11, macOS, Linux, Android, Android TV, iPhone, iPad and Apple TV |
-| [v14-discord-bot](https://github.com/umutxyp/v14-discord-bot) | discord.js v14 slash and prefix command boilerplate |
+<a href="https://github.com/umutxyp/MusicBot"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/opensource/musicbot.svg"><img width="100%" src="./assets/light/opensource/musicbot.svg" alt="MusicBot: Discord.js v14 music bot — YouTube, Spotify, SoundCloud"></picture></a>
+<a href="https://github.com/umutxyp/Seo-Promt-Master"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/opensource/seo-promt-master.svg"><img width="100%" src="./assets/light/opensource/seo-promt-master.svg" alt="Seo-Promt-Master: Google's SEO docs as an AI prompt — audit and fix every page"></picture></a>
+<a href="https://github.com/umutxyp/Discord-Bot-Website"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/opensource/discord-bot-website.svg"><img width="100%" src="./assets/light/opensource/discord-bot-website.svg" alt="Discord-Bot-Website: React + Tailwind website theme for Discord bots"></picture></a>
+<a href="https://github.com/umutxyp/Personal-Website"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/opensource/personal-website.svg"><img width="100%" src="./assets/light/opensource/personal-website.svg" alt="Personal-Website: Clean Next.js developer portfolio"></picture></a>
+<a href="https://github.com/umutxyp/Shroudly"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/opensource/shroudly.svg"><img width="100%" src="./assets/light/opensource/shroudly.svg" alt="Shroudly: Free anti-censorship app: opens blocked YouTube, Instagram, X, Facebook, Discord, Telegram, WhatsApp, Wikipedia, Roblox, League of Legends and news, without a VPN — Windows 7 to 11, macOS, Linux, Android, Android TV, iPhone, iPad and Apple TV"></picture></a>
+<a href="https://github.com/umutxyp/v14-discord-bot"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/opensource/v14-discord-bot.svg"><img width="100%" src="./assets/light/opensource/v14-discord-bot.svg" alt="v14-discord-bot: discord.js v14 slash and prefix command boilerplate"></picture></a>

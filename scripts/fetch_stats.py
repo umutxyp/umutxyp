@@ -59,7 +59,11 @@ def github():
         req.add_header("Authorization", "Bearer " + os.environ["GITHUB_TOKEN"])
     with urllib.request.urlopen(req, timeout=30) as res:
         repos = json.load(res)
-    return {"Stars": compact(sum(r["stargazers_count"] for r in repos if not r["fork"]))}
+    own = [r for r in repos if not r["fork"]]
+    stars = {"Stars": compact(sum(r["stargazers_count"] for r in own))}
+    # each repository's own count too, for the open source list ("MusicBot stars")
+    stars.update({f'{r["name"]} stars': compact(r["stargazers_count"]) for r in own})
+    return stars
 
 
 def scrape(page):

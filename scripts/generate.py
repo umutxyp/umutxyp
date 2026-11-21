@@ -55,6 +55,23 @@ LINKS = [
 # Logos that are a pale mark on nothing: the tile they sit on in their own product.
 LOGO_TILE = {"dotrai": "#0d0d0f", "justanime": "#15131d"}
 
+# *…* is written heavier and gets a marker swipe; {products} is the studio's list below.
+ABOUT = ("I'm *Umut* — full-stack developer, AI systems researcher and content creator with 6+ years of building "
+         "platforms end to end. I'm the founder & CEO of *Codeshare Technology*, the software studio behind {products}. "
+         "The company was incorporated in 2025, but most of the products are older than it — the first one dates back "
+         "to 2020. The core of every product stays free, and I run all of it myself.")
+
+OPEN_SOURCE = [
+    ("MusicBot", "Discord.js v14 music bot — YouTube, Spotify, SoundCloud"),
+    ("Seo-Promt-Master", "Google's SEO docs as an AI prompt — audit and fix every page"),
+    ("Discord-Bot-Website", "React + Tailwind website theme for Discord bots"),
+    ("Personal-Website", "Clean Next.js developer portfolio"),
+    ("Shroudly", "Free anti-censorship app: opens blocked YouTube, Instagram, X, Facebook, Discord, Telegram, WhatsApp, "
+                 "Wikipedia, Roblox, League of Legends and news, without a VPN — Windows 7 to 11, macOS, Linux, Android, "
+                 "Android TV, iPhone, iPad and Apple TV"),
+    ("v14-discord-bot", "discord.js v14 slash and prefix command boilerplate"),
+]
+
 HEADINGS = [("about", "About"), ("projects", "Projects"), ("stack", "Tech stack"), ("opensource", "Open source")]
 
 STACK = ["TypeScript", "JavaScript", "Next.js", "React", "Tailwind", "Node.js", "PostgreSQL",
@@ -737,14 +754,135 @@ def project(key, proj, n):
     both(f"projects/{key}.svg", draw, W, H, seed=hash_seed(key) + 7)
 
 
+# ─────────────────────────── WRITTEN PARTS ──────────────────────────
+
+
+def about_text():
+    names = STUDIO["products"]
+    return ABOUT.format(products=", ".join(names[:-1]) + " and " + names[-1])
+
+
+def wrap(text, size, width):
+    """Breaks text into lines. A line is [(word, heavy, x, w)], *…* marking the heavy words."""
+    tokens = []                                   # (word, heavy, glued to the word before)
+    before = " "
+    for n, part in enumerate(text.split("*")):
+        # glued only when neither side of the * has a space: "*Codeshare Technology*," keeps its comma
+        glued = bool(tokens) and not before[-1:].isspace() and not part[:1].isspace()
+        for k, word in enumerate(part.split()):
+            tokens.append((word, n % 2 == 1, glued and k == 0))
+        before = part or before
+    space = TEXT.width(" ", size)
+    lines, line, x = [], [], 0.0
+    i = 0
+    while i < len(tokens):
+        # a word and whatever is glued to it (a comma after a heavy word) stay together
+        group = [tokens[i]]
+        while i + len(group) < len(tokens) and tokens[i + len(group)][2]:
+            group.append(tokens[i + len(group)])
+        gw = sum((BOLD if h else TEXT).width(w, size) for w, h, _ in group)
+        if line and x + space + gw > width:
+            lines.append(line)
+            line, x = [], 0.0
+        if line:
+            x += space
+        for w, h, _ in group:
+            ww = (BOLD if h else TEXT).width(w, size)
+            line.append((w, h, x, ww))
+            x += ww
+        i += len(group)
+    lines.append(line)
+    return lines
+
+
+def write_lines(ink, lines, x0, y0, size, step, at, color, heavy_color=None, mark=True):
+    """Writes wrapped lines; heavy words in the ink colour with a marker swipe behind each run of them."""
+    p = ink.p
+    for n, line in enumerate(lines):
+        y, t = y0 + n * step, at + n * .11
+        k = 0
+        while k < len(line):
+            if line[k][1] and mark:
+                j = k
+                while j + 1 < len(line) and line[j + 1][1]:
+                    j += 1
+                ink.marker(x0 + line[k][2] - 3, y - size * .78, x0 + line[j][2] + line[j][3] + 3, y + size * .2, t)
+                k = j + 1
+            else:
+                k += 1
+        for word, heavy, x, _ in line:
+            ink.text(BOLD if heavy else TEXT, word, x0 + x, y, size, t + .05, (heavy_color or p["ink"]) if heavy else color)
+
+
+def about():
+    W, size, step, x0 = 1200, 27.5, 41, 66
+    lines = wrap(about_text(), size, W - x0 - 14)
+    H = 34 + step * len(lines) + 14
+
+    def draw(ink):
+        # ivy growing down the margin, like a note pinned under a plant
+        ink.vine([(26, -8), (34, H * .3), (20, H * .62), (30, H - 34)], at=.1, speed=210, leaf=23, sway=4, side=1,
+                 curl=-1, width=2.2, gap=(40, 56), first=30, berries=.25, taper=.7)
+        write_lines(ink, lines, x0, 46, size, step, .2, ink.p["soft"])
+
+    both("about.svg", draw, W, H, seed=53)
+
+
+def star(ink, cx, cy, r, at):
+    """A star as drawn in a notebook margin."""
+    rng, p = ink.rng, ink.p
+    pts = []
+    for k in range(10):
+        a = -math.pi / 2 + k * math.pi / 5 + rng.uniform(-.06, .06)
+        rr = (r if k % 2 == 0 else r * .46) * rng.uniform(.93, 1.07)
+        pts.append((cx + math.cos(a) * rr, cy + math.sin(a) * rr))
+    d = "M" + "L".join(f"{f(x)} {f(y)}" for x, y in pts) + "Z"
+    ink.add(f'<g class="i" style="animation-delay:{at:.2f}s"><path d="{d}" fill="{p["marker"]}" transform="translate(1.6 1.4)"/>'
+            f'<path d="{d}" fill="none" stroke="{p["ink"]}" stroke-width="2" stroke-linejoin="round"/></g>')
+
+
+def open_source():
+    W, size, step, x0 = 1200, 23.5, 33, 58
+    github = LIVE.get("github", {})
+    for n, (repo, desc) in enumerate(OPEN_SOURCE):
+        lines = wrap(desc, size, W - x0 - 20)
+        H = 96 + step * len(lines)
+
+        def draw(ink, repo=repo, lines=lines, H=H, n=n):
+            p = ink.p
+            # a leaf for a bullet, turned a little differently on every line
+            o, v = ink.leaf(25)
+            ink.add(f'<g transform="translate(14 {38 + ink.rng.uniform(-3, 3):.1f}) rotate({ink.rng.uniform(-34, 18):.1f})"><g class="lf" style="animation-delay:.15s">'
+                    f'<g class="sw" style="animation-duration:{ink.rng.uniform(3.4, 5.8):.1f}s;animation-delay:-{ink.rng.uniform(0, 5):.1f}s">'
+                    f'<path class="s" d="M0 0L6 0" stroke="{p["ink"]}" stroke-width="2"/><g transform="translate(6 0)">'
+                    f'<path d="{o}" fill="{p["leaf"][n % 3]}" transform="translate(1.8 1.5)"/>'
+                    f'<path class="s" d="{o}" stroke="{p["ink"]}" stroke-width="2"/>'
+                    f'<path class="s" d="{v}" stroke="{p["ink"]}" stroke-width="1" stroke-opacity=".7"/></g></g></g></g>')
+            w = ink.text(BOLD, repo, x0, 50, 33, .1)
+            ink.stroke(smooth(hand_line(ink.rng, (x0 - 2, 63), (x0 + w + 4, 61 + ink.rng.uniform(-1.2, 1.2)), 1.3, 46)), .3, .4, 3,
+                       p["accent"] if n % 2 == 0 else p["leaf"][1])
+            count = github.get(f"{repo} stars")
+            if count:
+                cw = BOLD.width(count, 25)
+                ink.text(BOLD, count, W - 30, 49, 25, .35, anchor="end")
+                star(ink, W - 30 - cw - 22, 40, 14, .3)
+            write_lines(ink, lines, x0, 96, size, step, .3, p["soft"])
+            if n < len(OPEN_SOURCE) - 1:
+                ink.stroke(smooth(hand_line(ink.rng, (x0 - 4, H - 8), (W - 16, H - 9), 1.2, 90)), .5, .7, 1.5, opacity=".32")
+
+        both(f"opensource/{repo.lower()}.svg", draw, W, H, seed=hash_seed(repo) + 5)
+
+
 if __name__ == "__main__":
     print("Drawing…")
     hero()
     links()
     headings()
+    about()
     stats()
     studio()
     for n, (k, v) in enumerate(PROJECTS.items()):
         project(k, v, n)
     stack()
+    open_source()
     print("Done.")
