@@ -1,29 +1,29 @@
 <div align="center">
 
-<img width="100%" src="./assets/hero.svg" alt="Umut Bayraktar — Full-Stack Developer" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/hero.svg"><img width="100%" src="./assets/light/hero.svg" alt="Umut Bayraktar: founder of Codeshare, full-stack developer, AI systems researcher"></picture>
 
-<a href="https://codeshare.me"><img src="https://img.shields.io/badge/Codeshare-0a1628?style=for-the-badge&logo=codesandbox&logoColor=38bdf8" /></a>
-<a href="https://umutbayraktar.vercel.app"><img src="https://img.shields.io/badge/Portfolio-0a1628?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-<a href="https://linkedin.com/in/umutxyp"><img src="https://img.shields.io/badge/LinkedIn-0a1628?style=for-the-badge&logo=linkedin&logoColor=0A66C2" /></a>
-<a href="https://youtube.com/@umutxyp"><img src="https://img.shields.io/badge/YouTube-0a1628?style=for-the-badge&logo=youtube&logoColor=FF0000" /></a>
-<a href="https://instagram.com/umutxyp"><img src="https://img.shields.io/badge/Instagram-0a1628?style=for-the-badge&logo=instagram&logoColor=E4405F" /></a>
-<a href="https://tiktok.com/@umutxyp"><img src="https://img.shields.io/badge/TikTok-0a1628?style=for-the-badge&logo=tiktok&logoColor=white" /></a>
-<a href="https://t.me/umutxyp"><img src="https://img.shields.io/badge/Telegram-0a1628?style=for-the-badge&logo=telegram&logoColor=26A5E4" /></a>
-<a href="https://twitter.com/devbayraktar"><img src="https://img.shields.io/badge/X-0a1628?style=for-the-badge&logo=x&logoColor=white" /></a>
-<a href="https://facebook.com/umutxyp"><img src="https://img.shields.io/badge/Facebook-0a1628?style=for-the-badge&logo=facebook&logoColor=1877F2" /></a>
-<a href="mailto:umutbayraktar55@gmail.com"><img src="https://img.shields.io/badge/Email-0a1628?style=for-the-badge&logo=gmail&logoColor=EA4335" /></a>
+<a href="https://codeshare.me"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/codeshare.svg"><img height="38" src="./assets/light/links/codeshare.svg" alt="Codeshare"></picture></a>
+<a href="https://umutbayraktar.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/portfolio.svg"><img height="38" src="./assets/light/links/portfolio.svg" alt="Portfolio"></picture></a>
+<a href="https://linkedin.com/in/umutxyp"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/linkedin.svg"><img height="38" src="./assets/light/links/linkedin.svg" alt="LinkedIn"></picture></a>
+<a href="https://youtube.com/@umutxyp"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/youtube.svg"><img height="38" src="./assets/light/links/youtube.svg" alt="YouTube"></picture></a>
+<a href="https://instagram.com/umutxyp"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/instagram.svg"><img height="38" src="./assets/light/links/instagram.svg" alt="Instagram"></picture></a>
+<a href="https://tiktok.com/@umutxyp"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/tiktok.svg"><img height="38" src="./assets/light/links/tiktok.svg" alt="TikTok"></picture></a>
+<a href="https://t.me/umutxyp"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/telegram.svg"><img height="38" src="./assets/light/links/telegram.svg" alt="Telegram"></picture></a>
+<a href="https://twitter.com/devbayraktar"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/x.svg"><img height="38" src="./assets/light/links/x.svg" alt="X"></picture></a>
+<a href="https://facebook.com/umutxyp"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/facebook.svg"><img height="38" src="./assets/light/links/facebook.svg" alt="Facebook"></picture></a>
+<a href="mailto:umutbayraktar55@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/links/email.svg"><img height="38" src="./assets/light/links/email.svg" alt="Email"></picture></a>
 
 </div>
 
-### 👋 About
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/headings/about.svg"><img width="100%" src="./assets/light/headings/about.svg" alt="About"></picture>
 
 I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the software studio behind Beatra, Shroudly, Vanigo, Sylon, MCStat, JustAnime, JustDiscord and Dotrai. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
 
-<img width="100%" src="./assets/stats.svg" alt="Discord users reached · Discord servers · Minecraft players · GitHub stars" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/stats.svg"><img width="100%" src="./assets/light/stats.svg" alt="Discord users reached, Discord servers, Minecraft players, GitHub stars"></picture>
 
-### 🚀 Projects
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/headings/projects.svg"><img width="100%" src="./assets/light/headings/projects.svg" alt="Projects"></picture>
 
-<a href="https://codeshare.me"><img width="100%" src="./assets/studio.svg" alt="Codeshare Technology — software studio" /></a>
+<a href="https://codeshare.me"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/studio.svg"><img width="100%" src="./assets/light/studio.svg" alt="Codeshare Technology, software studio"></picture></a>
 
 <details>
 <summary><b>How Codeshare got here</b></summary>
@@ -54,22 +54,22 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 
 <div align="center">
 
-<a href="https://beatra.app"><img width="49%" src="./assets/projects/beatra.svg" alt="Beatra" /></a>
-<a href="https://github.com/umutxyp/Shroudly"><img width="49%" src="./assets/projects/shroudly.svg" alt="Shroudly" /></a>
-<a href="https://vanigo.app"><img width="49%" src="./assets/projects/vanigo.svg" alt="Vanigo" /></a>
-<a href="https://sylon.app"><img width="49%" src="./assets/projects/sylon.svg" alt="Sylon" /></a>
-<a href="https://mcstat.org"><img width="49%" src="./assets/projects/mcstat.svg" alt="MCStat" /></a>
-<a href="https://justanime.me"><img width="49%" src="./assets/projects/justanime.svg" alt="JustAnime" /></a>
-<a href="https://justdiscord.org"><img width="49%" src="./assets/projects/justdiscord.svg" alt="JustDiscord" /></a>
-<a href="https://dotrai.com"><img width="49%" src="./assets/projects/dotrai.svg" alt="Dotrai" /></a>
+<a href="https://beatra.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/beatra.svg"><img width="49%" src="./assets/light/projects/beatra.svg" alt="Beatra"></picture></a>
+<a href="https://github.com/umutxyp/Shroudly"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/shroudly.svg"><img width="49%" src="./assets/light/projects/shroudly.svg" alt="Shroudly"></picture></a>
+<a href="https://vanigo.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/vanigo.svg"><img width="49%" src="./assets/light/projects/vanigo.svg" alt="Vanigo"></picture></a>
+<a href="https://sylon.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/sylon.svg"><img width="49%" src="./assets/light/projects/sylon.svg" alt="Sylon"></picture></a>
+<a href="https://mcstat.org"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/mcstat.svg"><img width="49%" src="./assets/light/projects/mcstat.svg" alt="MCStat"></picture></a>
+<a href="https://justanime.me"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/justanime.svg"><img width="49%" src="./assets/light/projects/justanime.svg" alt="JustAnime"></picture></a>
+<a href="https://justdiscord.org"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/justdiscord.svg"><img width="49%" src="./assets/light/projects/justdiscord.svg" alt="JustDiscord"></picture></a>
+<a href="https://dotrai.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/projects/dotrai.svg"><img width="49%" src="./assets/light/projects/dotrai.svg" alt="Dotrai"></picture></a>
 
 </div>
 
-### ⚙️ Tech Stack
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/headings/stack.svg"><img width="100%" src="./assets/light/headings/stack.svg" alt="Tech stack"></picture>
 
-<img src="https://skillicons.dev/icons?i=ts,js,nextjs,react,tailwind,nodejs,postgres,prisma,redis,mongodb,docker,linux,nginx,cloudflare&theme=dark" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/stack.svg"><img width="100%" src="./assets/light/stack.svg" alt="TypeScript, JavaScript, Next.js, React, Tailwind, Node.js, PostgreSQL, Prisma, Redis, MongoDB, Docker, Linux, nginx, Cloudflare"></picture>
 
-### 📦 Open Source
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/headings/opensource.svg"><img width="100%" src="./assets/light/headings/opensource.svg" alt="Open source"></picture>
 
 | Repository | Description |
 |:---|:---|
