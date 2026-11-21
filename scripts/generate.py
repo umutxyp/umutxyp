@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draws the pictures of the profile README: ink lines, ivy and hand lettering.
+"""Draws the pictures of the profile README: ink lines, a blue fox by the sea, hand lettering.
 
 Everything is an SVG written by this file, twice: once in dark ink for GitHub's
 light theme (assets/light) and once in pale ink for the dark one (assets/dark).
@@ -159,14 +159,19 @@ START = dict(hero=0.0, links=2.3, about_heading=3.0, about=3.3, stats=4.0, proje
 HEADING_START = dict(about="about_heading", projects="projects_heading", stack="stack_heading", opensource="opensource_heading")
 
 # ───────────────────────────── PALETTES ─────────────────────────────
-# Transparent pictures, so the page itself is the paper: dark ink on GitHub's
-# light theme, pale ink on its dark one. The README picks the file with <picture>.
+# A blue fox by the sea: the blues of the profile picture, navy ink, and a little coral.
+# Transparent pictures, so the page itself is the paper: dark ink on GitHub's light theme,
+# pale ink on its dark one. The README picks the file with <picture>.
 
 PALETTES = {
-    "light": dict(ink="#1f2a24", soft="#51605a", leaf=["#8fc79c", "#63a97a", "#b7dcab"], vein="#2f5b40",
-                  accent="#d4572f", marker="#ffd75a", marker_op=".62", wash="#eef4ea", bug="#e0492f", bug_ink="#1f2a24"),
-    "dark": dict(ink="#ece8da", soft="#a9ad9f", leaf=["#4f9c69", "#6fbf86", "#3b7a52"], vein="#d9efd9",
-                 accent="#ff8f63", marker="#f2c94c", marker_op=".2", wash="#16211b", bug="#f0603f", bug_ink="#14110f"),
+    "light": dict(ink="#14273d", soft="#4d6379", leaf=["#86cfe0", "#4fa9cc", "#b5e2ee"],
+                  accent="#2188e0", warm="#ff8559", marker="#bfe2ff", marker_op=".9",
+                  wash="#d6ecfa", wash_op=".8", deep="#bcdcf2",
+                  fur="#4aa8f2", fur2="#2c7fd6", mask="#f6fbff", paper="#ffffff", dark="#14273d"),
+    "dark": dict(ink="#e4eef8", soft="#9db1c6", leaf=["#2f86b3", "#51aad6", "#1f6790"],
+                 accent="#47b8f5", warm="#ff9770", marker="#1d5c8f", marker_op=".6",
+                 wash="#10283c", wash_op=".85", deep="#15344e",
+                 fur="#3f9ff0", fur2="#2a78cf", mask="#eaf4ff", paper="#1b3a55", dark="#0b1826"),
 }
 
 # ───────────────────────────── LETTERING ────────────────────────────
@@ -307,6 +312,16 @@ def blob(rng, x0, y0, x1, y1, rough=2.2):
            (x0 - 6, y1 - 2), (x0 - 8, (y0 + y1) / 2)]
     return smooth(pts, closed=True)
 
+def wave(rng, x0, x1, y, amp=6.0, span=110.0, rough=1.2):
+    """A sea line: gentle crests, never quite the same twice."""
+    pts, x, up = [], x0, rng.choice((-1, 1))
+    while x < x1:
+        pts.append((x, y + up * amp * rng.uniform(.7, 1.15) + rng.uniform(-rough, rough)))
+        x += span / 2 * rng.uniform(.82, 1.2)
+        up = -up
+    pts.append((x1, y + up * amp * .6))
+    return pts
+
 # ─────────────────────────────── INK ────────────────────────────────
 
 STYLE = """
@@ -316,18 +331,26 @@ STYLE = """
 .lf{transform:scale(0);animation:lf .9s cubic-bezier(.34,1.56,.64,1) forwards}
 @keyframes lf{to{transform:scale(1)}}
 .sw{animation:sw 4s ease-in-out infinite alternate}
-@keyframes sw{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+@keyframes sw{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+.bb{opacity:0;animation:bb 4s ease-in infinite}
+@keyframes bb{0%{opacity:0;transform:translateY(8px) scale(.6)}18%{opacity:1}80%{opacity:.9}100%{opacity:0;transform:translateY(-30px) scale(1.05)}}
+.bob{animation:bob 3.4s ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(1.5px) rotate(-3.5deg)}to{transform:translateY(-3.5px) rotate(3deg)}}
+.wv{animation:wv 7s ease-in-out infinite alternate}
+@keyframes wv{from{transform:translateX(-14px)}to{transform:translateX(14px)}}
+.cl{animation:cl 11s ease-in-out infinite alternate}
+@keyframes cl{from{transform:translateX(-10px)}to{transform:translateX(16px)}}
 .br{animation:br 2.8s ease-in-out infinite alternate}
-@keyframes br{from{transform:scale(1,1)}to{transform:scale(1.012,1.045)}}
+@keyframes br{from{transform:scale(1,1)}to{transform:scale(1.012,1.05)}}
 .tl{animation:tl 3.4s ease-in-out infinite alternate}
-@keyframes tl{from{transform:rotate(-9deg)}to{transform:rotate(7deg)}}
+@keyframes tl{from{transform:rotate(-5deg)}to{transform:rotate(4deg)}}
 .zz{opacity:0;animation:zz 3.9s ease-in-out infinite}
 @keyframes zz{0%{opacity:0;transform:translate(3px,7px)}35%{opacity:.85}100%{opacity:0;transform:translate(-9px,-17px)}}
 .i{opacity:0;animation:i .7s ease forwards}
 @keyframes i{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
 .w{stroke-dasharray:1;stroke-dashoffset:1;fill-opacity:0;stroke-linejoin:round;stroke-linecap:round;animation:w 1.2s ease forwards}
 @keyframes w{0%{stroke-dashoffset:1;fill-opacity:0}60%{stroke-dashoffset:0;fill-opacity:0}100%{stroke-dashoffset:0;fill-opacity:1}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}.d{stroke-dashoffset:0;opacity:1}.lf{transform:none}.i{opacity:1}.w{stroke-dashoffset:0;fill-opacity:1}.zz{opacity:.7}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.d{stroke-dashoffset:0;opacity:1}.lf{transform:none}.i{opacity:1}.w{stroke-dashoffset:0;fill-opacity:1}.zz{opacity:.7}.bb{opacity:.85}}
 """
 
 
@@ -342,11 +365,14 @@ class Ink:
     def add(self, s):
         self.body.append(s)
 
-    # a line that draws itself: `at` seconds after the picture loads, taking `dur`
+    # a line that draws itself: `at` seconds after the picture's turn comes, taking `dur`
     def stroke(self, d, at=0.0, dur=0.8, width=2.4, color=None, opacity=None):
+        self.add(self.line(d, at, dur, width, color, opacity))
+
+    def line(self, d, at=0.0, dur=0.8, width=2.4, color=None, opacity=None):
         op = f' stroke-opacity="{opacity}"' if opacity else ""
-        self.add(f'<path class="d" pathLength="1" d="{d}" stroke="{color or self.p["ink"]}" stroke-width="{width}"{op} '
-                 f'style="animation-delay:{at:.2f}s;animation-duration:{dur:.2f}s"/>')
+        return (f'<path class="d" pathLength="1" d="{d}" stroke="{color or self.p["ink"]}" stroke-width="{width}"{op} '
+                f'style="animation-delay:{at:.2f}s;animation-duration:{dur:.2f}s"/>')
 
     def text(self, face, s, x, y, size, at=0.0, color=None, anchor="start", tracking=0.0, fit=None):
         if fit and face.width(s, size) > fit:
@@ -374,38 +400,39 @@ class Ink:
         if ring:
             self.stroke(smooth(hand_box(self.rng, x - 3, y - 3, w + 6, size + 6, size * .26, wobble=.9)), at + .1, .7, 2)
 
-    # ── ivy ──
+    # ── sea plants ──
 
     def leaf(self, size):
-        """An ivy leaf pointing along +x from its stalk at the origin: (fill, outline, veins)."""
+        """A blade of sea grass pointing along +x from the origin: (outline, midrib)."""
         rng = self.rng
-        j = lambda v: v + rng.uniform(-.035, .035)
-        lean = rng.uniform(.88, 1.1)
-        half = [(.10, 0), (j(-.07), j(-.36)), (j(.27), j(-.31)), (j(.47), j(-.58)), (j(.66), j(-.27)), (1.0, 0)]
-        low = [(x, -y * lean) for x, y in reversed(half[1:-1])]
-        pts = [(x * size, y * size) for x, y in half + low]
-        cx, cy = .42 * size, 0
-        d = [f"M{f(pts[0][0])} {f(pts[0][1])}"]
-        for a, b in zip(pts, pts[1:] + pts[:1]):
-            mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
-            ox, oy = mx - cx, my - cy
-            k = .11 * size / (math.hypot(ox, oy) or 1)
-            d.append(f"Q{f(mx + ox * k)} {f(my + oy * k)} {f(b[0])} {f(b[1])}")
-        outline = "".join(d) + "Z"
-        tip = lambda i, k: (cx + (pts[i][0] - cx) * k, pts[i][1] * k)
-        veins = f"M{f(.12 * size)} 0Q{f(.5 * size)} {f(rng.uniform(-.03, .03) * size)} {f(.84 * size)} 0"
-        for i, k, root in ((1, .62, .2), (3, .68, .34), (len(pts) - 1, .62, .2), (len(pts) - 3, .68, .34)):
-            t = tip(i, k)
-            veins += f"M{f(root * size)} 0L{f(t[0])} {f(t[1])}"
-        return outline, veins
+        w, bend = rng.uniform(.17, .27) * size, rng.uniform(-.14, .14) * size
+        outline = (f"M0 0C{f(size * .2)} {f(-w * 1.15)} {f(size * .62)} {f(-w * .9 + bend)} {f(size)} {f(bend)}"
+                   f"C{f(size * .66)} {f(w * .75 + bend)} {f(size * .24)} {f(w * 1.05)} 0 0Z")
+        rib = f"M{f(size * .06)} 0Q{f(size * .5)} {f(bend * .45)} {f(size * .86)} {f(bend * .9)}"
+        return outline, rib
+
+    def bubbles(self, x, y, at, n=2, r=(2.6, 5.2)):
+        """A few bubbles that keep rising from (x, y) once the picture has got this far."""
+        rng, p = self.rng, self.p
+        out = []
+        for k in range(n):
+            rad = rng.uniform(*r)
+            bx, by = x + rng.uniform(-9, 9), y + rng.uniform(-6, 6)
+            out.append(
+                f'<g transform="translate({f(bx)} {f(by)})"><g class="bb" style="animation-duration:{rng.uniform(3.2, 5.6):.1f}s;'
+                f'animation-delay:{at + rng.uniform(0, 3.5):.2f}s">'
+                f'<circle r="{f(rad)}" fill="{p["mask"]}" fill-opacity=".55" stroke="{p["ink"]}" stroke-width="1.4"/>'
+                f'<path class="s" d="M{f(-rad * .45)} {f(-rad * .1)}A{f(rad * .5)} {f(rad * .5)} 0 0 1 {f(-rad * .05)} {f(-rad * .5)}" stroke="{p["ink"]}" stroke-width="1" stroke-opacity=".7"/>'
+                f'</g></g>')
+        self.add("".join(out))
 
     def vine(self, guide, at=0.0, speed=300, leaf=30, gap=(46, 70), sway=6.0, side=1, both=True, curl=1, width=2.6,
-             lean=(48, 78), taper=.55, first=26, berries=0.0):
-        """Ivy that grows along `guide`. Returns the stem's path data and the time it has finished growing."""
+             lean=(48, 78), taper=.55, first=26, bubbles=0.0):
+        """Sea grass that grows along `guide`. Returns the stem's path data and the time it has finished growing."""
         rng, p = self.rng, self.p
         pts = sample(guide, 5)
         total = length(pts)
-        wave, ph1, ph2 = rng.uniform(150, 200), rng.uniform(0, 6.28), rng.uniform(0, 6.28)
+        wavel, ph1, ph2 = rng.uniform(150, 200), rng.uniform(0, 6.28), rng.uniform(0, 6.28)
         out, s = [], 0.0
         for i, pt in enumerate(pts):
             a, b = pts[max(0, i - 1)], pts[min(len(pts) - 1, i + 1)]
@@ -414,10 +441,9 @@ class Ink:
             if i:
                 s += math.dist(pts[i - 1], pt)
             env = min(1, s / 40) * min(1, (total - s) / 30 + .3)
-            off = (math.sin(s / wave * 6.283 + ph1) * sway + math.sin(s / (wave * .37) * 6.283 + ph2) * sway * .22) * env
+            off = (math.sin(s / wavel * 6.283 + ph1) * sway + math.sin(s / (wavel * .37) * 6.283 + ph2) * sway * .22) * env
             out.append((pt[0] - ty / n * off, pt[1] + tx / n * off, s, math.atan2(ty, tx)))
-        # the tip curls
-        if curl:
+        if curl:                                      # the tip curls
             x, y, s, ang = out[-1]
             for k in range(26):
                 ang += curl * (0.13 + 0.017 * k)
@@ -427,52 +453,38 @@ class Ink:
         full = out[-1][2]
         stem = smooth([(q[0], q[1]) for q in out[::3]] + [(out[-1][0], out[-1][1])])
         self.stroke(stem, at, full / speed, width)
-        # leaves, each opening as the stem reaches it
-        nxt, flip, i = first, side, 0
-        leaves = []
+        nxt, flip, i = first, side, 0                 # blades, each opening as the stem reaches it
+        blades = []
         while i < len(out):
             x, y, s, ang = out[i]
-            if s >= nxt and s < total - 14:
+            if s >= nxt and s < total - 10:
                 k = 1 - (1 - taper) * max(0, (s - total * .55) / (total * .45))
-                size = leaf * rng.uniform(.78, 1.16) * k
-                stalk = size * rng.uniform(.34, .58)
+                size = leaf * rng.uniform(.8, 1.2) * k
                 turn = ang + flip * math.radians(rng.uniform(*lean))
-                leaves.append((x, y, turn, size, stalk, at + s / speed + .05, rng.choice(p["leaf"])))
-                if berries and rng.random() < berries and s > 60:
-                    # a few berries on the other side of the stem
-                    b = ang - flip * math.radians(rng.uniform(60, 95)) if both else ang + flip * math.radians(rng.uniform(100, 140))
-                    n, r = rng.choice((2, 3, 3)), size * rng.uniform(.13, .17)
-                    dots = "".join(
-                        f'<circle cx="{f(size * .42 + math.cos(q) * r * 1.25)}" cy="{f(math.sin(q) * r * 1.25)}" r="{f(r)}" '
-                        f'fill="{p["accent"]}" stroke="{p["ink"]}" stroke-width="{f(width * .6)}"/>'
-                        for q in (k * 6.283 / n + rng.uniform(0, 1) for k in range(n)))
-                    self.add(f'<g transform="translate({f(x)} {f(y)}) rotate({f(math.degrees(b))})"><g class="lf" style="animation-delay:{at + s / speed + .25:.2f}s">'
-                             f'<path class="s" d="M0 0Q{f(size * .2)} {f(rng.uniform(-3, 3))} {f(size * .36)} 0" stroke="{p["ink"]}" stroke-width="{f(width * .7)}"/>{dots}</g></g>')
+                blades.append((x, y, turn, size, at + s / speed + .05, rng.choice(p["leaf"])))
+                if bubbles and rng.random() < bubbles and s > 40:
+                    self.bubbles(x + math.cos(turn) * size * .9, y + math.sin(turn) * size * .9 - 6, at + s / speed + .6, rng.choice((1, 2)))
                 nxt = s + rng.uniform(*gap) * (.75 + .25 * k)
                 if both:
                     flip = -flip
             i += 1
-        for x, y, turn, size, stalk, t, fill in leaves:
-            outline, veins = self.leaf(size)
-            bend = rng.uniform(-.25, .25) * stalk
-            tilt = rng.uniform(-14, 14)
+        for x, y, turn, size, t, fill in blades:
+            outline, rib = self.leaf(size)
             self.add(
                 f'<g transform="translate({f(x)} {f(y)}) rotate({f(math.degrees(turn))})">'
                 f'<g class="lf" style="animation-delay:{t:.2f}s">'
                 f'<g class="sw" style="animation-duration:{rng.uniform(3.2, 6.4):.1f}s;animation-delay:-{rng.uniform(0, 6):.1f}s">'
-                f'<path class="s" d="M0 0Q{f(stalk * .5)} {f(bend)} {f(stalk)} 0" stroke="{p["ink"]}" stroke-width="{f(width * .8)}"/>'
-                f'<g transform="translate({f(stalk)} 0) rotate({f(tilt)})">'
-                f'<path d="{outline}" fill="{fill}" transform="translate({f(size * .075)} {f(size * .06)})"/>'
-                f'<path class="s" d="{outline}" stroke="{p["ink"]}" stroke-width="{f(width * .82)}"/>'
-                f'<path class="s" d="{veins}" stroke="{p["ink"]}" stroke-width="1.1" stroke-opacity=".7"/>'
-                f'</g></g></g></g>')
+                f'<path d="{outline}" fill="{fill}" transform="translate({f(size * .05)} {f(size * .06)})"/>'
+                f'<path class="s" d="{outline}" stroke="{p["ink"]}" stroke-width="{f(width * .8)}"/>'
+                f'<path class="s" d="{rib}" stroke="{p["ink"]}" stroke-width="1.1" stroke-opacity=".65"/>'
+                f'</g></g></g>')
         return stem, at + full / speed
 
     def render(self):
         defs = f'<defs>{"".join(self.defs)}</defs>' if self.defs else ""
         body = "".join(self.body)
         if self.start:
-            # the whole picture waits for its turn (the leaves' sway, which runs from the start, is left alone)
+            # the whole picture waits for its turn (the sway, which runs from the start, is left alone)
             body = re.sub(r"animation-delay:(\d*\.?\d+)s", lambda m: f"animation-delay:{float(m.group(1)) + self.start:.2f}s", body)
             body = re.sub(r'begin="(\d[\d.]*)s"', lambda m: f'begin="{float(m.group(1)) + self.start:.1f}s"', body)
         return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.w}" height="{self.h}" viewBox="0 0 {self.w} {self.h}" fill="none">'
@@ -503,72 +515,150 @@ def both(name, draw, w, h, seed, start=0.0):
         write(theme, name, ink)
     print(f"  ✓ {name}")
 
+
+def hash_seed(s):
+    return sum((i + 1) * ord(c) for i, c in enumerate(s)) % 9973
+
+# ────────────────────────────── THE FOX ─────────────────────────────
+# The fox of the profile picture: a diamond of a face under two tall ears, in its blues.
+
+
+def fox_head(p, asleep=False, w=2.3):
+    """The head, about 52 wide, its middle at the origin."""
+    eyes = ("M-14 -5q3.6 3.8 7.2 0M6.8 -5q3.6 3.8 7.2 0" if asleep else "")
+    dots = "" if asleep else f'<circle cx="-10" cy="-5" r="2.5" fill="{p["dark"]}"/><circle cx="10" cy="-5" r="2.5" fill="{p["dark"]}"/>'
+    return (
+        f'<path d="M-21 -13L-25 -43L-5 -19ZM21 -13L25 -43L5 -19Z" fill="{p["fur"]}" stroke="{p["ink"]}" stroke-width="{w}" stroke-linejoin="round"/>'
+        f'<path d="M-19 -19L-21.5 -35L-10 -21ZM19 -19L21.5 -35L10 -21Z" fill="{p["fur2"]}"/>'
+        f'<path d="M-27 -2L-15 -19L15 -19L27 -2L0 23Z" fill="{p["fur"]}" stroke="{p["ink"]}" stroke-width="{w}" stroke-linejoin="round"/>'
+        f'<path d="M-25.5 -1.5L-8 5L0 -2L8 5L25.5 -1.5L0 21.5Z" fill="{p["mask"]}"/>'
+        f'<path class="s" d="M-27 -2L-15 -19L15 -19L27 -2L0 23Z" stroke="{p["ink"]}" stroke-width="{w}"/>'
+        f'<path class="s" d="{eyes}" stroke="{p["dark"]}" stroke-width="2"/>{dots}'
+        f'<path d="M-3.2 17.2L3.2 17.2L0 21.2Z" fill="{p["dark"]}" stroke="{p["dark"]}" stroke-width="1.4" stroke-linejoin="round"/>')
+
+
+def sleeping_fox(ink, cx, base, at):
+    """The fox curled up asleep on a line, its tail around it."""
+    p, w = ink.p, 2.5
+    body = "M-42 1C-50 -26 -30 -43 -2 -43C28 -43 50 -27 48 1Z"
+    tail = "M44 -13C62 -9 62 6 40 4C14 2 -8 5 -26 -1C-14 -17 12 -21 30 -18C37 -17 41 -17 44 -13Z"
+    tip = "M-26 -1C-18 -11 -8 -15 2 -17.5L5 2.6C-6 2.6 -17 2 -26 -1Z"
+    z = "".join(
+        f'<g transform="translate({x} {y})"><path class="zz" d="{BOLD.d("z", 0, 0, s)[0]}" fill="{p["soft"]}" style="animation-delay:{at + 1.2 + k * 1.3:.2f}s"/></g>'
+        for k, (x, y, s) in enumerate(((-92, -52, 15), (-107, -64, 18), (-123, -76, 21))))
+    ink.add(
+        f'<g transform="translate({cx} {base})"><g class="i" style="animation-delay:{at:.2f}s">'
+        f'<g class="br"><path d="{body}" fill="{p["fur"]}"/>'
+        f'<path class="s" d="M6 -43q3 7 1 13M20 -41q3 6 1 12" stroke="{p["fur2"]}" stroke-width="4"/>'
+        f'<path class="s" d="{body}" stroke="{p["ink"]}" stroke-width="{w}"/></g>'
+        f'<g class="tl"><path d="{tail}" fill="{p["fur"]}"/><path d="{tip}" fill="{p["mask"]}"/>'
+        f'<path class="s" d="{tail}" stroke="{p["ink"]}" stroke-width="{w}"/></g>'
+        f'<g transform="translate(-46 -24) rotate(-9)">{fox_head(p, asleep=True, w=w)}</g>'
+        f'</g>{z}</g>')
+
+
+def boat(ink, x, y, at, fox=True, k=1.0):
+    """A paper boat riding the waves, the fox looking out of it."""
+    p = ink.p
+    hull = "M-52 -2L52 -2L35 22L-35 22Z"
+    sail = "M-17 -2L1 -44L19 -2Z"
+    crew = (f'<path d="M30 -2C38 -26 58 -24 54 -6C53 -1 46 1 40 -2Z" fill="{p["fur"]}" stroke="{p["ink"]}" stroke-width="2.2" stroke-linejoin="round"/>'
+            f'<path d="M46.5 -20.5C54 -20 56.5 -13 54 -6C52 -11 49 -15 44.5 -16.5Z" fill="{p["mask"]}"/>'
+            f'<g transform="translate(-33 -19) scale(.86)">{fox_head(p, w=2.5)}</g>') if fox else ""
+    ink.add(
+        f'<g transform="translate({x} {y}) scale({k})"><g class="i" style="animation-delay:{at:.2f}s"><g class="bob">{crew}'
+        f'<path d="{sail}" fill="{p["paper"]}" stroke="{p["ink"]}" stroke-width="2.3" stroke-linejoin="round"/>'
+        f'<path class="s" d="M1 -44L1 -58M1 -58L15 -53L1 -48" stroke="{p["ink"]}" stroke-width="2"/><path d="M1 -58L15 -53L1 -48Z" fill="{p["warm"]}"/>'
+        f'<path d="{hull}" fill="{p["paper"]}" stroke="{p["ink"]}" stroke-width="2.3" stroke-linejoin="round"/>'
+        f'<path class="s" d="M-17 -2L0 22L19 -2" stroke="{p["ink"]}" stroke-width="1.5" stroke-opacity=".55"/>'
+        f'</g></g></g>')
+
+
+def fish_shape(p, color):
+    """A small fish swimming towards +x, its middle at the origin."""
+    return (f'<path d="M-9 0L-19 -7L-16 0L-19 7Z" fill="{color}" stroke="{p["ink"]}" stroke-width="1.5" stroke-linejoin="round"/>'
+            f'<path d="M-11 0C-6 -8 6 -8 12 0C6 8 -6 8 -11 0Z" fill="{color}" stroke="{p["ink"]}" stroke-width="1.5"/>'
+            f'<path class="s" d="M-1 -5.5q3 5.5 0 11" stroke="{p["ink"]}" stroke-width="1.1" stroke-opacity=".6"/>'
+            f'<circle cx="6.5" cy="-1.6" r="1.4" fill="{p["dark"]}"/>')
+
+
+def swimmer(ink, path, begin, dur, color, k=1.0):
+    """A fish that swims the path over and over, fading in and out at its ends."""
+    ink.add(f'<g opacity="0"><g transform="scale({k})">{fish_shape(ink.p, color)}</g>'
+            f'<animateMotion path="{path}" dur="{dur}s" begin="{begin:.1f}s" repeatCount="indefinite" rotate="auto"/>'
+            f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.04;0.95;1" dur="{dur}s" begin="{begin:.1f}s" repeatCount="indefinite"/></g>')
+
+
+def cloud(ink, x, y, k, at):
+    p = ink.p
+    d = ("M-58 14C-76 14 -78 -8 -58 -10C-58 -30 -30 -36 -20 -20C-10 -42 26 -40 30 -16C48 -24 66 -8 54 8C62 14 56 22 46 20"
+         "C30 22 -30 22 -58 14Z")
+    ink.add(f'<g transform="translate({x} {y}) scale({k})"><g class="cl" style="animation-delay:-{ink.rng.uniform(0, 8):.1f}s">'
+            f'<path class="i" d="{d}" fill="{p["wash"]}" fill-opacity="{p["wash_op"]}" style="animation-delay:{at:.2f}s"/>'
+            f'{ink.line(d, at, 1.1, 2.2 / k)}</g></g>')
+
+
+def gull(ink, x, y, k, at):
+    ink.add(f'<g transform="translate({x} {y}) scale({k})">{ink.line("M-13 1Q-7 -9 0 0Q7 -9 13 1", at, .5, 2.2 / k)}</g>')
+
 # ─────────────────────────────── HERO ───────────────────────────────
 
 
-def ladybug(ink, path, begin, dur=64):
-    """A ladybird that walks the vine once it has grown, again and again."""
-    p = ink.p
-    legs = p["ink"]
-    ink.add(
-        f'<g opacity="0"><g transform="translate(0 -7)">'
-        f'<path class="s" d="M4 -1.5L8.5 -5M4 1.5L8.5 5M-1 -3L-2 -7.5M-1 3L-2 7.5M-5 -2.5L-8 -6M-5 2.5L-8 6" stroke="{legs}" stroke-width="1.2"/>'
-        f'<ellipse cx="0" cy="0" rx="8.6" ry="6.6" fill="{p["bug"]}" stroke="{p["bug_ink"]}" stroke-width="1.5"/>'
-        f'<path d="M5.2 -5.3A7 7 0 0 1 5.2 5.3Z" fill="{p["bug_ink"]}"/>'
-        f'<path class="s" d="M-8.4 0L5 0" stroke="{p["bug_ink"]}" stroke-width="1.2"/>'
-        f'<circle cx="-3.6" cy="-3" r="1.5" fill="{p["bug_ink"]}"/><circle cx="-3.4" cy="3.1" r="1.5" fill="{p["bug_ink"]}"/>'
-        f'<circle cx="1.4" cy="-2.6" r="1.2" fill="{p["bug_ink"]}"/><circle cx="1.6" cy="2.7" r="1.2" fill="{p["bug_ink"]}"/>'
-        f'</g>'
-        f'<animateMotion path="{path}" dur="{dur}s" begin="{begin:.1f}s" repeatCount="indefinite" rotate="auto"/>'
-        f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.97;1" dur="{dur}s" begin="{begin:.1f}s" repeatCount="indefinite"/>'
-        f'</g>')
-
-
 def hero():
-    W, H = 1200, 446
+    W, H, SEA = 1200, 548, 440
 
     def draw(ink):
-        p = ink.p
-        # ivy climbing the left side and running along the top
-        stem, done = ink.vine([(-10, 470), (52, 388), (76, 278), (60, 176), (104, 88), (236, 52), (404, 68), (570, 46), (708, 62)],
-                              at=.2, speed=330, leaf=42, sway=7, side=-1, curl=-1, width=2.9, gap=(54, 82), berries=.3, first=96)
-        # ivy hanging down on the right
-        ink.vine([(1210, -18), (1144, 50), (1124, 150), (1150, 236), (1128, 296)], at=.9, speed=260, leaf=38, sway=6, side=1,
-                 curl=1, width=2.9, gap=(52, 76), berries=.3, first=74)
-        # a short one creeping in along the bottom
-        ink.vine([(1212, 440), (1100, 404), (980, 414), (872, 400)], at=1.6, speed=240, leaf=26, sway=4, side=1, curl=-1,
-                 width=2.4, gap=(42, 62), first=40)
+        p, rng = ink.p, ink.rng
+        # the sky
+        cloud(ink, 132, 76, 1.0, .3)
+        cloud(ink, 1062, 62, .78, .5)
+        gull(ink, 874, 104, 1.0, 1.1)
+        gull(ink, 918, 84, .72, 1.3)
+        gull(ink, 300, 46, .66, 1.5)
         # the name, written letter by letter
-        letters, w = NAME_FACE.letters(NAME, W / 2 + 6, 246, 138, "middle")
+        letters, w = NAME_FACE.letters(NAME, W / 2, 238, 138, "middle")
         for k, d in enumerate(letters):
             ink.add(f'<path class="w" pathLength="1" d="{d}" fill="{p["ink"]}" stroke="{p["ink"]}" stroke-width="1.6" '
                     f'style="animation-delay:{.4 + k * .06:.2f}s"/>')
         t = .4 + len(letters) * .06 + .45
-        # a swoosh under it, drawn twice like a pen going back
-        x0, x1 = W / 2 - w / 2 + 34, W / 2 + w / 2 - 6
-        ink.stroke(smooth([(x0, 288), (x0 + (x1 - x0) * .3, 281), (x0 + (x1 - x0) * .62, 287), (x1, 276)]), t, .55, 4.4, p["accent"])
-        ink.stroke(smooth([(x1 - 8, 285), (x0 + (x1 - x0) * .66, 295), (x0 + (x1 - x0) * .4, 294)]), t + .4, .35, 3, p["accent"])
+        # a wave under it instead of a straight line
+        x0, x1 = W / 2 - w / 2 + 30, W / 2 + w / 2 - 10
+        ink.stroke(smooth(wave(rng, x0, x1, 280, 5, 74)), t, .6, 4.4, p["accent"])
+        ink.stroke(smooth(wave(rng, x0 + (x1 - x0) * .38, x1 - 12, 293, 3.5, 66)), t + .4, .4, 2.8, p["accent"], ".7")
         # what he does
         size, gap = 25.5, 52
         sizes = [TEXT.width(r, size) for r in ROLES]
-        x = W / 2 - 4 - (sum(sizes) + gap * (len(ROLES) - 1)) / 2
+        x = W / 2 - (sum(sizes) + gap * (len(ROLES) - 1)) / 2
         for k, (r, rw) in enumerate(zip(ROLES, sizes)):
-            ink.text(TEXT, r, x, 356, size, t + .3 + k * .15, p["soft"])
+            ink.text(TEXT, r, x, 346, size, t + .3 + k * .15, p["soft"])
             if k < len(ROLES) - 1:
-                o, v = ink.leaf(15)
-                ink.add(f'<g class="i" style="animation-delay:{t + .4 + k * .15:.2f}s"><g transform="translate({f(x + rw + gap / 2 - 6)} 349) rotate(-38)">'
-                        f'<path d="{o}" fill="{p["leaf"][k % 3]}" transform="translate(1.4 1.2)"/>'
-                        f'<path class="s" d="{o}" stroke="{p["ink"]}" stroke-width="1.5"/></g></g>')
+                ink.add(f'<g class="i" style="animation-delay:{t + .4 + k * .15:.2f}s"><g transform="translate({f(x + rw + gap / 2)} 338) scale(.82)">'
+                        f'{fish_shape(p, p["leaf"][k % 3])}</g></g>')
             x += rw + gap
-        ladybug(ink, stem, done + .6)
+        # the sea: its surface drifting a little, deeper water under it
+        top = wave(rng, -40, W + 40, SEA, 6.5, 118)
+        ink.add(f'<g class="wv"><path class="i" d="{smooth(top)}L{W + 40} {H + 10}L-40 {H + 10}Z" fill="{p["wash"]}" fill-opacity="{p["wash_op"]}" style="animation-delay:.5s"/>'
+                f'{ink.line(smooth(top), .2, 1.5, 2.8)}</g>')
+        low = wave(rng, -40, W + 40, SEA + 46, 5, 150)
+        ink.add(f'<g class="wv" style="animation-duration:9s;animation-delay:-3s">'
+                f'<path class="i" d="{smooth(low)}L{W + 40} {H + 10}L-40 {H + 10}Z" fill="{p["deep"]}" fill-opacity=".55" style="animation-delay:.8s"/></g>')
+        for a, b, yy in ((150, 320, SEA + 26), (560, 700, SEA + 30), (860, 980, SEA + 24)):
+            ink.stroke(smooth(wave(rng, a, b, yy, 3, 60)), 1.4, .5, 1.8, opacity=".45")
+        # sea grass growing up from the bottom, left and right
+        for gx, top_y, lf, t0, sd in ((54, SEA + 22, 30, 1.0, 1), (112, SEA + 44, 24, 1.3, -1), (176, SEA + 62, 19, 1.5, 1),
+                                      (1150, SEA + 26, 29, 1.2, -1), (1092, SEA + 50, 22, 1.5, 1), (742, SEA + 66, 18, 1.7, 1)):
+            ink.vine([(gx, H + 12), (gx + rng.uniform(-10, 10), (H + top_y) / 2), (gx + rng.uniform(-12, 12), top_y)], at=t0, speed=110,
+                     leaf=lf, sway=4, side=sd, curl=0, width=2.3, gap=(17, 24), first=10, taper=.7, lean=(22, 44), bubbles=.3)
+        # fish below, the boat above with the fox aboard
+        swimmer(ink, smooth(wave(rng, -40, W + 40, SEA + 58, 9, 190)), 3.2, 46, p["warm"], 1.05)
+        swimmer(ink, smooth(wave(rng, -40, W + 40, SEA + 84, 7, 160)), 9.0, 61, p["leaf"][1], .8)
+        ink.bubbles(420, SEA + 70, 2.2, 2)
+        ink.bubbles(905, SEA + 78, 2.6, 2)
+        boat(ink, 1060, SEA - 9, 1.7, k=1.22)
 
     both("hero.svg", draw, W, H, seed=11, start=START["hero"])
 
 # ───────────────────────────── SMALL PARTS ──────────────────────────
-
-
-def hash_seed(s):
-    return sum((i + 1) * ord(c) for i, c in enumerate(s)) % 9973
 
 
 def links():
@@ -577,31 +667,32 @@ def links():
         W = int(BOLD.width(label, size) + pad * 2 + 22)
 
         def draw(ink, label=label, W=W):
-            p = ink.p
-            ink.box(8, 16, W - 22, 48, 23, at=.1, dur=.8, width=2.4)
-            ink.text(BOLD, label, 8 + (W - 22) / 2, 50, size, .35, anchor="middle")
-            # one small leaf growing out of the top right corner
-            o, v = ink.leaf(22)
-            ink.add(f'<g transform="translate({W - 31} 20) rotate({f(ink.rng.uniform(-62, -34))})"><g class="lf" style="animation-delay:.9s">'
-                    f'<g class="sw" style="animation-duration:{ink.rng.uniform(3.4, 5.6):.1f}s;animation-delay:-{ink.rng.uniform(0, 5):.1f}s">'
-                    f'<path class="s" d="M0 0L7 0" stroke="{p["ink"]}" stroke-width="2"/><g transform="translate(7 0)">'
-                    f'<path d="{o}" fill="{ink.rng.choice(p["leaf"])}" transform="translate(1.6 1.3)"/>'
-                    f'<path class="s" d="{o}" stroke="{p["ink"]}" stroke-width="1.9"/>'
-                    f'<path class="s" d="{v}" stroke="{p["ink"]}" stroke-width="1" stroke-opacity=".7"/></g></g></g></g>')
+            ink.box(8, 18, W - 22, 48, 23, at=.1, dur=.8, width=2.4)
+            ink.text(BOLD, label, 8 + (W - 22) / 2, 52, size, .35, anchor="middle")
+            ink.bubbles(W - 14, 20, .7, 2, (2.6, 4.6))     # bubbles off the top right corner
 
         both(f"links/{key}.svg", draw, W, h, seed=hash_seed(key), start=START["links"] + n * .06)
 
 
 def headings():
-    W, H = 1200, 100
-    for key, label in HEADINGS:
-        def draw(ink, label=label):
+    W, H = 1200, 104
+    for n, (key, label) in enumerate(HEADINGS):
+        def draw(ink, label=label, n=n):
+            p, rng = ink.p, ink.rng
             w = ink.text(BOLD, label, 6, 68, 52, .1)
-            # a pen stroke under the word, then ivy running off to the right
-            ink.stroke(smooth(hand_line(ink.rng, (4, 85), (w + 14, 82), 1.6, 60)), .3, .5, 4.4, ink.p["accent"])
-            x0 = w + 46
-            ink.vine([(x0, 64), (x0 + 220, 56), (x0 + 470, 68), (x0 + 700, 54), (1126, 62)], at=.4, speed=520, leaf=25,
-                     sway=5, side=-1, curl=1, width=2.2, gap=(70, 116), first=40, berries=.25)
+            ink.stroke(smooth(wave(rng, 4, w + 14, 84, 3.2, 52)), .3, .5, 4.4, p["accent"])
+            # the sea running off to the right, something sailing or swimming along it
+            x0 = w + 48
+            line = wave(rng, x0, 1176, 62, 6, 116)
+            ink.stroke(smooth(line), .4, 1.2, 2.3)
+            ink.stroke(smooth(wave(rng, x0 + 90, x0 + 250, 82, 3, 60)), 1, .4, 1.6, opacity=".4")
+            ink.stroke(smooth(wave(rng, 820, 1010, 84, 3, 60)), 1.1, .4, 1.6, opacity=".4")
+            if n % 2 == 0:
+                bx = rng.uniform(x0 + 240, 980)
+                boat(ink, bx, 52, 1.2, fox=False, k=.5)
+            else:
+                swimmer(ink, smooth([(q[0], q[1] + 20) for q in line]), 1.6, 40, p["warm"], .95)
+            ink.bubbles(rng.uniform(x0 + 60, 1100), 82, 1.4, 2, (2.4, 4.2))
 
         both(f"headings/{key}.svg", draw, W, H, seed=hash_seed(key) + 3, start=START[HEADING_START[key]])
 
@@ -621,11 +712,12 @@ def stats():
             ink.text(BOLD, v, cx, 96, 64, .25 + k * .14, anchor="middle")
             ink.text(TEXT, label, cx, 142, 23.5, .4 + k * .14, p["soft"], anchor="middle", fit=col - 34)
             if k:
-                # a little sprig between two numbers
+                # a blade or two of sea grass between two numbers, bubbles rising off it
                 x = col * k
-                ink.vine([(x + ink.rng.uniform(-4, 4), 108), (x + ink.rng.uniform(-7, 7), 80), (x + ink.rng.uniform(-5, 5), 54), (x + ink.rng.uniform(-4, 4), 30)],
-                         at=.5 + k * .2, speed=130, leaf=19, sway=2.5, side=ink.rng.choice((-1, 1)), curl=0,
-                         width=2, gap=(20, 25), first=22, taper=.8)
+                ink.vine([(x + ink.rng.uniform(-4, 4), 112), (x + ink.rng.uniform(-7, 7), 80), (x + ink.rng.uniform(-5, 5), 50)],
+                         at=.5 + k * .2, speed=130, leaf=24, sway=2.5, side=ink.rng.choice((-1, 1)), curl=0,
+                         width=2, gap=(16, 22), first=10, taper=.8, lean=(24, 46))
+                ink.bubbles(x, 40, .9 + k * .2, 2, (2.4, 4.4))
 
     both("stats.svg", draw, W, H, seed=23, start=START["stats"])
 
@@ -652,9 +744,9 @@ def stack():
             y = 56 + r * line
             for wd, w in row:
                 ink.text(BOLD, wd, x, y, size, .1 + k * .05)
-                # a pen stroke under each word, each one a little different
-                ink.stroke(smooth(hand_line(ink.rng, (x - 2, y + 12 + ink.rng.uniform(-1, 1)), (x + w + 3, y + 10 + ink.rng.uniform(-1.5, 1.5)), 1.3, 40)),
-                           .3 + k * .05, .35, 2.8, p["accent"] if k % 3 == 0 else p["leaf"][1])
+                # a little wave under each word, each one different
+                ink.stroke(smooth(wave(ink.rng, x - 2, x + w + 3, y + 12, 2.4, 40, .6)), .3 + k * .05, .35, 2.8,
+                           p["accent"] if k % 3 == 0 else p["leaf"][1])
                 x += w + gap
                 k += 1
 
@@ -663,55 +755,27 @@ def stack():
 # ────────────────────────────── STUDIO ──────────────────────────────
 
 
-def cat(ink, cx, base, at):
-    """A cat asleep on the top edge of the frame."""
-    p = ink.p
-    light = p is PALETTES["light"]
-    fur, shade = ("#f3b888", "#e39a62") if light else ("#c97a45", "#a55f30")
-    w = 2.5
-    body = "M-47 1C-54 -24 -37 -42 -10 -42L17 -42C41 -42 52 -23 47 1Z"
-    head = "M-55 -37C-55 -51 -46 -58 -35 -58C-24 -58 -15 -51 -15 -37C-15 -24 -24 -18 -35 -18C-46 -18 -55 -24 -55 -37Z"
-    ears = "M-52 -46L-54 -68L-39 -56ZM-30 -56L-16 -69L-17 -45Z"
-    z = "".join(
-        f'<g transform="translate({x} {y})"><path class="zz" d="{BOLD.d("z", 0, 0, s)[0]}" fill="{p["soft"]}" style="animation-delay:{at + 1.2 + k * 1.3:.2f}s"/></g>'
-        for k, (x, y, s) in enumerate(((-70, -38, 15), (-84, -50, 18), (-99, -62, 21))))
-    ink.add(
-        f'<g transform="translate({cx} {base})"><g class="i" style="animation-delay:{at:.2f}s">'
-        f'<g transform="translate(45 -8)"><g class="tl">'
-        f'<path class="s" d="M0 0C21 -3 26 18 15 31C9 38 2 34 4 27" stroke="{p["ink"]}" stroke-width="13.5"/>'
-        f'<path class="s" d="M0 0C21 -3 26 18 15 31C9 38 2 34 4 27" stroke="{fur}" stroke-width="8.6"/>'
-        f'<path class="s" d="M19 9l7 -3M19 19l7 0" stroke="{shade}" stroke-width="3"/></g></g>'
-        f'<g class="br">'
-        f'<path d="{body}" fill="{fur}"/><path class="s" d="M-2 -42l2 12M11 -42l1 12M24 -40l-1 11" stroke="{shade}" stroke-width="4.5"/>'
-        f'<path class="s" d="{body}" stroke="{p["ink"]}" stroke-width="{w}"/>'
-        f'<path d="{ears}" fill="{fur}" stroke="{p["ink"]}" stroke-width="{w}" stroke-linejoin="round"/>'
-        f'<path d="{head}" fill="{fur}" stroke="{p["ink"]}" stroke-width="{w}"/>'
-        f'<path class="s" d="M-47 -37q4 4.4 8 0M-31 -37q4 4.4 8 0" stroke="{p["bug_ink"] if light else "#1a1512"}" stroke-width="2"/>'
-        f'<path class="s" d="M-37 -30.5l2 2l2 -2M-55 -32l-10 -2M-55 -28l-10 2M-15 -32l10 -2M-15 -28l10 2" stroke="{p["bug_ink"] if light else "#1a1512"}" stroke-width="1.4"/>'
-        f'</g></g>{z}</g>')
-
-
 def studio():
-    # The frame starts 96 down: room above it for the ivy and for the cat, ears and all.
-    W, H, TOP = 1200, 456, 96
+    # The frame starts 96 down: room above it for the sea grass and for the fox, ears and all.
+    W, H, TOP = 1200, 440, 96
     s = STUDIO
 
     def draw(ink):
         p = ink.p
         ink.box(14, TOP, W - 30, H - TOP - 16, 26, at=0, dur=1.6, width=2.8)
-        ink.logo("codeshare", 52, TOP + 40, 108, .4, ring=False, ratio=120 / 128)
-        ink.text(BOLD, s["title"], 190, TOP + 86, 47, .45)
-        w = ink.text(BOLD, s["url"], 192, TOP + 124, 24, .55, p["accent"])
-        ink.text(TEXT, "·  " + s["tag"], 192 + w + 14, TOP + 124, 24, .6, p["soft"])
-        ink.text(TEXT, s["desc"], 192, TOP + 164, 24, .7, p["soft"], fit=W - 250)
+        ink.logo("codeshare", 54, TOP + 42, 62, .4, ring=False, ratio=120 / 128)
+        ink.text(BOLD, s["title"], 132, TOP + 76, 44, .45)
+        w = ink.text(BOLD, s["url"], 134, TOP + 110, 23, .55, p["accent"])
+        ink.text(TEXT, "·  " + s["tag"], 134 + w + 14, TOP + 110, 23, .6, p["soft"])
+        ink.text(TEXT, s["desc"], 54, TOP + 156, 24, .7, p["soft"], fit=W - 110)
         # the products, as hand-drawn labels in a row
         x = 52
         for k, name in enumerate(s["products"]):
             w = TEXT.width(name, 21.5) + 36
-            ink.box(x, TOP + 194, w, 38, 18, at=.7 + k * .07, dur=.5, width=1.9)
-            ink.text(TEXT, name, x + w / 2, TOP + 220, 21.5, .8 + k * .07, anchor="middle")
+            ink.box(x, TOP + 180, w, 38, 18, at=.7 + k * .07, dur=.5, width=1.9)
+            ink.text(TEXT, name, x + w / 2, TOP + 206, 21.5, .8 + k * .07, anchor="middle")
             x += w + 14
-        ink.stroke(smooth(hand_line(ink.rng, (46, TOP + 258), (W - 48, TOP + 256), 1.4, 70)), 1, .8, 1.8, opacity=".5")
+        ink.stroke(smooth(wave(ink.rng, 46, W - 48, TOP + 243, 2.2, 150, .8)), 1, .8, 1.8, opacity=".5")
         # the numbers, spread across the bottom
         parts = [(live(v), l) for v, l in s["stats"]]
         widths = [BOLD.width(v, 29) + 11 + TEXT.width(l, 22.5) for v, l in parts]
@@ -719,14 +783,14 @@ def studio():
         x = 52
         for k, ((v, l), tw) in enumerate(zip(parts, widths)):
             w = BOLD.width(v, 29)
-            ink.marker(x - 2, TOP + 282, x + w + 2, TOP + 308, 1.1 + k * .1)
-            ink.text(BOLD, v, x, TOP + 306, 29, 1.15 + k * .1)
-            ink.text(TEXT, l, x + w + 11, TOP + 306, 22.5, 1.2 + k * .1, p["soft"])
+            ink.marker(x - 2, TOP + 268, x + w + 2, TOP + 294, 1.1 + k * .1)
+            ink.text(BOLD, v, x, TOP + 292, 29, 1.15 + k * .1)
+            ink.text(TEXT, l, x + w + 11, TOP + 292, 22.5, 1.2 + k * .1, p["soft"])
             x += tw + space
-        # ivy along the top of the frame, growing in from the left, and a cat asleep on the right
-        ink.vine([(30, TOP + 4), (190, TOP - 6), (380, TOP + 4), (560, TOP - 8), (700, TOP)], at=1, speed=330, leaf=29, sway=5,
-                 side=-1, both=False, curl=-1, width=2.4, gap=(44, 66), lean=(38, 112), first=18, berries=.3)
-        cat(ink, 1010, TOP, 1.5)
+        # sea grass along the top of the frame, growing in from the left, and the fox asleep on the right
+        ink.vine([(30, TOP + 4), (190, TOP - 6), (380, TOP + 4), (560, TOP - 8), (700, TOP)], at=1, speed=330, leaf=34, sway=5,
+                 side=-1, both=False, curl=-1, width=2.4, gap=(30, 48), lean=(62, 104), first=14, bubbles=.25)
+        sleeping_fox(ink, 1016, TOP, 1.5)
 
     both("studio.svg", draw, W, H, seed=41, start=START["studio"])
 
@@ -752,18 +816,17 @@ def project(key, proj, n):
             ink.text(BOLD, v, x, 257, 21, .9 + k * .1)
             lw = ink.text(TEXT, l, x + w + 8, 257, 19.5, .95 + k * .1, p["soft"])
             x += w + 8 + lw + 28
-        # ivy along the top edge: from the right on one card, from the left on the next
+        # sea grass along the top edge: from the right on one card, from the left on the next
         span = ink.rng.uniform(.44, .64) * W
         if n % 2 == 0:
             guide = [(W - 22, 56), (W - 22 - span * .35, 46), (W - 22 - span * .7, 54), (W - 22 - span, 46)]
-            ink.vine(guide, at=.7, speed=250, leaf=27, sway=4, side=1, both=False, curl=1, width=2.2, gap=(42, 62), lean=(38, 112), first=16, berries=.28)
+            ink.vine(guide, at=.7, speed=250, leaf=31, sway=4, side=1, both=False, curl=1, width=2.2, gap=(28, 44), lean=(62, 104), first=12, bubbles=.28)
         else:
             guide = [(22, 56), (22 + span * .35, 46), (22 + span * .7, 54), (22 + span, 46)]
-            ink.vine(guide, at=.7, speed=250, leaf=27, sway=4, side=-1, both=False, curl=-1, width=2.2, gap=(42, 62), lean=(38, 112), first=16, berries=.28)
+            ink.vine(guide, at=.7, speed=250, leaf=31, sway=4, side=-1, both=False, curl=-1, width=2.2, gap=(28, 44), lean=(62, 104), first=12, bubbles=.28)
 
     # two cards to a row: the left one a moment before the right, each row after the one above
     both(f"projects/{key}.svg", draw, W, H, seed=hash_seed(key) + 7, start=START["cards"] + (n // 2) * .35 + (n % 2) * .12)
-
 
 # ─────────────────────────── WRITTEN PARTS ──────────────────────────
 
@@ -806,14 +869,14 @@ def wrap(text, size, width):
     return lines
 
 
-def write_lines(ink, lines, x0, y0, size, step, at, color, heavy_color=None, mark=True):
+def write_lines(ink, lines, x0, y0, size, step, at, color):
     """Writes wrapped lines; heavy words in the ink colour with a marker swipe behind each run of them."""
     p = ink.p
     for n, line in enumerate(lines):
         y, t = y0 + n * step, at + n * .11
         k = 0
         while k < len(line):
-            if line[k][1] and mark:
+            if line[k][1]:
                 j = k
                 while j + 1 < len(line) and line[j + 1][1]:
                     j += 1
@@ -822,7 +885,7 @@ def write_lines(ink, lines, x0, y0, size, step, at, color, heavy_color=None, mar
             else:
                 k += 1
         for word, heavy, x, _ in line:
-            ink.text(BOLD if heavy else TEXT, word, x0 + x, y, size, t + .05, (heavy_color or p["ink"]) if heavy else color)
+            ink.text(BOLD if heavy else TEXT, word, x0 + x, y, size, t + .05, p["ink"] if heavy else color)
 
 
 def about():
@@ -831,25 +894,26 @@ def about():
     H = 34 + step * len(lines) + 14
 
     def draw(ink):
-        # ivy growing down the margin, like a note pinned under a plant
-        ink.vine([(26, -8), (34, H * .3), (20, H * .62), (30, H - 34)], at=.1, speed=210, leaf=23, sway=4, side=1,
-                 curl=-1, width=2.2, gap=(40, 56), first=30, berries=.25, taper=.7)
+        # sea grass growing up the margin, bubbles rising off it
+        ink.vine([(28, H + 10), (20, H * .68), (36, H * .36), (24, 26)], at=.1, speed=210, leaf=27, sway=4, side=1,
+                 curl=1, width=2.2, gap=(26, 38), first=24, taper=.7, lean=(26, 50), bubbles=.3)
         write_lines(ink, lines, x0, 46, size, step, .2, ink.p["soft"])
 
     both("about.svg", draw, W, H, seed=53, start=START["about"])
 
 
-def star(ink, cx, cy, r, at):
-    """A star as drawn in a notebook margin."""
+def starfish(ink, cx, cy, r, at):
+    """Stars are counted in starfish here."""
     rng, p = ink.rng, ink.p
     pts = []
     for k in range(10):
-        a = -math.pi / 2 + k * math.pi / 5 + rng.uniform(-.06, .06)
-        rr = (r if k % 2 == 0 else r * .46) * rng.uniform(.93, 1.07)
+        a = -math.pi / 2 + k * math.pi / 5 + rng.uniform(-.07, .07)
+        rr = (r if k % 2 == 0 else r * .5) * rng.uniform(.93, 1.07)
         pts.append((cx + math.cos(a) * rr, cy + math.sin(a) * rr))
-    d = "M" + "L".join(f"{f(x)} {f(y)}" for x, y in pts) + "Z"
-    ink.add(f'<g class="i" style="animation-delay:{at:.2f}s"><path d="{d}" fill="{p["marker"]}" transform="translate(1.6 1.4)"/>'
-            f'<path d="{d}" fill="none" stroke="{p["ink"]}" stroke-width="2" stroke-linejoin="round"/></g>')
+    d = smooth(pts, closed=True)
+    ink.add(f'<g class="i" style="animation-delay:{at:.2f}s"><path d="{d}" fill="{p["warm"]}" transform="translate(1.4 1.3)"/>'
+            f'<path d="{d}" fill="none" stroke="{p["ink"]}" stroke-width="1.9" stroke-linejoin="round"/>'
+            f'<circle cx="{f(cx)}" cy="{f(cy)}" r="1.3" fill="{p["ink"]}" fill-opacity=".6"/></g>')
 
 
 def open_source():
@@ -861,25 +925,20 @@ def open_source():
 
         def draw(ink, repo=repo, lines=lines, H=H, n=n):
             p = ink.p
-            # a leaf for a bullet, turned a little differently on every line
-            o, v = ink.leaf(25)
-            ink.add(f'<g transform="translate(14 {38 + ink.rng.uniform(-3, 3):.1f}) rotate({ink.rng.uniform(-34, 18):.1f})"><g class="lf" style="animation-delay:.15s">'
-                    f'<g class="sw" style="animation-duration:{ink.rng.uniform(3.4, 5.8):.1f}s;animation-delay:-{ink.rng.uniform(0, 5):.1f}s">'
-                    f'<path class="s" d="M0 0L6 0" stroke="{p["ink"]}" stroke-width="2"/><g transform="translate(6 0)">'
-                    f'<path d="{o}" fill="{p["leaf"][n % 3]}" transform="translate(1.8 1.5)"/>'
-                    f'<path class="s" d="{o}" stroke="{p["ink"]}" stroke-width="2"/>'
-                    f'<path class="s" d="{v}" stroke="{p["ink"]}" stroke-width="1" stroke-opacity=".7"/></g></g></g></g>')
+            # a small fish for a bullet, each a little different
+            ink.add(f'<g transform="translate(26 {40 + ink.rng.uniform(-2, 2):.1f}) rotate({ink.rng.uniform(-10, 10):.1f})"><g class="lf" style="animation-delay:.15s">'
+                    f'<g class="sw" style="animation-duration:{ink.rng.uniform(2.6, 4.2):.1f}s;animation-delay:-{ink.rng.uniform(0, 4):.1f}s">'
+                    f'<g transform="scale(1.12)">{fish_shape(p, p["leaf"][n % 3])}</g></g></g></g>')
             w = ink.text(BOLD, repo, x0, 50, 33, .1)
-            ink.stroke(smooth(hand_line(ink.rng, (x0 - 2, 63), (x0 + w + 4, 61 + ink.rng.uniform(-1.2, 1.2)), 1.3, 46)), .3, .4, 3,
-                       p["accent"] if n % 2 == 0 else p["leaf"][1])
+            ink.stroke(smooth(wave(ink.rng, x0 - 2, x0 + w + 4, 62, 2.4, 44, .6)), .3, .4, 3, p["accent"] if n % 2 == 0 else p["leaf"][1])
             count = github.get(f"{repo} stars")
             if count:
                 cw = BOLD.width(count, 25)
                 ink.text(BOLD, count, W - 30, 49, 25, .35, anchor="end")
-                star(ink, W - 30 - cw - 22, 40, 14, .3)
+                starfish(ink, W - 30 - cw - 24, 40, 15, .3)
             write_lines(ink, lines, x0, 96, size, step, .3, p["soft"])
             if n < len(OPEN_SOURCE) - 1:
-                ink.stroke(smooth(hand_line(ink.rng, (x0 - 4, H - 8), (W - 16, H - 9), 1.2, 90)), .5, .7, 1.5, opacity=".32")
+                ink.stroke(smooth(wave(ink.rng, x0 - 4, W - 16, H - 8, 1.8, 170, .6)), .5, .7, 1.5, opacity=".32")
 
         both(f"opensource/{repo.lower()}.svg", draw, W, H, seed=hash_seed(repo) + 5, start=START["opensource"] + n * .18)
 
