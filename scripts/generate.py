@@ -68,8 +68,7 @@ PROJECTS = {
         title="Vanigo", url="vanigo.app",
         desc=["Travel app with places, reviews, events and trips —",
               "plus a wallet that pays shops by local QR."],
-        stats=[(("vanigo", "Places on the map"), "places"), (("vanigo", "Countries"), "countries"),
-               (("vanigo", "Languages"), "languages")],
+        stats=[(("vanigo", "Places on the map"), "places"), (("vanigo", "Languages"), "languages")],
     ),
     "sylon": dict(
         title="Sylon", url="sylon.app",

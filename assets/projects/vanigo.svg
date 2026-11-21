@@ -10,6 +10,5 @@
 <text x="30" y="134" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17" fill="#7b93ad">Travel app with places, reviews, events and trips —</text>
 <text x="30" y="159" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17" fill="#7b93ad">plus a wallet that pays shops by local QR.</text>
 <text x="30" y="200" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17"><tspan font-weight="700" fill="#bae6fd">66M</tspan><tspan fill="#7b93ad"> places</tspan></text>
-<text x="216" y="200" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17"><tspan font-weight="700" fill="#bae6fd">65</tspan><tspan fill="#7b93ad"> countries</tspan></text>
-<text x="402" y="200" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17"><tspan font-weight="700" fill="#bae6fd">30</tspan><tspan fill="#7b93ad"> languages</tspan></text>
+<text x="216" y="200" font-family="'Segoe UI', Inter, 'Helvetica Neue', Ubuntu, Roboto, Arial, sans-serif" font-size="17"><tspan font-weight="700" fill="#bae6fd">30</tspan><tspan fill="#7b93ad"> languages</tspan></text>
 </svg>
