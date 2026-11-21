@@ -40,7 +40,7 @@ STUDIO = dict(
     title="Codeshare Technology", url="codeshare.me",
     tag="Software studio",
     desc="Software for online communities — with the core kept free.",
-    products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai", "Shroudly"],
+    products=["Beatra", "Sylon", "MCStat", "JustDiscord", "JustAnime", "Dotrai", "Shroudly", "Vanigo"],
     stats=[(("about", "Products live"), "products live"),
            (("about", "Discord users reached"), "Discord users reached"),
            (("about", "Oldest account we own"), "oldest account"),
@@ -97,6 +97,13 @@ PROJECTS = {
         desc=["Opens blocked YouTube, Instagram, X, Discord —",
               "no VPN; Windows 7–11, Mac, Linux, phones, TVs."],
         stats=[(("shroudly", "Downloads"), "downloads"), (("shroudly", "GitHub stars"), "stars")],
+    ),
+    "vanigo": dict(
+        title="Vanigo", url="vanigo.app",
+        desc=["Travel app with places, reviews, events and trips —",
+              "plus a wallet that pays shops by local QR."],
+        stats=[(("vanigo", "Places on the map"), "places"), (("vanigo", "Countries"), "countries"),
+               (("vanigo", "Languages"), "languages")],
     ),
 }
 

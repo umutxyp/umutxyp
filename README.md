@@ -17,7 +17,7 @@
 
 ### 👋 About
 
-I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime, Dotrai and Shroudly. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
+I'm **Umut** — full-stack developer, AI systems researcher and content creator with 6+ years of building platforms end to end. I'm the founder & CEO of **[Codeshare Technology](https://codeshare.me)**, the software studio behind Beatra, Sylon, MCStat, JustDiscord, JustAnime, Dotrai, Shroudly and Vanigo. The company was incorporated in 2025, but most of the products are older than it — the first one dates back to 2020. The core of every product stays free, and I run all of it myself.
 
 <img width="100%" src="./assets/stats.svg" alt="Discord users reached · Discord servers · Minecraft players · GitHub stars" />
 
@@ -43,6 +43,7 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 | **Apr 2026** | Server Support becomes Sylon and gets its own site |
 | **Aug 2026** | JustDiscord and JustAnime launch three days apart |
 | **Sep 2026** | The marketplace closes — codeshare.me becomes the studio's own site |
+| **Oct 2026** | Work on Vanigo, a travel app, starts |
 | **Oct 2026** | Shroudly 2 ships for Windows, macOS and Linux, and reaches Android nine days later |
 | **Nov 2026** | Shroudly reaches iPhone, iPad, Android TV, Google TV and Apple TV, and goes to the App Store and Google Play |
 | **Nov 2026** | Shroudly reaches Windows 7 and 8, 32-bit Windows and 32-bit ARM Linux |
@@ -60,6 +61,7 @@ I'm **Umut** — full-stack developer, AI systems researcher and content creator
 <a href="https://justanime.me"><img width="49%" src="./assets/projects/justanime.svg" alt="JustAnime" /></a>
 <a href="https://dotrai.com"><img width="49%" src="./assets/projects/dotrai.svg" alt="Dotrai" /></a>
 <a href="https://github.com/umutxyp/Shroudly"><img width="49%" src="./assets/projects/shroudly.svg" alt="Shroudly" /></a>
+<a href="https://vanigo.app"><img width="49%" src="./assets/projects/vanigo.svg" alt="Vanigo" /></a>
 
 </div>
 
