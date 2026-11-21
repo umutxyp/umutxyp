@@ -50,7 +50,7 @@ STUDIO = dict(
 PROJECTS = {
     "beatra": dict(
         title="Beatra", url="beatra.app",
-        desc=["Music bot for Discord, web and desktop —",
+        desc=["Music bot for Discord, with a web player —",
               "Spotify, YouTube, Apple Music and more."],
         stats=[(("beatra", "Discord servers"), "servers"), (("beatra", "Discord users"), "users")],
     ),
