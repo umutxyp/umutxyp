@@ -1,15 +1,15 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "pages": {
     "home": {
       "Products live": "7",
       "Discord servers": "45.2K",
       "Discord users reached": "3.3M",
       "Minecraft players": "43.9K",
-      "servers": "50.9K",
+      "servers": "51K",
       "titles": "164K",
-      "downloads": "153,319",
-      "Shroudly downloads": "153K",
+      "downloads": "156,456",
+      "Shroudly downloads": "156K",
       "Our oldest bot goes live": "2020",
       "Building software since": "2020"
     },
@@ -23,11 +23,11 @@
     "beatra": {
       "Discord servers": "50K",
       "Discord users": "3.2M",
-      "Playing right now": "72"
+      "Playing right now": "71"
     },
     "sylon": {
       "Discord servers": "945",
-      "Discord users": "508K",
+      "Discord users": "510K",
       "Uptime": "99.9%"
     },
     "mcstat": {
@@ -37,20 +37,20 @@
       "Capes archived": "10K"
     },
     "justdiscord": {
-      "Server listings": "1,495",
+      "Server listings": "1,493",
       "Bot listings": "8,111",
       "Emojis and stickers": "96.8K",
-      "Unique visitors": "13.6K"
+      "Unique visitors": "14.6K"
     },
     "justanime": {
       "Anime and manga titles": "164K",
       "Character records": "183K",
-      "Airing schedule entries": "2,187"
+      "Airing schedule entries": "2,194"
     },
     "shroudly": {
-      "Downloads": "153,322",
-      "Running right now": "1,670",
-      "GitHub stars": "591"
+      "Downloads": "156,456",
+      "Running right now": "1,704",
+      "GitHub stars": "593"
     },
     "vanigo": {
       "Places on the map": "66M",
@@ -65,9 +65,9 @@
       "Framer-Potfolio-Website stars": "7",
       "MusicBot stars": "1.3K",
       "Personal-Website stars": "280",
-      "Seo-Promt-Master stars": "596",
+      "Seo-Promt-Master stars": "600",
       "Shopier-Nodejs-Integration-and-Website stars": "2",
-      "Shroudly stars": "591",
+      "Shroudly stars": "593",
       "umutxyp stars": "1",
       "v14-discord-bot stars": "142"
     }
