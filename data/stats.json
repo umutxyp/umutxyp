@@ -1,15 +1,15 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "pages": {
     "home": {
       "Products live": "7",
       "Discord servers": "45.2K",
       "Discord users reached": "3.3M",
       "Minecraft players": "43.9K",
-      "servers": "51K",
+      "servers": "51.1K",
       "titles": "164K",
-      "downloads": "156,456",
-      "Shroudly downloads": "156K",
+      "downloads": "158,600",
+      "Shroudly downloads": "159K",
       "Our oldest bot goes live": "2020",
       "Building software since": "2020"
     },
@@ -21,36 +21,36 @@
       "Building software since": "2020"
     },
     "beatra": {
-      "Discord servers": "50K",
+      "Discord servers": "50.2K",
       "Discord users": "3.2M",
-      "Playing right now": "71"
+      "Playing right now": "90"
     },
     "sylon": {
-      "Discord servers": "945",
-      "Discord users": "510K",
+      "Discord servers": "953",
+      "Discord users": "512K",
       "Uptime": "99.9%"
     },
     "mcstat": {
-      "Servers tracked": "6,781",
+      "Servers tracked": "6,780",
       "Player records": "44.3K",
       "Skins archived": "125K",
       "Capes archived": "10K"
     },
     "justdiscord": {
-      "Server listings": "1,493",
-      "Bot listings": "8,111",
+      "Server listings": "1,490",
+      "Bot listings": "8,112",
       "Emojis and stickers": "96.8K",
-      "Unique visitors": "14.6K"
+      "Unique visitors": "19.5K"
     },
     "justanime": {
       "Anime and manga titles": "164K",
       "Character records": "183K",
-      "Airing schedule entries": "2,194"
+      "Airing schedule entries": "2,206"
     },
     "shroudly": {
-      "Downloads": "156,456",
-      "Running right now": "1,704",
-      "GitHub stars": "593"
+      "Downloads": "158,600",
+      "Running right now": "1,711",
+      "GitHub stars": "596"
     },
     "vanigo": {
       "Places on the map": "66M",
@@ -65,9 +65,9 @@
       "Framer-Potfolio-Website stars": "7",
       "MusicBot stars": "1.3K",
       "Personal-Website stars": "280",
-      "Seo-Promt-Master stars": "600",
+      "Seo-Promt-Master stars": "602",
       "Shopier-Nodejs-Integration-and-Website stars": "2",
-      "Shroudly stars": "593",
+      "Shroudly stars": "595",
       "umutxyp stars": "1",
       "v14-discord-bot stars": "142"
     }
